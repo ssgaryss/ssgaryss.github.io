@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkButton from '../components/LinkButton';
 
 const PikaEnginePage: React.FC = () => {
-  const project = INFO.projects.find(p => p.id === 'project-pika-engine')!;
+  const project = INFO.projects.find(p => p.id === 'project-raytracing')!;
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
