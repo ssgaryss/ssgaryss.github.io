@@ -6,7 +6,7 @@ const INFO = {
 		title: "Huidi Qiu",
 		email: "qiuhuidi31@gmail.com",
 		profile: "../../profile.png",
-		resume: "../../resume.pdf",
+		resume: "../../files/resume.pdf",
 	},
 
 	socials: {

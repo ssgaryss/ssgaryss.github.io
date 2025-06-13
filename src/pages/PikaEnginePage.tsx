@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 
 const PikaEnginePage: React.FC = () => {
@@ -20,6 +21,7 @@ const PikaEnginePage: React.FC = () => {
           <h1 className="project-title">{title}</h1>
           <div className="project-links">
             <LinkButton href={link} label="Code" icon={<GitHubIcon />} />
+            <LinkButton href="/files/项目介绍.pptx" label="PPT" icon={<InsertDriveFileIcon />} />
           </div>
           <div className="project-hero">
             <img src={cover} alt={`${title} Hero`} />
