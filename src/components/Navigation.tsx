@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -16,11 +17,13 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import { useNavigate } from 'react-router-dom';
+import LanguageToggle from './LanguageToggle'
 
 const drawerWidth = 240;
 const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
+  const { i18n } = useTranslation();
 
   const {mode} = parentToChild;
 
@@ -79,6 +82,7 @@ function Navigation({parentToChild, modeChange}: any) {
             </ListItemButton>
           </ListItem>
         ))}
+        <LanguageToggle arrowColor="black" />
       </List>
     </Box>
   );
@@ -108,6 +112,7 @@ function Navigation({parentToChild, modeChange}: any) {
                 {item[0]}
               </Button>
             ))}
+            <LanguageToggle />
           </Box>
         </Toolbar>
       </AppBar>

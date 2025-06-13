@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import { I18nextProvider } from 'react-i18next';
+import i18n from './locales/i18n';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
 import {
@@ -27,25 +29,27 @@ function App() {
     };
 
     return (
-    <BrowserRouter>
-        <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-            <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                {INFO.projects.map(project => {
-                    const Component = ProjectPageMap[project.id];
-                    return (
-                        <Route 
-                        key={project.id}
-                        path={project.path}
-                        element={<Component />}  // ✅ 这里动态加载组件
-                        />
-                    );
-                })}
-            </Routes>
-            <Footer />
-        </div>
-    </BrowserRouter>
+    <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+            <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
+                <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    {INFO.projects.map(project => {
+                        const Component = ProjectPageMap[project.id];
+                        return (
+                            <Route 
+                            key={project.id}
+                            path={project.path}
+                            element={<Component />}  // ✅ 这里动态加载组件
+                            />
+                        );
+                    })}
+                </Routes>
+                <Footer />
+            </div>
+        </BrowserRouter>
+    </I18nextProvider>
     );
 }
 

@@ -1,0 +1,57 @@
+.language-toggle__button {
+  color: #fff;
+  min-width: auto;
+  padding: 0;
+  margin-left: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  &:hover { opacity: 0.8; }
+  & .MuiButton-startIcon,
+  & .MuiButton-endIcon { margin: 0; }
+}
+
+.language-toggle__flag {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.language-toggle__arrow {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.language-toggle__menu-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.language-toggle__menu-item {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-height: auto;
+}
+
+.language-toggle__menu-icon {
+  min-width: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.language-toggle__menu-flag {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.language-toggle__menu-text {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: black;
+}
