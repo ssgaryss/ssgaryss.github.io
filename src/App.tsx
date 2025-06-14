@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { I18nextProvider } from 'react-i18next';
 import i18n from './locales/i18n';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
 import {
     Navigation,
@@ -30,7 +30,7 @@ function App() {
 
     return (
     <I18nextProvider i18n={i18n}>
-        <BrowserRouter>
+        <HashRouter>
             <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
                 <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
                 <Routes>
@@ -48,7 +48,7 @@ function App() {
                 </Routes>
                 <Footer />
             </div>
-        </BrowserRouter>
+        </HashRouter>
     </I18nextProvider>
     );
 }
