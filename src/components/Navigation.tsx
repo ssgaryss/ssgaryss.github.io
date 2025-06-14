@@ -16,7 +16,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import LanguageToggle from './LanguageToggle'
 
 const drawerWidth = 240;
@@ -61,9 +61,10 @@ function Navigation({parentToChild, modeChange}: any) {
     }
   };
 
+  const location = useLocation();
   const navigate = useNavigate();
   const handleClick = (section: string) => {
-    if (window.location.pathname === '/') {
+    if (location.pathname === '/' || location.hash === '#/') {
       scrollToSection(section);
     } else {
       navigate('/', { state: { scrollTo: section } });
