@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../assets/styles/Contact.scss';
 import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
@@ -9,6 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
 function Contact() {
+  const { t } = useTranslation();
 
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -73,7 +75,7 @@ function Contact() {
       </Snackbar>
       <div className="items-container">
         <div className="contact_wrapper">
-          <h1>Contact Me</h1>
+          <h1>{t(`HomePage.Contact.Title`)}</h1>
           <Box
             ref={form}
             component="form"
@@ -85,33 +87,33 @@ function Contact() {
               <TextField
                 required
                 id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
+                label={t(`HomePage.Contact.Name.label`)}
+                placeholder={t(`HomePage.Contact.Name.placeholder`)}
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
                 error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
+                helperText={nameError ? (t('HomePage.Contact.Name.helperText') as string) : ""}
               />
               <TextField
                 required
                 id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
+                label={t(`HomePage.Contact.Email.label`)}
+                placeholder={t(`HomePage.Contact.Email.placeholder`)}
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
                 error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
+                helperText={emailError ? (t(`HomePage.Contact.Email.helperText`) as string) : ""}
               />
             </div>
             <TextField
               required
               id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
+              label={t(`HomePage.Contact.Message.label`)}
+              placeholder={t(`HomePage.Contact.Message.placeholder`)}
               multiline
               rows={10}
               className="body-form"
@@ -120,10 +122,10 @@ function Contact() {
                 setMessage(e.target.value);
               }}
               error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
+              helperText={messageError ? (t(`HomePage.Contact.Message.helperText`) as string) : ""}
             />
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
+              {t(`HomePage.Contact.Send`)}
             </Button>
           </Box>
         </div>

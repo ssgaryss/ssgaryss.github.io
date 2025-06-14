@@ -1,8 +1,93 @@
 {
     "HomePage": {
         "Main": {
-          "name": "Huidi Qiu",
-          "greeting": "Hi there 👋 This is Gary's personal website"
+            "name": "Huidi Qiu",
+            "greeting": "Hi there 👋 This is Gary's personal website"
+        },
+        "Navigation": {
+            "Expertise": "Expertise",
+            "History": "History",
+            "Projects": "Projects",
+            "Contact": "Contact"
+        },
+        "Expertise": {
+            "Title": "Expertise",
+            "Part1":{
+                "title": "Game Client Development",
+                "content": [
+                "I specialize in <1><7>game client development</7></1> with hands-on experience from my internship at <2><8>Tencent Lightspeed Studio</8></2>.",
+                "I am skilled in using <3><9>RenderDoc</9></3> for frame capturing and reverse-engineering complex rendering workflows.",
+                "With a strong foundation in <4><10>OpenGL</10></4> and a portfolio of related projects, I also have a working knowledge of <5><11>Vulkan</11></5>.",
+                "Additionally, I am familiar with <6><12>Unreal Engine</12></6> and have experience developing custom plugins to extend its functionality."
+                ]
+            },
+            "Part2": {
+                "title": "Programming Languages",
+                "content": [
+                "I am highly familiar with <1><2>C++</2></1>, having completed <5><6>Advanced C++20 Programming</6></5> and developed numerous related projects such as a mini-engine.",
+                "I specialize in profiling programs and resolving performance bottlenecks efficiently, while maintaining strict and consistent coding standards.",
+                "In addition, I have extensive experience with <3><4>Python</4></3>, which has been an essential tool throughout my graduate research.",
+                "Beyond typical scripting, I have developed various plugins using Python, including those for <7><8>ZBrush</8></7>, <9><10>3ds Max</10></9>, <11><12>Blender</12></11>, and <13><14>RenderDoc</14></13>."
+                ]
+            },
+            "Part3": {
+                "title": "Research",
+                "content": [
+                "My research focuses on real-time relighting algorithms based on <1><5>2D Gaussian Splatting</5></1>.",
+                "I have a solid background in <2><6>deep learning</6></2> and am familiar with <4><7>Python</7></4> and <3><8>PyTorch</8></3>.",
+                "I am skilled at implementing academic papers and rapidly understanding their key contributions."
+                ]
+            },
+            "KeyWords": "Key words"
+        },
+        "History": {
+            "Title": "History",
+            "Time1": {
+                "title": "Undergraduate Student",
+                "subtitle": "Sichuan University",
+                "content": "Major in Computer Science and Technology"
+            },
+            "Time2": {
+                "title": "Graduate Researcher",
+                "subtitle": "Sichuan University",
+                "content": "Computer Graphics, Rendering Algorithms, Gaussian Splatting"
+            },
+            "Time3": {
+                "title": "Game Client Development Intern",
+                "subtitle": "Tencent Lightspeed Studios",
+                "content": "Unreal Engine, RenderDoc, DCC Plugin Development"
+            }
+        },
+        "Projects": {
+            "Title": "Projects",
+            "project-pika-engine": {
+                "title": "Pika Engine",
+                "description": "Pika Engine is a self-developed mini-engine designed to apply and realize the knowledge I’ve acquired through hands-on implementation."
+            },
+            "project-raytracing": {
+                "title": "Ray-Tracing",
+			    "description": "A ray-tracing practice project. Currently implemented with CPU multithreading; the goal is to migrate to Vulkan for GPU acceleration."
+            }
+        },
+        "Contact": {
+            "Title": "Contact Me",
+            "Name": {
+                "label": "Your Name",
+                "placeholder": "What's your name?",
+                "helperText": "Please enter your name"
+            },
+            "Email": {
+                "label": "Email / Phone",
+                "placeholder": "How can I reach you?",
+                "helperText": "Please enter your email or phone number"
+            },
+            "Message": {
+                "label": "Message",
+                "placeholder": "Send me any inquiries or questions",
+                "helperText": "Please enter the message"
+            },
+            "Send": "Send"
         }
     }
+
 }

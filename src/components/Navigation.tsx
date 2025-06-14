@@ -23,7 +23,7 @@ const drawerWidth = 240;
 const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const {mode} = parentToChild;
 
@@ -78,7 +78,7 @@ function Navigation({parentToChild, modeChange}: any) {
         {navItems.map((item) => (
           <ListItem key={item[0]} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} onClick={() => handleClick(item[1])}>
-              <ListItemText primary={item[0]} />
+              <ListItemText primary={t(`HomePage.Navigation.${item[0]}` as any)} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -109,7 +109,7 @@ function Navigation({parentToChild, modeChange}: any) {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item[0]} onClick={() => handleClick(item[1])} sx={{ color: '#fff' }}>
-                {item[0]}
+                {t(`HomePage.Navigation.${item[0]}` as any)}
               </Button>
             ))}
             <LanguageToggle />

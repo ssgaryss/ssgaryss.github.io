@@ -1,8 +1,92 @@
 {
     "HomePage": {
         "Main": {
-          "name": "邱汇迪",
-          "greeting": "Hi there 👋 This is Gary's personal website"
+            "name": "邱汇迪",
+            "greeting": "Hi there 👋 This is Gary's personal website"
+        },
+        "Navigation": {
+            "Expertise": "专业技能",
+            "History": "过往经历",
+            "Projects": "相关项目",
+            "Contact": "联系本人"
+        },
+        "Expertise": {
+            "Title": "专业技能",
+            "Part1": {
+                "title": "游戏客户端开发",
+                "content": [
+                    "我专注于 <1><7>游戏客户端开发</7></1>，并在 <2><8>腾讯光子工作室</8></2> 实习期间积累了丰富的实践经验。",
+                    "我熟练使用 <3><9>RenderDoc</9></3> 进行帧捕获和复杂渲染流程的逆向分析。",
+                    "我拥有扎实的 <4><10>OpenGL</10></4> 基础，并完成了多个相关项目，同时也掌握了 <5><11>Vulkan</11></5> 的使用。",
+                    "此外，我熟悉 <6><12>虚幻引擎</12></6>，并具备开发自定义插件以扩展其功能的经验。"
+                ]
+            },
+            "Part2": {
+                "title": "编程语言",
+                "content": [
+                    "我非常熟悉 <1><2>C++</2></1>，阅读完成了 <5><6> 《C++20 高级编程》 </6></5>，并开发了多个相关项目，例如一个迷你引擎。",
+                    "我擅长对程序进行性能分析并高效解决性能瓶颈，同时保持严格且一致的编码规范。",
+                    "此外，我拥有丰富的 <3><4>Python</4></3> 使用经验，这在我整个研究生科研阶段是一项不可或缺技能。",
+                    "除了典型的脚本编写，我还使用 Python 开发了多个插件，包括为 <7><8>ZBrush</8></7>、<9><10>3ds Max</10></9>、<11><12>Blender</12></11> 和 <13><14>RenderDoc</14></13> 开发的插件。"
+                ]
+            },
+            "Part3": {
+                "title": "研究方向",
+                "content": [
+                    "我的研究集中在基于 <1><5>2D高斯泼溅</5></1> 的实时重光照算法上。",
+                    "我具有扎实的 <2><6>深度学习</6></2> 背景，并且熟悉 <4><7>Python</7></4> 和 <3><8>PyTorch</8></3>。",
+                    "我擅长阅读复现学术论文，并能够快速理解其核心贡献。"
+                ]
+            },
+            "KeyWords": "关键词"
+        },
+        "History": {
+            "Title": "过往经历",
+            "Time1": {
+                "title": "本科在读",
+                "subtitle": "四川大学",
+                "content": "计算机科学与技术(拔尖计划)专业"
+            },
+            "Time2": {
+                "title": "研究生在读",
+                "subtitle": "四川大学",
+                "content": "计算机图形学、渲染算法、高斯溅射"
+            },
+            "Time3": {
+                "title": "游戏客户端开发实习生",
+                "subtitle": "腾讯光子工作室群",
+                "content": "Unreal Engine、RenderDoc、DCC 插件开发"
+            }
+        },
+        "Projects": {
+            "Title": "相关项目",
+            "project-pika-engine": {
+                "title": "Pika 引擎",
+                "description": "Pika 引擎是个人独立开发的迷你引擎，旨在将我之所学付诸于实践。"
+            },
+            "project-raytracing": {
+                "title": "光线追踪",
+                "description": "一个光线追踪练习项目。目前已实现 CPU 多线程版本，目标是迁移至 Vulkan 实现 GPU 加速。"
+            }
+        },
+        "Contact": {
+            "Title": "联系本人",
+            "Name": {
+                "label": "你的名字",
+                "placeholder": "你叫什么名字？",
+                "helperText": "请输入你的名字"
+            },
+            "Email": {
+                "label": "邮箱 / 电话",
+                "placeholder": "我该如何联系你？",
+                "helperText": "请输入你的邮箱或电话号码"
+            },
+            "Message": {
+                "label": "留言",
+                "placeholder": "欢迎留言或提问",
+                "helperText": "请输入留言内容"
+            },
+            "Send": "发送"
         }
     }
 }
