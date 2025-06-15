@@ -1,3 +1,4 @@
+import { toBeChecked } from '@testing-library/jest-dom/matchers';
 import pikaCover from '../images/project-pika-engine/cover.png';
 import raytracingCover from '../images/project-raytracing/cover.png';
 
@@ -19,6 +20,12 @@ const INFO = {
 			path: "/projects/project-pika-engine",
 			link: "https://github.com/ssgaryss/Pika.git",
 			cover: pikaCover,
+			keyword: [
+				"ECS",
+				"Lighting",
+				"Shadow",
+				"Physics"
+			]
 		},
 
 		{
@@ -26,6 +33,9 @@ const INFO = {
 			path: "/projects/project-raytracing",
 			link: "https://github.com/ssgaryss/Ray-Tracing.git",
 			cover: raytracingCover,
+			keyword: [
+				"CPU Muiti-threading"
+			]
 		},
 	],
 };
