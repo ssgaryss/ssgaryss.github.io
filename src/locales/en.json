@@ -88,6 +88,36 @@
             },
             "Send": "Send"
         }
+    },
+
+    "PikaEnginePage": {
+        "Title": "Pika Engine",
+        "Contents": {
+            "title": "Contents",
+            "items": {
+                "abstract": "Abstract",
+                "ecs": "Entity Component System",
+                "Lighting&Shadow": "Lighting & Shadow",
+                "Serialization": "Serialization"
+            }
+        },
+        "Abstract": {
+            "title": "Abstract",
+            "content": "Pika Engine is a self-developed mini-engine designed to apply and realize the knowledge I’ve acquired through hands-on implementation."
+        },
+        "ECS": {
+            "title": "Entity Component System",
+            "content": "Entity Component System"
+        },
+        "Lighting&Shadow": {
+            "title": "Lighting & Shadows",
+            "content": "Lighting"
+        },
+        "Serialization": {
+            "title": "Serialization",
+            "content": "Serialization"
+        }
+        
     }
 
 }

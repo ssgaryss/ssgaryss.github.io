@@ -22,9 +22,9 @@ const INFO = {
 			cover: pikaCover,
 			keyword: [
 				"ECS",
-				"Lighting",
-				"Shadow",
-				"Physics"
+				"Lighting & Shadow",
+				"2D Physics",
+				"Serialization"
 			]
 		},
 

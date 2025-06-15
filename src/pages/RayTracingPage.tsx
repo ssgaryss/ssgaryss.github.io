@@ -19,12 +19,12 @@ const PikaEnginePage: React.FC = () => {
     <div className="project-page-wrapper">
       <div className="project-card">
         <div className="project-content">
+          <div className="project-hero">
+            <img src={cover} alt={`${t(`HomePage.Projects.${id}.title` as any)} Hero`} />
+          </div>
           <h1 className="project-title">{t(`HomePage.Projects.${id}.title` as any)}</h1>
           <div className="project-links">
             <LinkButton href={link} label="Code" icon={<GitHubIcon />} />
-          </div>
-          <div className="project-hero">
-            <img src={cover} alt={`${t(`HomePage.Projects.${id}.title` as any)} Hero`} />
           </div>
           <section className="project-abstract">
             <h2>Abstract</h2>
