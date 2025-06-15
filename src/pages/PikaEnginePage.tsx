@@ -7,7 +7,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
-
+import TransText from '../components/TransParagraph';
+import abstract1 from '../assets/images/project-pika-engine/abstract-2D.mp4';
+import abstract2 from '../assets/images/project-pika-engine/abstract-3D.mp4';
 
 const PikaEnginePage: React.FC = () => {
   const { t } = useTranslation();
@@ -16,6 +18,9 @@ const PikaEnginePage: React.FC = () => {
     { id: 'abstract', title: t('PikaEnginePage.Contents.items.abstract') },
     { id: 'ecs', title: t('PikaEnginePage.Contents.items.ecs') },
     { id: 'Lighting&Shadow', title: t('PikaEnginePage.Contents.items.Lighting&Shadow') },
+    { id: 'Material', title: t('PikaEnginePage.Contents.items.Material') },
+    { id: 'Render', title: t('PikaEnginePage.Contents.items.Render') },
+    { id: 'GraphicsAPI', title: t('PikaEnginePage.Contents.items.GraphicsAPI') },
     { id: 'Serialization', title: t('PikaEnginePage.Contents.items.Serialization') },
   ];
   
@@ -44,16 +49,68 @@ const PikaEnginePage: React.FC = () => {
           <div className="project-detail">
             <section id="abstract">
               <h2>{t('PikaEnginePage.Abstract.title')}</h2>
-              <p>{t('PikaEnginePage.Abstract.content')}</p>
-              <img src={cover} alt={`${t(`HomePage.Projects.${id}.title` as any)} Hero`} />
+              <p>
+                {t('PikaEnginePage.Abstract.content1', { returnObjects: true }).map(
+                    (_, index, array) => (
+                    <TransText
+                    key={index}
+                    i18nKey="PikaEnginePage.Abstract.content1"
+                    index={index}
+                    isLast={index === array.length - 1}
+                    />
+                    )
+                )}
+              </p>
+              <video width="640" height="360" controls>
+                <source src={abstract1} type="video/mp4" />
+                Failed to load video. Please check your connection or try again later.
+              </video>
+              <p>
+                {t('PikaEnginePage.Abstract.content2', { returnObjects: true }).map(
+                    (_, index, array) => (
+                    <TransText
+                    key={index}
+                    i18nKey="PikaEnginePage.Abstract.content2"
+                    index={index}
+                    isLast={index === array.length - 1}
+                    />
+                    )
+                )}
+              </p>
+              <video width="640" height="360" controls>
+                <source src={abstract2} type="video/mp4" />
+                Failed to load video. Please check your connection or try again later.
+              </video>
             </section>
             <section id="ecs">
               <h2>{t('PikaEnginePage.ECS.title')}</h2>
-              <p>{t('PikaEnginePage.ECS.content')}</p>
+              <p>
+                {t('PikaEnginePage.ECS.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.ECS.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    links={["https://github.com/skypjack/entt"]}
+                  />
+                ))}
+              </p>
             </section>
             <section id="Lighting&Shadow">
               <h2>{t('PikaEnginePage.Lighting&Shadow.title')}</h2>
               <p>{t('PikaEnginePage.Lighting&Shadow.content')}</p>
+            </section>
+            <section id="Material">
+              <h2>{t('PikaEnginePage.Material.title')}</h2>
+              <p>{t('PikaEnginePage.Material.content')}</p>
+            </section>
+            <section id="Render">
+              <h2>{t('PikaEnginePage.Render.title')}</h2>
+              <p>{t('PikaEnginePage.Render.content')}</p>
+            </section>
+            <section id="GraphicsAPI">
+              <h2>{t('PikaEnginePage.GraphicsAPI.title')}</h2>
+              <p>{t('PikaEnginePage.GraphicsAPI.content')}</p>
             </section>
             <section id="Serialization">
               <h2>{t('PikaEnginePage.Serialization.title')}</h2>

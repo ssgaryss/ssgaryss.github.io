@@ -106,14 +106,21 @@
         },
         "Abstract": {
             "title": "Abstract",
-            "content": [
+            "content1": [
                "Pika Engine is a self-developed mini-engine designed to apply and realize the knowledge I’ve acquired through hands-on implementation." ,
-               "The current Pika Engine supports both 2D and 3D scenes. In 2D scenes, it uses Quads as primitives and supports Batch Rendering to render the entire scene with a minimal number of draw calls. It also supports 2D physics simulation. For 3D scenes, it currently supports Skybox, Lighting, and Shadows, and allows importing Mesh data in formats such as OBJ and FBX."
+               "The current Pika Engine supports both 2D and 3D scenes. In 2D scenes, it uses Quads as primitives and supports <1>Batch Rendering</1> to render the entire scene with a minimal number of draw calls. It also supports <1>2D physics simulation</1>."
+            ],
+            "content2": [
+               "For 3D scenes, it currently supports <1>Skybox</1>, <1>Lighting</1>, and <1>Shadows</1>, and allows importing Mesh data in formats such as OBJ and FBX. The current material system is relatively simple and uses predefined <1>Blinn-Phong</1> materials. Support for <1>physically based rendering (PBR)</1> materials will be added in future versions."
             ]
         },
         "ECS": {
             "title": "Entity Component System",
-            "content": "Entity Component System"
+            "content": [
+                "The <1>Entity Component System (ECS)</1> is a powerful architectural pattern widely adopted in modern game engines, including <1>Unreal Engine (UE)</1> and <1>Unity</1>, due to its flexibility, scalability, and performance benefits.",
+                "Pika Engine utilizes the third-party library <3>entt</3> to implement its own ECS (Entity Component System). The separation of data and logic allows Pika to efficiently manage entities and their associated components, such as <1>UUID</1>, <1>Material</1>, <1>Mesh</1>, and others.",
+                "As shown below, you can easily configure component properties, add or remove components, and perform other operations through the UI."
+            ]
         },
         "Lighting&Shadow": {
             "title": "Lighting & Shadows",

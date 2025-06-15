@@ -102,6 +102,15 @@
       margin: 0 auto;
       padding: 0.5rem;
     }
+
+    video {
+      width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      padding: 0.5rem;
+    }
   }
 }
 
@@ -139,6 +148,10 @@
     }
 
     img {
+      padding: 0rem;
+    }
+    
+    video {
       padding: 0rem;
     }
   }
