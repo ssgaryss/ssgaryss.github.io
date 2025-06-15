@@ -4,6 +4,7 @@ import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGamepad, faBookOpen, faFileCode } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
+import TransText from '../components/TransParagraph';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
@@ -38,27 +39,13 @@ function Expertise() {
                     <h3>{t('HomePage.Expertise.Part1.title')}</h3>
                     <p>
                     {t('HomePage.Expertise.Part1.content', { returnObjects: true }).map(
-                        (text, index, array) => (
-                        <React.Fragment key={index}>
-                            <Trans
-                            i18nKey={`HomePage.Expertise.Part1.content.${index}` as any}
-                            components={{
-                                1: <strong></strong>,
-                                2: <strong></strong>,
-                                3: <strong></strong>,
-                                4: <strong></strong>,
-                                5: <strong></strong>,
-                                6: <strong></strong>,
-                                7: <em></em>,
-                                8: <em></em>,
-                                9: <em></em>,
-                                10: <em></em>,
-                                11: <em></em>,
-                                12: <em></em>,
-                            }}
-                            />
-                            {index < array.length - 1 && <br />}
-                        </React.Fragment>
+                        (_, index, array) => (
+                        <TransText
+                        key={index}
+                        i18nKey="HomePage.Expertise.Part1.content"
+                        index={index}
+                        isLast={index === array.length - 1}
+                        />
                         )
                     )}
                     </p>
@@ -75,29 +62,13 @@ function Expertise() {
                     <h3>{t('HomePage.Expertise.Part2.title')}</h3>
                     <p>
                     {t('HomePage.Expertise.Part2.content', { returnObjects: true }).map(
-                        (text, index, array) => (
-                        <React.Fragment key={index}>
-                            <Trans
-                            i18nKey={`HomePage.Expertise.Part2.content.${index}` as any}
-                            components={{
-                                1: <strong></strong>,
-                                2: <em></em>,
-                                3: <strong></strong>,
-                                4: <em></em>,
-                                5: <strong></strong>,
-                                6: <em></em>,
-                                7: <strong></strong>,
-                                8: <em></em>,
-                                9: <strong></strong>,
-                                10: <em></em>,
-                                11: <strong></strong>,
-                                12: <em></em>,
-                                13: <strong></strong>,
-                                14: <em></em>,
-                            }}
-                            />
-                            {index < array.length - 1 && <br />}
-                        </React.Fragment>
+                        (_, index, array) => (
+                        <TransText
+                        key={index}
+                        i18nKey="HomePage.Expertise.Part2.content"
+                        index={index}
+                        isLast={index === array.length - 1}
+                        />
                         )
                     )}
                     </p>
@@ -114,23 +85,13 @@ function Expertise() {
                     <h3>{t('HomePage.Expertise.Part3.title')}</h3>
                     <p>
                     {t('HomePage.Expertise.Part3.content', { returnObjects: true }).map(
-                        (text, index, array) => (
-                        <React.Fragment key={index}>
-                            <Trans
-                            i18nKey={`HomePage.Expertise.Part3.content.${index}` as any}
-                            components={{
-                                1: <strong></strong>,
-                                2: <strong></strong>,
-                                3: <strong></strong>,
-                                4: <strong></strong>,
-                                5: <em></em>,
-                                6: <em></em>,
-                                7: <em></em>,
-                                8: <em></em>,
-                            }}
-                            />
-                            {index < array.length - 1 && <br />}
-                        </React.Fragment>
+                        (_, index, array) => (
+                        <TransText
+                        key={index}
+                        i18nKey="HomePage.Expertise.Part3.content"
+                        index={index}
+                        isLast={index === array.length - 1}
+                        />
                         )
                     )}
                     </p>
