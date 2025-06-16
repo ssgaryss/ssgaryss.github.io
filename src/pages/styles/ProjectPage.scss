@@ -144,15 +144,12 @@
     }
 
     p {
-      padding: 0rem 1rem;
+      padding: 0rem 0.5rem;
     }
 
-    img {
-      padding: 0rem;
-    }
-    
-    video {
-      padding: 0rem;
+    img, video {
+      padding: 0 !important;
+      margin: 2rem 0rem !important;
     }
   }
 }

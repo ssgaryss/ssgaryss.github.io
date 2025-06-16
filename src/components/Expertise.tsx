@@ -41,10 +41,10 @@ function Expertise() {
                     {t('HomePage.Expertise.Part1.content', { returnObjects: true }).map(
                         (_, index, array) => (
                         <TransText
-                        key={index}
-                        i18nKey="HomePage.Expertise.Part1.content"
-                        index={index}
-                        isLast={index === array.length - 1}
+                            key={index}
+                            i18nKey="HomePage.Expertise.Part1.content"
+                            index={index}
+                            isLast={index === array.length - 1}
                         />
                         )
                     )}
@@ -87,10 +87,10 @@ function Expertise() {
                     {t('HomePage.Expertise.Part3.content', { returnObjects: true }).map(
                         (_, index, array) => (
                         <TransText
-                        key={index}
-                        i18nKey="HomePage.Expertise.Part3.content"
-                        index={index}
-                        isLast={index === array.length - 1}
+                            key={index}
+                            i18nKey="HomePage.Expertise.Part3.content"
+                            index={index}
+                            isLast={index === array.length - 1}
                         />
                         )
                     )}

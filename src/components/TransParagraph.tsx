@@ -7,9 +7,18 @@ interface TransTextProps {
   index?: number;
   isLast?: boolean;
   links?: string[]; // 如 ['https://github.com/skypjack/entt', 'https://unity.com/', ...]
+  breakLine?: boolean;
+  breakCount?: number;
 }
 
-const TransText: React.FC<TransTextProps> = ({ i18nKey, index, isLast, links }) => {
+const TransText: React.FC<TransTextProps> = ({
+  i18nKey,
+  index,
+  isLast,
+  links,
+  breakLine = true,
+  breakCount = 1,
+}) => {
   const components: Record<number, React.ReactNode> = {
     1: <strong />,
     2: <em />,
@@ -37,10 +46,15 @@ const TransText: React.FC<TransTextProps> = ({ i18nKey, index, isLast, links }) 
     />
   );
 
+  const breaks =
+    breakLine && !isLast
+      ? Array.from({ length: breakCount }, (_, i) => <br key={i} />)
+      : null;
+
   return index !== undefined ? (
     <>
       {transElement}
-      {!isLast && <br />}
+      {breaks}
     </>
   ) : (
     transElement

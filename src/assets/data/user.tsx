@@ -17,10 +17,12 @@ const INFO = {
 	projects: [
 		{
 			id: "project-pika-engine",
+			date: "2024.5 - 2024.10",
 			path: "/projects/project-pika-engine",
 			link: "https://github.com/ssgaryss/Pika.git",
 			cover: pikaCover,
 			keyword: [
+				"Personal Project",
 				"ECS",
 				"Lighting & Shadow",
 				"2D Physics",
@@ -28,15 +30,17 @@ const INFO = {
 			]
 		},
 
-		{
-			id: "project-raytracing",
-			path: "/projects/project-raytracing",
-			link: "https://github.com/ssgaryss/Ray-Tracing.git",
-			cover: raytracingCover,
-			keyword: [
-				"CPU Muiti-threading"
-			]
-		},
+		// {
+		// 	id: "project-raytracing",
+		// 	date: "2024.7 - 2024.7",
+		// 	path: "/projects/project-raytracing",
+		// 	link: "https://github.com/ssgaryss/Ray-Tracing.git",
+		// 	cover: raytracingCover,
+		// 	keyword: [
+		// 		"Personal Project",
+		// 		"CPU Muiti-threading"
+		// 	]
+		// },
 	],
 };
 

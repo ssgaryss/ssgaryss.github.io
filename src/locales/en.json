@@ -100,14 +100,15 @@
                 "Lighting&Shadow": "Lighting & Shadow",
                 "Material": "Material",
                 "Render": "Render",
+                "Physics": "Physics",
                 "Serialization": "Serialization",
-                "GraphicsAPI": "Graphics API"
+                "Conclusion": "Conclusion"
             }
         },
         "Abstract": {
             "title": "Abstract",
             "content1": [
-               "Pika Engine is a self-developed mini-engine designed to apply and realize the knowledge I’ve acquired through hands-on implementation." ,
+               "Pika Engine is a self-developed mini-engine designed to apply and realize the knowledge I’ve acquired through hands-on implementation. Development has been on hold since I started my internship at <1>Tencent Lightspeed Studios</1>, but I plan to revisit and upgrade the engine when time permits in the future.",
                "The current Pika Engine supports both 2D and 3D scenes. In 2D scenes, it uses Quads as primitives and supports <1>Batch Rendering</1> to render the entire scene with a minimal number of draw calls. It also supports <1>2D physics simulation</1>."
             ],
             "content2": [
@@ -119,28 +120,40 @@
             "content": [
                 "The <1>Entity Component System (ECS)</1> is a powerful architectural pattern widely adopted in modern game engines, including <1>Unreal Engine (UE)</1> and <1>Unity</1>, due to its flexibility, scalability, and performance benefits.",
                 "Pika Engine utilizes the third-party library <3>entt</3> to implement its own ECS (Entity Component System). The separation of data and logic allows Pika to efficiently manage entities and their associated components, such as <1>UUID</1>, <1>Material</1>, <1>Mesh</1>, and others.",
-                "As shown below, you can easily configure component properties, add or remove components, and perform other operations through the UI."
+                "As shown in the figure above, you can easily configure component properties, add or remove components, and perform other operations through the UI."
             ]
         },
         "Lighting&Shadow": {
             "title": "Lighting & Shadows",
-            "content": "Lighting"
+            "content1": [
+                "The Pika engine currently supports point lights, spotlights, and directional lights, each with integrated shadow mapping. Additional lighting types, such as area lights and emissive surfaces, are planned for future updates.",
+                "To reduce common shadow mapping artifacts—particularly <1>moiré patterns</1> and <1>surface acne</1>—the engine leverages reverse-Z buffering alongside enhanced depth precision techniques to improve visual fidelity. Depth bias remains a particularly tricky aspect; the use of dynamic, slope-aware biasing is crucial to adapting to varying light directions and surface normals in order to mitigate artifacts."
+            ],
+            "content2": [
+                "More advanced shadowing techniques such as <1>Cascaded Shadow Maps (CSM)</1>, <1>Percentage Closer Filtering (PCF)</1>, and <1>Percentage Closer Soft Shadows (PCSS)</1> have not yet been implemented, but are planned for future integration as the engine evolves."
+            ]
         },
         "Material": {
             "title": "Material",
-            "content": "Material"
+            "content": [
+                "In terms of material support, the Pika engine currently offers a configurable <1>Blinn-Phong</1> shading model. Future updates will introduce support for physically based rendering (PBR) materials, as well as comprehensive import and export functionality for mainstream 3D model formats along with their associated material data. Widely used embedded-material formats such as <1>FBX</1>, <1>glb</1>, and <1>glTF</1> will be supported to ensure seamless integration with popular modeling tools and asset pipelines."
+            ]
         },
         "Render": {
             "title": "Render",
             "content": "Render"
         },
-        "GraphicsAPI": {
-            "title": "Graphics API",
-            "content": "GraphicsAPI"
+        "Physics": {
+            "title": "Physics",
+            "content": "Physics"
         },
         "Serialization": {
             "title": "Serialization",
             "content": "Serialization"
+        },
+        "Conclusion": {
+            "title": "Conclusion",
+            "content": "Conclusion"
         }
         
     }

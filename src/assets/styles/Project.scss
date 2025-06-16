@@ -33,8 +33,27 @@
     h2 {
         font-size: 1.25rem;
         font-weight: 700;
-        margin: 1rem 1.5rem 0.5rem;
+        margin: 1rem 0rem 0.5rem;
         color: #222;
+    }
+
+    .project-title-with-date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        flex-wrap: nowrap;
+        width: 100%;
+        white-space: nowrap;
+        padding: 0 1.5rem; 
+    }
+
+    .project-date {
+        font-size: 1rem;
+        color: #888;
+        font-weight: normal;
+        margin: 0rem 1.5rem 0rem 0rem;
     }
 
     p {

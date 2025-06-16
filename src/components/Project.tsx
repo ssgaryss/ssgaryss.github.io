@@ -16,7 +16,12 @@ function Project() {
                 <div className="project" key={project.id}>
                     <Link to={project.path}>
                         <img src={project.cover} className="zoom" alt="thumbnail" width="100%" />
-                        <h2>{t(`HomePage.Projects.${project.id}.title` as any)}</h2>
+                        <h2 className="project-title-with-date">
+                            <span className="project-title">
+                                {t(`HomePage.Projects.${project.id}.title` as any)}
+                            </span>
+                            <span className="project-date">{project.date}</span>
+                        </h2>
                         <p>{t(`HomePage.Projects.${project.id}.description` as any)}</p>
                         <div className="chip-container">
                             {project.keyword.map((label, index) => (

@@ -20,8 +20,9 @@ const PikaEnginePage: React.FC = () => {
     { id: 'Lighting&Shadow', title: t('PikaEnginePage.Contents.items.Lighting&Shadow') },
     { id: 'Material', title: t('PikaEnginePage.Contents.items.Material') },
     { id: 'Render', title: t('PikaEnginePage.Contents.items.Render') },
-    { id: 'GraphicsAPI', title: t('PikaEnginePage.Contents.items.GraphicsAPI') },
+    { id: 'Physics', title: t('PikaEnginePage.Contents.items.Physics') },
     { id: 'Serialization', title: t('PikaEnginePage.Contents.items.Serialization') },
+    { id: 'Conclusion', title: t('PikaEnginePage.Contents.items.Conclusion') },
   ];
   
   useEffect(() => {
@@ -53,15 +54,16 @@ const PikaEnginePage: React.FC = () => {
                 {t('PikaEnginePage.Abstract.content1', { returnObjects: true }).map(
                     (_, index, array) => (
                     <TransText
-                    key={index}
-                    i18nKey="PikaEnginePage.Abstract.content1"
-                    index={index}
-                    isLast={index === array.length - 1}
+                      key={index}
+                      i18nKey="PikaEnginePage.Abstract.content1"
+                      index={index}
+                      isLast={index === array.length - 1}
+                      breakCount={2}
                     />
                     )
                 )}
               </p>
-              <video width="640" height="360" controls>
+              <video controls>
                 <source src={abstract1} type="video/mp4" />
                 Failed to load video. Please check your connection or try again later.
               </video>
@@ -69,15 +71,16 @@ const PikaEnginePage: React.FC = () => {
                 {t('PikaEnginePage.Abstract.content2', { returnObjects: true }).map(
                     (_, index, array) => (
                     <TransText
-                    key={index}
-                    i18nKey="PikaEnginePage.Abstract.content2"
-                    index={index}
-                    isLast={index === array.length - 1}
+                      key={index}
+                      i18nKey="PikaEnginePage.Abstract.content2"
+                      index={index}
+                      isLast={index === array.length - 1}
+                      breakCount={2}
                     />
                     )
                 )}
               </p>
-              <video width="640" height="360" controls>
+              <video controls>
                 <source src={abstract2} type="video/mp4" />
                 Failed to load video. Please check your connection or try again later.
               </video>
@@ -92,29 +95,65 @@ const PikaEnginePage: React.FC = () => {
                     index={index}
                     isLast={index === array.length - 1}
                     links={["https://github.com/skypjack/entt"]}
+                    breakCount={2}
                   />
                 ))}
               </p>
             </section>
             <section id="Lighting&Shadow">
               <h2>{t('PikaEnginePage.Lighting&Shadow.title')}</h2>
-              <p>{t('PikaEnginePage.Lighting&Shadow.content')}</p>
+              <p>
+                {t('PikaEnginePage.Lighting&Shadow.content1', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Lighting&Shadow.content1" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+              <p>
+                {t('PikaEnginePage.Lighting&Shadow.content2', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Lighting&Shadow.content2" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
             </section>
             <section id="Material">
               <h2>{t('PikaEnginePage.Material.title')}</h2>
-              <p>{t('PikaEnginePage.Material.content')}</p>
+              <p>
+                {t('PikaEnginePage.Material.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Material.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
             </section>
             <section id="Render">
               <h2>{t('PikaEnginePage.Render.title')}</h2>
               <p>{t('PikaEnginePage.Render.content')}</p>
             </section>
-            <section id="GraphicsAPI">
-              <h2>{t('PikaEnginePage.GraphicsAPI.title')}</h2>
-              <p>{t('PikaEnginePage.GraphicsAPI.content')}</p>
+            <section id="Physics">
+              <h2>{t('PikaEnginePage.Physics.title')}</h2>
+              <p>{t('PikaEnginePage.Physics.content')}</p>
             </section>
             <section id="Serialization">
               <h2>{t('PikaEnginePage.Serialization.title')}</h2>
               <p>{t('PikaEnginePage.Serialization.content')}</p>
+            </section>
+            <section id="Conclusion">
+              <h2>{t('PikaEnginePage.Conclusion.title')}</h2>
+              <p>{t('PikaEnginePage.Conclusion.content')}</p>
             </section>
           </div>
         </div>
