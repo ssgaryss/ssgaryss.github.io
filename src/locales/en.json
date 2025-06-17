@@ -127,7 +127,7 @@
             "title": "Lighting & Shadows",
             "content1": [
                 "The Pika engine currently supports point lights, spotlights, and directional lights, each with integrated shadow mapping. Additional lighting types, such as area lights and emissive surfaces, are planned for future updates.",
-                "To reduce common shadow mapping artifacts—particularly <1>moiré patterns</1> and <1>surface acne</1>—the engine leverages reverse-Z buffering alongside enhanced depth precision techniques to improve visual fidelity. Depth bias remains a particularly tricky aspect; the use of dynamic, slope-aware biasing is crucial to adapting to varying light directions and surface normals in order to mitigate artifacts."
+                "To reduce common shadow mapping artifacts—particularly <1>moiré patterns</1> and <1>surface acne</1>—the engine leverages <1>reverse-Z</1> buffering alongside enhanced depth precision techniques to improve visual fidelity. <1>Depth bias</1> remains a particularly tricky aspect; a dynamic, slope-aware biasing strategy is planned for future implementation to adapt to varying light directions and surface normals, which is expected to effectively mitigate such artifacts."
             ],
             "content2": [
                 "More advanced shadowing techniques such as <1>Cascaded Shadow Maps (CSM)</1>, <1>Percentage Closer Filtering (PCF)</1>, and <1>Percentage Closer Soft Shadows (PCSS)</1> have not yet been implemented, but are planned for future integration as the engine evolves."
@@ -141,19 +141,34 @@
         },
         "Render": {
             "title": "Render",
-            "content": "Render"
+            "content": [
+                "Pika's rendering interface is designed using the Factory design pattern, with a clear separation between the rendering abstraction layer and the underlying graphics API. The original intent behind this design was to ensure flexibility and allow support for multiple graphics backends such as <1>OpenGL</1>, <1>DirectX 12</1>, <1>Vulkan</1>, and <1>Metal</1>.",
+                "However, I later realized a key limitation with this approach: designing the API to be compatible with all backends means I have to accommodate the least capable one—namely OpenGL. Since OpenGL lacks support for modern features like command buffers and multithreaded rendering, this severely restricts the potential of my rendering system.",
+                "As a result, I plan to fully drop OpenGL in the future and adopt a Vulkan-only backend. Vulkan is not only cross-platform—helping reduce development overhead—but also aligns better with my expertise, allowing me to implement more advanced and efficient rendering features."
+            ]
         },
         "Physics": {
             "title": "Physics",
-            "content": "Physics"
+            "content": [
+                "Physics systems are now an essential part of modern game engines. Currently, the Pika engine only supports physics simulation in 2D scenes. I integrated the open-source <3>Box2D</3> library to add physical collision detection and 2D rigid body components for entities in 2D scenes. For 3D scenes, NVIDIA PhysX is intended to be used for implementing physical simulations, with more advanced physics features planned for future development."
+            ]
         },
         "Serialization": {
             "title": "Serialization",
-            "content": "Serialization"
+            "content1": [
+                "Serialization in Pika includes both scene serialization and deserialization. When saving the current scene state, Pika serializes key scene information into a YAML-based .pika file. You can import a scene by simply dragging it from the Content Browser into the viewport, or by using the Import option from the menu bar."
+            ],
+            "content2": [
+                "In addition, model files are also part of the serialization system. Currently, model data import and export are supported through the Assimp library. To load a 3D model, you can simply drag the corresponding file into the Model Component section."
+            ]
         },
         "Conclusion": {
             "title": "Conclusion",
-            "content": "Conclusion"
+            "content": [
+                "The Pika engine is a work-in-progress project. During my internship, I had limited time to keep it updated. I originally started this engine to integrate the graphics algorithms I had learned into a single impressive project and to use it as a showcase during interviews. Building the core framework consumed a significant amount of my energy, leaving little time to implement various rendering algorithms and engine features.",
+                "Today, I have gained much deeper knowledge in computer graphics. I’ve analyzed the rendering techniques of cutting-edge games like <1><2>Call of Duty: Black Ops 6</2></1> and <1><2>Infinity Nikki</2></1>, and I’m currently studying the rendering concepts presented in <1><2>Real-Time Rendering, 4th Edition</2></1>. I now better understand the complexity behind top-tier engines like Unreal Engine, particularly systems such as <1>Lumen</1> and <1>Nanite</1>.",
+                "With this experience, I’m more prepared than ever to advance the development of the Pika engine. In the future, Pika will focus heavily on 3D capabilities, introducing scripting support, a material system, and more rendering features including—but not limited to—anti-aliasing, ambient occlusion, and global illumination. I also plan to fully abandon OpenGL in favor of Vulkan to achieve more efficient rendering. Stay tuned."
+            ]
         }
         
     }

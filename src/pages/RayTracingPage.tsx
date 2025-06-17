@@ -4,6 +4,7 @@ import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkButton from '../components/LinkButton';
+import PageTurningButton from '../components/PageTurningButton';
 
 const PikaEnginePage: React.FC = () => {
   const { t } = useTranslation();
@@ -30,6 +31,12 @@ const PikaEnginePage: React.FC = () => {
             <h2>Abstract</h2>
             <p>{t(`HomePage.Projects.${id}.description` as any)}</p>
           </section>
+          <div className="page-turning-wrapper">
+            <PageTurningButton
+              currentId="project-raytracing"
+              projects={INFO.projects}
+            />
+          </div>
         </div>
       </div>
     </div>

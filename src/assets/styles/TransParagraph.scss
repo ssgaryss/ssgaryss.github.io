@@ -1,9 +1,20 @@
 .custom-link {
-  color: #868686;
+  color: #868686 !important;
   font-weight: bold;
   text-decoration: none;
 }
 
 .custom-link:hover {
   text-decoration: underline;
+  color: #66bfff !important;
+}
+
+@media (max-width: 700px) {
+  .dark-mode .custom-link {
+    color: #ffffff !important;
+
+    &:hover {
+      color: #66bfff !important;
+    }
+  }
 }

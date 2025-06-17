@@ -1,0 +1,33 @@
+.post-nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.post-nav-button {
+  padding: 0.4rem 0.9rem;
+  font-weight: bold;
+  font-size: 0.6rem;
+  border: 1.5px solid #cbd5e0; 
+  border-radius: 9999px;
+  background-color: transparent;
+  color: #2d3748;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.post-nav-button:hover {
+  background-color: #edf2f7;
+}
+
+
+@media (max-width: 700px) {
+  .dark-mode .post-nav-button {
+    color: #ffffff !important;
+
+    &:hover {
+      color: #66bfff !important;
+    }
+  }
+}

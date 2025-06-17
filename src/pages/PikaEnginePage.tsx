@@ -8,6 +8,8 @@ import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
 import TransText from '../components/TransParagraph';
+import PageTurningButton from '../components/PageTurningButton';
+
 import abstract1 from '../assets/images/project-pika-engine/abstract-2D.mp4';
 import abstract2 from '../assets/images/project-pika-engine/abstract-3D.mp4';
 
@@ -145,20 +147,79 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
             </section>
             <section id="Render">
               <h2>{t('PikaEnginePage.Render.title')}</h2>
-              <p>{t('PikaEnginePage.Render.content')}</p>
+              <p>
+                {t('PikaEnginePage.Render.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Render.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
             </section>
             <section id="Physics">
               <h2>{t('PikaEnginePage.Physics.title')}</h2>
-              <p>{t('PikaEnginePage.Physics.content')}</p>
+              <p>
+                {t('PikaEnginePage.Physics.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Physics.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    links={["https://github.com/erincatto/box2d"]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
             </section>
             <section id="Serialization">
               <h2>{t('PikaEnginePage.Serialization.title')}</h2>
-              <p>{t('PikaEnginePage.Serialization.content')}</p>
+              <p>
+                {t('PikaEnginePage.Serialization.content1', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Serialization.content1" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+              <p>
+                {t('PikaEnginePage.Serialization.content2', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Serialization.content2" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
             </section>
             <section id="Conclusion">
               <h2>{t('PikaEnginePage.Conclusion.title')}</h2>
-              <p>{t('PikaEnginePage.Conclusion.content')}</p>
+              <p>
+                {t('PikaEnginePage.Conclusion.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.Conclusion.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
             </section>
+            <Divider className="contents-divider" />
+            <div className="page-turning-wrapper">
+              <PageTurningButton
+                currentId="project-pika-engine"
+                projects={INFO.projects}
+              />
+            </div>
           </div>
         </div>
       </div>
