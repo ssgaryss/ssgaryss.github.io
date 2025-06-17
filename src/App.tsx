@@ -23,7 +23,7 @@ function App() {
         }
     }
 
-    const ProjectPageMap: Record<string, React.FC> = {
+    const ProjectPageMap: Record<string, React.ComponentType<any>> = {
         'project-pika-engine': PikaEnginePage,
         'project-raytracing': RayTracingPage,
     };
@@ -36,14 +36,20 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     {INFO.projects.map(project => {
-                        const Component = ProjectPageMap[project.id];
-                        return (
-                            <Route 
-                            key={project.id}
-                            path={project.path}
-                            element={<Component />}  // ✅ 这里动态加载组件
-                            />
-                        );
+                    const Component = ProjectPageMap[project.id];
+
+                    // 判断是否需要传 props
+                    const element = project.id === 'project-pika-engine'
+                        ? <Component mode={mode} />
+                        : <Component />;
+
+                    return (
+                        <Route 
+                        key={project.id}
+                        path={project.path}
+                        element={element}
+                        />
+                    );
                     })}
                 </Routes>
                 <Footer />

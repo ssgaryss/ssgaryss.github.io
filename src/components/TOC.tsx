@@ -7,12 +7,16 @@ interface TOCProps {
 }
 
 const TOC: React.FC<TOCProps> = ({ title = "Contents", items }) => {
-  const handleClick = (id: string) => {
+    const handleClick = (id: string) => {
     const section = document.getElementById(id);
+    const navbar = document.getElementById("navigation");
+    const offset = navbar?.clientHeight || 64;
+
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+        const y = section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
     }
-  };
+    };
 
   return (
     <div className="toc">

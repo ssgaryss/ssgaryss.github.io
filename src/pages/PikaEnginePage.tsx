@@ -11,7 +11,11 @@ import TransText from '../components/TransParagraph';
 import abstract1 from '../assets/images/project-pika-engine/abstract-2D.mp4';
 import abstract2 from '../assets/images/project-pika-engine/abstract-3D.mp4';
 
-const PikaEnginePage: React.FC = () => {
+interface PikaEnginePageProps {
+  mode: 'light' | 'dark';
+}
+
+const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
   const { t } = useTranslation();
   const project = INFO.projects.find(p => p.id === 'project-pika-engine')!;
   const contents = [
@@ -32,7 +36,7 @@ const PikaEnginePage: React.FC = () => {
   const { id, link, cover } = project;
 
   return (
-    <div className="project-page-wrapper">
+    <div className={`project-page-wrapper ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
       <div className="project-card">
         <div className="project-content">
           <div className="project-hero">

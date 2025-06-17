@@ -1,7 +1,8 @@
+/* ============ 主容器 ============ */
 .project-page-wrapper {
   display: flex;
   justify-content: center;
-  padding: 1.5rem 0rem;
+  padding: 1.5rem 0;
   margin-top: 3rem;
   background-color: #f5f7fa;
 
@@ -23,6 +24,7 @@
   }
 }
 
+/* ============ 卡片组件 ============ */
 .project-card {
   width: 100%;
   max-width: 900px;
@@ -33,6 +35,7 @@
   margin: 0 auto;
 }
 
+/* ============ 顶部封面图 ============ */
 .project-hero {
   width: 100%;
   overflow: hidden;
@@ -45,8 +48,9 @@
   }
 }
 
+/* ============ 内容区域 ============ */
 .project-content {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   text-align: center;
   color: #3a3f51;
 
@@ -91,18 +95,10 @@
       line-height: 1.6;
       color: gray;
       text-align: left;
-      padding: 0rem 4rem;
+      padding: 0 4rem;
     }
 
-    img {
-      width: 100%;
-      max-width: 100%;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-      padding: 0.5rem;
-    }
-
+    img,
     video {
       width: 100%;
       max-width: 100%;
@@ -114,42 +110,68 @@
   }
 }
 
-@media (max-width: 700px) {
+/* ============ 深色模式 - 默认（PC） ============ */
+.dark-mode .project-page-wrapper {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
+/* ============ 响应式：移动端 ============ */
+@media (max-width: 700px) {
   .project-page-wrapper {
-    padding: 0rem;
+    padding: 0;
   }
 
   .project-card {
     max-width: 100%;
-    margin: 0;
     border-left: none;
     border-right: none;
-    margin: 0 auto;
   }
 
   .project-content {
-    padding: 0rem;
+    padding: 0;
 
     .project-title {
       font-size: 2.25rem;
     }
+
+    .project-detail {
+      padding: 1rem;
+
+      h2 {
+        padding: 1rem 1rem;
+      }
+
+      p {
+        padding: 0 0.5rem;
+      }
+
+      img,
+      video {
+        padding: 0 !important;
+        margin: 2rem 0 !important;
+      }
+    }
   }
 
-  .project-content .project-detail {
-    padding: 1rem 1rem;
+  /* 深色模式下，移动端卡片样式 */
+  .dark-mode .project-card {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
 
-    h2 {
-      padding: 1rem 1rem;
+    .project-title,
+    .project-subtitle,
+    .project-authors,
+    .project-detail h2,
+    .project-detail p {
+      color: white;
     }
 
-    p {
-      padding: 0rem 0.5rem;
+    .contents-divider {
+      background-color: #888;
     }
+  }
 
-    img, video {
-      padding: 0 !important;
-      margin: 2rem 0rem !important;
-    }
+  .dark-mode .project-page-wrapper {
+    background-color: #f5f7fa;
   }
 }

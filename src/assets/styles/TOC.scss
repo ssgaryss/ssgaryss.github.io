@@ -1,5 +1,6 @@
 .toc {
   text-align: left;
+
   h3 {
     text-align: left;
     font-weight: bold;
@@ -24,3 +25,22 @@
     }
   }
 }
+
+@media (max-width: 700px) {
+  .dark-mode .toc {
+    h3 {
+      color: #f0f0f0;
+    }
+
+    ul {
+      li {
+        color: #ccc;
+
+        &:hover {
+          color: #66bfff;
+        }
+      }
+    }
+  }
+}
+
