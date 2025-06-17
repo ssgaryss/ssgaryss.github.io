@@ -12,6 +12,11 @@ import PageTurningButton from '../components/PageTurningButton';
 
 import abstract1 from '../assets/images/project-pika-engine/abstract-2D.mp4';
 import abstract2 from '../assets/images/project-pika-engine/abstract-3D.mp4';
+import ECS from '../assets/images/project-pika-engine/ECS.png';
+import Lighting from '../assets/images/project-pika-engine/Lighting.mp4';
+import Material from '../assets/images/project-pika-engine/Material.png';
+import Physics from '../assets/images/project-pika-engine/Physics.png';
+import Serialization from '../assets/images/project-pika-engine/Serialization.mp4';
 
 interface PikaEnginePageProps {
   mode: 'light' | 'dark';
@@ -21,8 +26,8 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
   const { t } = useTranslation();
   const project = INFO.projects.find(p => p.id === 'project-pika-engine')!;
   const contents = [
-    { id: 'abstract', title: t('PikaEnginePage.Contents.items.abstract') },
-    { id: 'ecs', title: t('PikaEnginePage.Contents.items.ecs') },
+    { id: 'Abstract', title: t('PikaEnginePage.Contents.items.Abstract') },
+    { id: 'ECS', title: t('PikaEnginePage.Contents.items.ECS') },
     { id: 'Lighting&Shadow', title: t('PikaEnginePage.Contents.items.Lighting&Shadow') },
     { id: 'Material', title: t('PikaEnginePage.Contents.items.Material') },
     { id: 'Render', title: t('PikaEnginePage.Contents.items.Render') },
@@ -54,7 +59,7 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
           </div>
           <Divider className="contents-divider" />
           <div className="project-detail">
-            <section id="abstract">
+            <section id="Abstract">
               <h2>{t('PikaEnginePage.Abstract.title')}</h2>
               <p>
                 {t('PikaEnginePage.Abstract.content1', { returnObjects: true }).map(
@@ -91,16 +96,28 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
                 Failed to load video. Please check your connection or try again later.
               </video>
             </section>
-            <section id="ecs">
+            <section id="ECS">
               <h2>{t('PikaEnginePage.ECS.title')}</h2>
               <p>
-                {t('PikaEnginePage.ECS.content', { returnObjects: true }).map((_, index, array) => (
+                {t('PikaEnginePage.ECS.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
                     key={index}
-                    i18nKey={"PikaEnginePage.ECS.content" as any}
+                    i18nKey={"PikaEnginePage.ECS.content1" as any}
                     index={index}
                     isLast={index === array.length - 1}
                     links={["https://github.com/skypjack/entt"]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+              <img src={ECS} alt="Unable to display image" />
+              <p>
+                {t('PikaEnginePage.ECS.content2', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PikaEnginePage.ECS.content2" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
                     breakCount={2}
                   />
                 ))}
@@ -119,6 +136,10 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
+              <video controls>
+                <source src={Lighting} type="video/mp4" />
+                Failed to load video. Please check your connection or try again later.
+              </video>
               <p>
                 {t('PikaEnginePage.Lighting&Shadow.content2', { returnObjects: true }).map((_, index, array) => (
                   <TransText
@@ -144,6 +165,7 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
+              <img src={Material} alt="Unable to display image" />
             </section>
             <section id="Render">
               <h2>{t('PikaEnginePage.Render.title')}</h2>
@@ -168,11 +190,12 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
                     i18nKey={"PikaEnginePage.Physics.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={["https://github.com/erincatto/box2d"]}
+                    links={["https://github.com/erincatto/box2d", "https://github.com/NVIDIAGameWorks/PhysX"]}
                     breakCount={2}
                   />
                 ))}
               </p>
+              <img src={Physics} alt="Unable to display image" />
             </section>
             <section id="Serialization">
               <h2>{t('PikaEnginePage.Serialization.title')}</h2>
@@ -183,10 +206,15 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
                     i18nKey={"PikaEnginePage.Serialization.content1" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={["https://github.com/jbeder/yaml-cpp"]}
                     breakCount={2}
                   />
                 ))}
               </p>
+              <video controls>
+                <source src={Serialization} type="video/mp4" />
+                Failed to load video. Please check your connection or try again later.
+              </video>
               <p>
                 {t('PikaEnginePage.Serialization.content2', { returnObjects: true }).map((_, index, array) => (
                   <TransText
@@ -194,6 +222,7 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
                     i18nKey={"PikaEnginePage.Serialization.content2" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={["https://github.com/assimp/assimp"]}
                     breakCount={2}
                   />
                 ))}

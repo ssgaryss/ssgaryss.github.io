@@ -95,8 +95,8 @@
         "Contents": {
             "title": "Contents",
             "items": {
-                "abstract": "Abstract",
-                "ecs": "Entity Component System",
+                "Abstract": "Abstract",
+                "ECS": "Entity Component System",
                 "Lighting&Shadow": "Lighting & Shadow",
                 "Material": "Material",
                 "Render": "Render",
@@ -117,14 +117,16 @@
         },
         "ECS": {
             "title": "Entity Component System",
-            "content": [
+            "content1": [
                 "The <1>Entity Component System (ECS)</1> is a powerful architectural pattern widely adopted in modern game engines, including <1>Unreal Engine (UE)</1> and <1>Unity</1>, due to its flexibility, scalability, and performance benefits.",
-                "Pika Engine utilizes the third-party library <3>entt</3> to implement its own ECS (Entity Component System). The separation of data and logic allows Pika to efficiently manage entities and their associated components, such as <1>UUID</1>, <1>Material</1>, <1>Mesh</1>, and others.",
+                "Pika Engine utilizes the third-party library <3>entt</3> to implement its own ECS (Entity Component System). The separation of data and logic allows Pika to efficiently manage entities and their associated components, such as <1>UUID</1>, <1>Material</1>, <1>Mesh</1>, and others."
+            ],
+            "content2": [
                 "As shown in the figure above, you can easily configure component properties, add or remove components, and perform other operations through the UI."
             ]
         },
         "Lighting&Shadow": {
-            "title": "Lighting & Shadows",
+            "title": "Lighting & Shadow",
             "content1": [
                 "The Pika engine currently supports point lights, spotlights, and directional lights, each with integrated shadow mapping. Additional lighting types, such as area lights and emissive surfaces, are planned for future updates.",
                 "To reduce common shadow mapping artifacts—particularly <1>moiré patterns</1> and <1>surface acne</1>—the engine leverages <1>reverse-Z</1> buffering alongside enhanced depth precision techniques to improve visual fidelity. <1>Depth bias</1> remains a particularly tricky aspect; a dynamic, slope-aware biasing strategy is planned for future implementation to adapt to varying light directions and surface normals, which is expected to effectively mitigate such artifacts."
@@ -150,16 +152,16 @@
         "Physics": {
             "title": "Physics",
             "content": [
-                "Physics systems are now an essential part of modern game engines. Currently, the Pika engine only supports physics simulation in 2D scenes. I integrated the open-source <3>Box2D</3> library to add physical collision detection and 2D rigid body components for entities in 2D scenes. For 3D scenes, NVIDIA PhysX is intended to be used for implementing physical simulations, with more advanced physics features planned for future development."
+                "Physics systems are now an essential part of modern game engines. Currently, the Pika engine only supports physics simulation in 2D scenes. I integrated the open-source <3>Box2D</3> library to add physical collision detection and 2D rigid body components for entities in 2D scenes. For 3D scenes, NVIDIA <4>PhysX</4> is intended to be used for implementing physical simulations, with more advanced physics features planned for future development."
             ]
         },
         "Serialization": {
             "title": "Serialization",
             "content1": [
-                "Serialization in Pika includes both scene serialization and deserialization. When saving the current scene state, Pika serializes key scene information into a YAML-based .pika file. You can import a scene by simply dragging it from the Content Browser into the viewport, or by using the Import option from the menu bar."
+                "Serialization in Pika includes both scene serialization and deserialization. When saving the current scene state, Pika serializes key scene information into a <3>YAML</3>-based .pika file. You can import a scene by simply dragging it from the <1>Content Browser</1> into the <1>Viewport</1>, or by using the Import option from the menu bar."
             ],
             "content2": [
-                "In addition, model files are also part of the serialization system. Currently, model data import and export are supported through the Assimp library. To load a 3D model, you can simply drag the corresponding file into the Model Component section."
+                "In addition, model files are also part of the serialization system. Currently, model data import and export are supported through the <3>Assimp</3> library. To load a 3D model, you can simply drag the corresponding file into the Model Component section."
             ]
         },
         "Conclusion": {
