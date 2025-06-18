@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.06fac4a6.css",
-    "main.js": "/static/js/main.c27b4dbb.js",
+    "main.css": "/static/css/main.0406b60a.css",
+    "main.js": "/static/js/main.ce3fab30.js",
     "static/js/453.eeebb05b.chunk.js": "/static/js/453.eeebb05b.chunk.js",
     "static/media/Lighting.mp4": "/static/media/Lighting.b17a3af2c5982bce6d3f.mp4",
     "static/media/abstract-3D.mp4": "/static/media/abstract-3D.49a457f37e460c931066.mp4",
-    "static/media/cover.png": "/static/media/cover.6a07c0584dae9d4d15f3.png",
+    "static/media/cover.png": "/static/media/cover.1978eb26ec7a3c2c3d19.png",
     "static/media/Serialization.mp4": "/static/media/Serialization.472a02a74caf95707731.mp4",
     "static/media/abstract-2D.mp4": "/static/media/abstract-2D.bce353ec96dc31b91b6d.mp4",
     "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
@@ -14,12 +14,12 @@
     "static/media/Physics.png": "/static/media/Physics.7e01d5448035d6f317ec.png",
     "static/media/ECS.png": "/static/media/ECS.8849dd82ff5b57aaa17d.png",
     "index.html": "/index.html",
-    "main.06fac4a6.css.map": "/static/css/main.06fac4a6.css.map",
-    "main.c27b4dbb.js.map": "/static/js/main.c27b4dbb.js.map",
+    "main.0406b60a.css.map": "/static/css/main.0406b60a.css.map",
+    "main.ce3fab30.js.map": "/static/js/main.ce3fab30.js.map",
     "453.eeebb05b.chunk.js.map": "/static/js/453.eeebb05b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06fac4a6.css",
-    "static/js/main.c27b4dbb.js"
+    "static/css/main.0406b60a.css",
+    "static/js/main.ce3fab30.js"
   ]
 }
