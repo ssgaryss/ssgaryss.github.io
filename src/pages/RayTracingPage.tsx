@@ -8,13 +8,14 @@ import PageTurningButton from '../components/PageTurningButton';
 
 const PikaEnginePage: React.FC = () => {
   const { t } = useTranslation();
-  const project = INFO.projects.find(p => p.id === 'project-raytracing')!;
+  const current_page_id = 'project-raytracing';
+  const project = INFO.projects.find(p => p.id === current_page_id)!;
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, []);
 
-  const { id, link, cover } = project;
+  const { id, cover } = project;
 
   return (
     <div className="project-page-wrapper">
@@ -25,7 +26,7 @@ const PikaEnginePage: React.FC = () => {
           </div>
           <h1 className="project-title">{t(`HomePage.Projects.${id}.title` as any)}</h1>
           <div className="project-links">
-            <LinkButton href={link} label="Code" icon={<GitHubIcon />} />
+            <LinkButton href="https://github.com/ssgaryss/Ray-Tracing.git" label="Code" icon={<GitHubIcon />} />
           </div>
           <section className="project-abstract">
             <h2>Abstract</h2>

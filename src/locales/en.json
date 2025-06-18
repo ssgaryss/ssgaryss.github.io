@@ -64,6 +64,10 @@
                 "title": "Pika Engine",
                 "description": "Pika Engine is a self-developed mini-engine designed to apply and realize the knowledge I’ve acquired through hands-on implementation."
             },
+            "project-cod-analysis": {
+                "title": "CoD: BO6 Analysis",
+                "description": "Conducted in-depth analysis of the 2024 Call of Duty: Black Ops VI rendering techniques during an internship at Tencent."
+            },
             "project-raytracing": {
                 "title": "Ray-Tracing",
 			    "description": "A ray-tracing practice project. Currently implemented with CPU multithreading; the goal is to migrate to Vulkan for GPU acceleration."
@@ -172,7 +176,19 @@
                 "With this experience, I’m more prepared than ever to advance the development of the Pika engine. In the future, Pika will focus heavily on 3D capabilities, introducing scripting support, a material system, and more rendering features including—but not limited to—anti-aliasing, ambient occlusion, and global illumination. I also plan to fully abandon OpenGL in favor of Vulkan to achieve more efficient rendering. Stay tuned."
             ]
         }
-        
+    },
+
+    "CODAnalysisPage": {
+        "Title": "Call of Duty: Black Ops VI Analysis",
+        "Contents": {
+            "title": "Contents",
+            "items": {
+                "Abstract": "Abstract"
+            }
+        },
+        "Abstract": {
+            "title": "Abstract"
+        }
     }
 
 }

@@ -11,6 +11,7 @@ import INFO from "./assets/data/user";
 import HomePage from './pages/HomePage';
 import PikaEnginePage from './pages/PikaEnginePage';
 import RayTracingPage from './pages/RayTracingPage';
+import CODAnalysisPage from './pages/CODAnalysisPage';
 
 function App() {
     const [mode, setMode] = useState<string>('dark');
@@ -25,6 +26,7 @@ function App() {
 
     const ProjectPageMap: Record<string, React.ComponentType<any>> = {
         'project-pika-engine': PikaEnginePage,
+        'project-cod-analysis': CODAnalysisPage,
         'project-raytracing': RayTracingPage,
     };
 
@@ -45,9 +47,9 @@ function App() {
 
                     return (
                         <Route 
-                        key={project.id}
-                        path={project.path}
-                        element={element}
+                            key={project.id}
+                            path={project.path}
+                            element={element}
                         />
                     );
                     })}

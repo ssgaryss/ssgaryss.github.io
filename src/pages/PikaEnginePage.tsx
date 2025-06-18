@@ -18,13 +18,14 @@ import Material from '../assets/images/project-pika-engine/Material.png';
 import Physics from '../assets/images/project-pika-engine/Physics.png';
 import Serialization from '../assets/images/project-pika-engine/Serialization.mp4';
 
-interface PikaEnginePageProps {
+interface PageProps {
   mode: 'light' | 'dark';
 }
 
-const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
+const PikaEnginePage: React.FC<PageProps> = ({ mode }) => {
   const { t } = useTranslation();
-  const project = INFO.projects.find(p => p.id === 'project-pika-engine')!;
+  const current_page_id = 'project-pika-engine';
+  const project = INFO.projects.find(p => p.id === current_page_id)!;
   const contents = [
     { id: 'Abstract', title: t('PikaEnginePage.Contents.items.Abstract') },
     { id: 'ECS', title: t('PikaEnginePage.Contents.items.ECS') },
@@ -40,7 +41,7 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, []);
 
-  const { id, link, cover } = project;
+  const { id, cover } = project;
 
   return (
     <div className={`project-page-wrapper ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
@@ -51,7 +52,7 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
           </div>
           <h1 className="project-title">{t('PikaEnginePage.Title')}</h1>
           <div className="project-links">
-            <LinkButton href={link} label="Code" icon={<GitHubIcon />} />
+            <LinkButton href="https://github.com/ssgaryss/Pika.git" label="Code" icon={<GitHubIcon />} />
             <LinkButton href="/files/项目介绍.pptx" label="PPT" icon={<InsertDriveFileIcon />} />
           </div>
           <div className="project-contents">
@@ -245,7 +246,7 @@ const PikaEnginePage: React.FC<PikaEnginePageProps> = ({ mode }) => {
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">
               <PageTurningButton
-                currentId="project-pika-engine"
+                currentId={current_page_id}
                 projects={INFO.projects}
               />
             </div>

@@ -64,6 +64,10 @@
                 "title": "Pika 引擎",
                 "description": "Pika 引擎是个人独立开发的迷你引擎，旨在将我之所学付诸于实践。"
             },
+            "project-cod-analysis": {
+                "title": "使命召唤：黑色行动6 分析",
+                "description": "在腾讯实习期间，深入分析了2024年《使命召唤：黑色行动VI》的渲染技术。"
+            },
             "project-raytracing": {
                 "title": "光线追踪",
                 "description": "一个光线追踪练习项目。目前已实现 CPU 多线程版本，目标是迁移至 Vulkan 实现 GPU 加速。"

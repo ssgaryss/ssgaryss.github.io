@@ -1,5 +1,6 @@
 import { toBeChecked } from '@testing-library/jest-dom/matchers';
 import pikaCover from '../images/project-pika-engine/cover.png';
+import codCover from '../images/project-cod-analysis/cover.png';
 import raytracingCover from '../images/project-raytracing/cover.png';
 
 const INFO = {
@@ -20,7 +21,6 @@ const INFO = {
 			title: "Pika Engine",
 			date: "2024.5 - 2024.10",
 			path: "/projects/project-pika-engine",
-			link: "https://github.com/ssgaryss/Pika.git",
 			cover: pikaCover,
 			keyword: [
 				"Personal Project",
@@ -30,19 +30,29 @@ const INFO = {
 				"Serialization"
 			]
 		},
-
 		{
-			id: "project-raytracing",
-			title: "Ray-Tracing",
-			date: "2024.7 - 2024.7",
-			path: "/projects/project-raytracing",
-			link: "https://github.com/ssgaryss/Ray-Tracing.git",
-			cover: raytracingCover,
+			id: "project-cod-analysis",
+			title: "CoD: BO6 Analysis",
+			date: "2025.6 - 2025.6",
+			path: "/projects/project-cod-analysis",
+			cover: codCover,
 			keyword: [
-				"Personal Project",
-				"CPU Muiti-threading"
+				"Tencent",
+				"Rendering Analysis"
 			]
 		},
+		// {
+		// 	id: "project-raytracing",
+		// 	title: "Ray-Tracing",
+		// 	date: "2024.7 - 2024.7",
+		// 	path: "/projects/project-raytracing",
+		// 	link: "https://github.com/ssgaryss/Ray-Tracing.git",
+		// 	cover: raytracingCover,
+		// 	keyword: [
+		// 		"Personal Project",
+		// 		"CPU Muiti-threading"
+		// 	]
+		// },
 	],
 };
 
