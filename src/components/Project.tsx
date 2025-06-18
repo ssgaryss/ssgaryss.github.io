@@ -20,7 +20,7 @@ function Project() {
                             <span className="project-title">
                                 {t(`HomePage.Projects.${project.id}.title` as any)}
                             </span>
-                            <span className="project-date">{project.date}</span>
+                            {/* <span className="project-date">{project.date}</span> */}
                         </h2>
                         <p>{t(`HomePage.Projects.${project.id}.description` as any)}</p>
                         <div className="chip-container">
