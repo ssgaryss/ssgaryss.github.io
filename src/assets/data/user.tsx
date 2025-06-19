@@ -2,6 +2,7 @@ import { toBeChecked } from '@testing-library/jest-dom/matchers';
 import pikaCover from '../images/project-pika-engine/cover.png';
 import codCover from '../images/project-cod-analysis/cover.png';
 import nikkiCover from '../images/project-nikki-analysis/cover.png';
+import rdcparserCover from '../images/project-rdc-parser/cover.png';
 import raytracingCover from '../images/project-raytracing/cover.png';
 
 const INFO = {
@@ -51,6 +52,17 @@ const INFO = {
 			keyword: [
 				"Tencent",
 				"Rendering Analysis"
+			]
+		},
+		{
+			id: "project-rdc-parser",
+			title: "RDC-Parser",
+			date: "2025.4 - 2025.4",
+			path: "/projects/project-rdc-parser",
+			cover: rdcparserCover,
+			keyword: [
+				"Tencent",
+				"RenderDoc Tool"
 			]
 		},
 		// {

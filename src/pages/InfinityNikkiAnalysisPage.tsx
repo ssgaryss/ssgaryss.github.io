@@ -55,7 +55,7 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"InfinityNikkiAnalysisPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={[`mailto:${INFO.main.email}`, "/files/无限暖暖渲染方案.png"]}
+                    links={[`mailto:${INFO.main.email}`, "https://infinitynikki.nuanpaper.com/home", "/files/无限暖暖渲染方案.png"]}
                     breakCount={2}
                   />
                 ))}

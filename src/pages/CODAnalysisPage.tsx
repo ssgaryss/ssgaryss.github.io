@@ -61,7 +61,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"CODAnalysisPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={[`mailto:${INFO.main.email}`]}
+                    links={[`mailto:${INFO.main.email}`, "https://www.callofduty.com/cn/zh/blackops6"]}
                     breakCount={2}
                   />
                 ))}

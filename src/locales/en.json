@@ -72,6 +72,10 @@
                 "title": "Infinity Nikki Analysis",
                 "description": "Conducted an in-depth analysis of the rendering techniques used in the 2024 release of Infinity Nikki during an internship at Tencent."
             },
+            "project-rdc-parser": {
+                "title": "RDC-Parser",
+                "description": "RDC-Parser is a command-line tool that directly parses .rdc files, serializes their information into JSON format, and extracts associated mesh, texture, and shader data."
+            },
             "project-raytracing": {
                 "title": "Ray-Tracing",
 			    "description": "A ray-tracing practice project. Currently implemented with CPU multithreading; the goal is to migrate to Vulkan for GPU acceleration."
@@ -176,7 +180,7 @@
             "title": "Conclusion",
             "content": [
                 "The Pika engine is a work-in-progress project. During my internship, I had limited time to keep it updated. I originally started this engine to integrate the graphics algorithms I had learned into a single impressive project and to use it as a showcase during interviews. Building the core framework consumed a significant amount of my energy, leaving little time to implement various rendering algorithms and engine features.",
-                "Today, I have gained much deeper knowledge in computer graphics. I’ve analyzed the rendering techniques of cutting-edge games like <1><2>Call of Duty: Black Ops 6</2></1> and <1><2>Infinity Nikki</2></1>, and I’m currently studying the rendering concepts presented in <1><2>Real-Time Rendering, 4th Edition</2></1>. I now better understand the complexity behind top-tier engines like Unreal Engine, particularly systems such as <1>Lumen</1> and <1>Nanite</1>.",
+                "Today, I have gained much deeper knowledge in computer graphics. I’ve analyzed the rendering techniques of cutting-edge games like <1><2><3>Call of Duty: Black Ops 6</3></2></1> and <1><2><4>Infinity Nikki</4></2></1>, and I’m currently studying the rendering concepts presented in <1><2>Real-Time Rendering, 4th Edition</2></1>. I now better understand the complexity behind top-tier engines like Unreal Engine, particularly systems such as <1>Lumen</1> and <1>Nanite</1>.",
                 "With this experience, I’m more prepared than ever to advance the development of the Pika engine. In the future, Pika will focus heavily on 3D capabilities, introducing scripting support, a material system, and more rendering features including—but not limited to—anti-aliasing, ambient occlusion, and global illumination. I also plan to fully abandon OpenGL in favor of Vulkan to achieve more efficient rendering. Stay tuned."
             ]
         }
@@ -204,7 +208,7 @@
             "title": "Abstract",
             "content": [
                 "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <3>contact me</3> for prompt removal.",
-                "This blog presents a summary of my <1>rendering analysis</1> of Call of Duty: Black Ops VI and a review of the associated rendering techniques. The full analysis document is available for <4>download</4> via the button above."
+                "This blog presents a summary of my <1>rendering analysis</1> of <1><2><4>Call of Duty: Black Ops VI</4></2></1> and a review of the associated rendering techniques. The full analysis document is available for <5>download</5> via the button above."
             ]
         },
         "DOF": {
@@ -284,7 +288,7 @@
             "title": "Abstract",
             "content": [
                 "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <3>contact me</3> for prompt removal.",
-                "This blog presents a summary of my <1>rendering analysis</1> of Infinity Nikki and a review of the associated rendering techniques. The full analysis document is available for <4>download</4> via the button above."
+                "This blog presents a summary of my <1>rendering analysis</1> of <1><2><4>Infinity Nikki</4></2></1> and a review of the associated rendering techniques. The full analysis document is available for <5>download</5> via the button above."
             ]
         },
         "PPLL": {
@@ -303,6 +307,22 @@
             "title": "Screen Space Ambient Occlusion",
             "content": [
                 "Screen Space Ambient Occlusion"
+            ]
+        }
+    },
+
+    "RDCParserPage": {
+        "Title": "RDC-Parser",
+        "Contents": {
+            "title": "Contents",
+            "items": {
+                "Abstract": "Abstract"
+            }
+        },
+        "Abstract": {
+            "title": "Abstract",
+            "content": [
+                "RDC-Parser"
             ]
         }
     }

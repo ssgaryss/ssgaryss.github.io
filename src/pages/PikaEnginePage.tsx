@@ -238,6 +238,7 @@ const PikaEnginePage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"PikaEnginePage.Conclusion.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={["https://www.callofduty.com/cn/zh/blackops6", "https://infinitynikki.nuanpaper.com/home"]}
                     breakCount={2}
                   />
                 ))}
