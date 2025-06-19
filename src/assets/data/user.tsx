@@ -1,6 +1,7 @@
 import { toBeChecked } from '@testing-library/jest-dom/matchers';
 import pikaCover from '../images/project-pika-engine/cover.png';
 import codCover from '../images/project-cod-analysis/cover.png';
+import nikkiCover from '../images/project-nikki-analysis/cover.png';
 import raytracingCover from '../images/project-raytracing/cover.png';
 
 const INFO = {
@@ -36,6 +37,17 @@ const INFO = {
 			date: "2025.6 - 2025.6",
 			path: "/projects/project-cod-analysis",
 			cover: codCover,
+			keyword: [
+				"Tencent",
+				"Rendering Analysis"
+			]
+		},
+		{
+			id: "project-nikki-analysis",
+			title: "Infinity Nikki Analysis",
+			date: "2024.12 - 2025.1",
+			path: "/projects/project-nikki-analysis",
+			cover: nikkiCover,
 			keyword: [
 				"Tencent",
 				"Rendering Analysis"

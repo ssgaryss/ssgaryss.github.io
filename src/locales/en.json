@@ -68,6 +68,10 @@
                 "title": "CoD: BO6 Analysis",
                 "description": "Conducted an in-depth analysis of the rendering techniques used in the 2024 release of Call of Duty: Black Ops VI during an internship at Tencent."
             },
+            "project-nikki-analysis": {
+                "title": "Infinity Nikki Analysis",
+                "description": "Conducted an in-depth analysis of the rendering techniques used in the 2024 release of Infinity Nikki during an internship at Tencent."
+            },
             "project-raytracing": {
                 "title": "Ray-Tracing",
 			    "description": "A ray-tracing practice project. Currently implemented with CPU multithreading; the goal is to migrate to Vulkan for GPU acceleration."
@@ -187,7 +191,28 @@
             }
         },
         "Abstract": {
-            "title": "Abstract"
+            "title": "Abstract",
+            "content": [
+                "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <3>contact me</3> for prompt removal.",
+                "This blog presents a summary of my <1>rendering analysis</1> of Call of Duty: Black Ops VI and a review of the associated rendering techniques. The full analysis document is available for <4>download</4> via the button above."
+            ]
+        }
+    },
+
+    "InfinityNikkiAnalysisPage": {
+        "Title": "Infinity Nikki",
+        "Contents": {
+            "title": "Contents",
+            "items": {
+                "Abstract": "Abstract"
+            }
+        },
+        "Abstract": {
+            "title": "Abstract",
+            "content": [
+                "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <3>contact me</3> for prompt removal.",
+                "This blog presents a summary of my <1>rendering analysis</1> of Infinity Nikki and a review of the associated rendering techniques. The full analysis document is available for <4>download</4> via the button above."
+            ]
         }
     }
 

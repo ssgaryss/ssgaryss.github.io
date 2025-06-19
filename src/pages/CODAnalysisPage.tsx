@@ -3,20 +3,11 @@ import { useTranslation } from 'react-i18next';
 import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
 import { Box, Typography, Divider } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
 import TransText from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
-
-import abstract1 from '../assets/images/project-pika-engine/abstract-2D.mp4';
-import abstract2 from '../assets/images/project-pika-engine/abstract-3D.mp4';
-import ECS from '../assets/images/project-pika-engine/ECS.png';
-import Lighting from '../assets/images/project-pika-engine/Lighting.mp4';
-import Material from '../assets/images/project-pika-engine/Material.png';
-import Physics from '../assets/images/project-pika-engine/Physics.png';
-import Serialization from '../assets/images/project-pika-engine/Serialization.mp4';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -53,7 +44,19 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
           <Divider className="contents-divider" />
           <div className="project-detail">
             <section id="Abstract">
-                
+              <h2>{t('CODAnalysisPage.Abstract.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Abstract.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Abstract.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    links={[`mailto:${INFO.main.email}`]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">

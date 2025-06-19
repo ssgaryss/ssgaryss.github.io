@@ -68,6 +68,10 @@
                 "title": "使命召唤:黑色行动6",
                 "description": "在腾讯实习期间，深入分析了2024年10月发布的游戏《使命召唤：黑色行动VI》的渲染技术。"
             },
+            "project-nikki-analysis": {
+                "title": "无限暖暖",
+                "description": "在腾讯实习期间，深入分析了2024年12月发布的游戏《无限暖暖》的渲染技术。"
+            },
             "project-raytracing": {
                 "title": "光线追踪",
                 "description": "一个光线追踪练习项目。目前已实现 CPU 多线程版本，目标是迁移至 Vulkan 实现 GPU 加速。"
