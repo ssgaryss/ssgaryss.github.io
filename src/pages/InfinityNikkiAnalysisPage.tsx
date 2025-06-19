@@ -19,6 +19,9 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
   const project = INFO.projects.find(p => p.id === current_page_id)!;
   const contents = [
     { id: 'Abstract', title: t('InfinityNikkiAnalysisPage.Contents.items.Abstract') },
+    { id: 'PPLL', title: t('InfinityNikkiAnalysisPage.Contents.items.PPLL') },
+    { id: 'ShellFur', title: t('InfinityNikkiAnalysisPage.Contents.items.ShellFur') },
+    { id: 'SSAO', title: t('InfinityNikkiAnalysisPage.Contents.items.SSAO') },
   ];
   
   useEffect(() => {
@@ -53,6 +56,48 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     index={index}
                     isLast={index === array.length - 1}
                     links={[`mailto:${INFO.main.email}`, "/files/无限暖暖渲染方案.png"]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="PPLL">
+              <h2>{t('InfinityNikkiAnalysisPage.PPLL.title')}</h2>
+              <p>
+                {t('InfinityNikkiAnalysisPage.PPLL.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"InfinityNikkiAnalysisPage.PPLL.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="ShellFur">
+              <h2>{t('InfinityNikkiAnalysisPage.ShellFur.title')}</h2>
+              <p>
+                {t('InfinityNikkiAnalysisPage.ShellFur.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"InfinityNikkiAnalysisPage.ShellFur.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="SSAO">
+              <h2>{t('InfinityNikkiAnalysisPage.SSAO.title')}</h2>
+              <p>
+                {t('InfinityNikkiAnalysisPage.SSAO.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"InfinityNikkiAnalysisPage.SSAO.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
                     breakCount={2}
                   />
                 ))}

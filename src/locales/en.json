@@ -55,7 +55,7 @@
             "Time3": {
                 "title": "Game Client Development Intern",
                 "subtitle": "Tencent Lightspeed Studios",
-                "content": "Unreal Engine, RenderDoc, DCC Plugin Development"
+                "content": "Unreal Engine, RenderDoc, DCC Plugin Development, Rendering Technique Analysis"
             }
         },
         "Projects": {
@@ -187,7 +187,17 @@
         "Contents": {
             "title": "Contents",
             "items": {
-                "Abstract": "Abstract"
+                "Abstract": "Abstract",
+                "DOF": "Depth of Field",
+                "AA": "Anti-Aliasing",
+                "AO": "Ambient Occlusion",
+                "Reflection": "Reflection",
+                "GI": "Global Illumination",
+                "Shadow": "Shadow",
+                "Effects": "Effects",
+                "AE": "Auto Exposure",
+                "Static": "Static Geometry Rendering",
+                "Animation": "Animation"
             }
         },
         "Abstract": {
@@ -195,6 +205,66 @@
             "content": [
                 "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <3>contact me</3> for prompt removal.",
                 "This blog presents a summary of my <1>rendering analysis</1> of Call of Duty: Black Ops VI and a review of the associated rendering techniques. The full analysis document is available for <4>download</4> via the button above."
+            ]
+        },
+        "DOF": {
+            "title": "Depth of Field",
+            "content": [
+                "Depth of Field"
+            ]
+        },
+        "AA": {
+            "title": "Anti-Aliasing",
+            "content": [
+                "Anti-Aliasing"
+            ]
+        },
+        "AO": {
+            "title": "Ambient Occlusion",
+            "content": [
+                "Ambient Occlusion"
+            ]
+        },
+        "Reflection": {
+            "title": "Reflection",
+            "content": [
+                "Reflection"
+            ]
+        },
+        "GI": {
+            "title": "Global Illumination",
+            "content": [
+                "Global Illumination"
+            ]
+        },
+        "Shadow": {
+            "title": "Shadow",
+            "content": [
+                "Shadow"
+            ]
+        },
+        "Effects": {
+            "title": "Effects",
+            "content": [
+                "Effects"
+            ]
+        },
+        "AE": {
+            "title": "Auto Exposure",
+            "content": [
+                "Auto Exposure"
+            ]
+        },
+        "Static": {
+            "title": "Static Geometry Rendering",
+            "content": [
+                "Static Geometry Rendering"
+            ]
+        },
+        "Animation": {
+            "title": "Animation",
+            "content": [
+                "Animation"
             ]
         }
     },
@@ -204,7 +274,10 @@
         "Contents": {
             "title": "Contents",
             "items": {
-                "Abstract": "Abstract"
+                "Abstract": "Abstract",
+                "PPLL": "Per-Pixel Linked List OIT",
+                "ShellFur": "Shell-Based Fur Rendering",
+                "SSAO": "Screen Space Ambient Occlusion"
             }
         },
         "Abstract": {
@@ -212,6 +285,24 @@
             "content": [
                 "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <3>contact me</3> for prompt removal.",
                 "This blog presents a summary of my <1>rendering analysis</1> of Infinity Nikki and a review of the associated rendering techniques. The full analysis document is available for <4>download</4> via the button above."
+            ]
+        },
+        "PPLL": {
+            "title": "Per-Pixel Linked List OIT",
+            "content": [
+                "OIT"
+            ]
+        },
+        "ShellFur": {
+            "title": "Shell-Based Fur Rendering",
+            "content": [
+                "Shell-Based Fur Rendering"
+            ]
+        },
+        "SSAO": {
+            "title": "Screen Space Ambient Occlusion",
+            "content": [
+                "Screen Space Ambient Occlusion"
             ]
         }
     }

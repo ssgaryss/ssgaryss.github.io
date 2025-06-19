@@ -19,6 +19,15 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
   const project = INFO.projects.find(p => p.id === current_page_id)!;
   const contents = [
     { id: 'Abstract', title: t('CODAnalysisPage.Contents.items.Abstract') },
+    { id: 'DOF', title: t('CODAnalysisPage.Contents.items.DOF') },
+    { id: 'AA', title: t('CODAnalysisPage.Contents.items.AA') },
+    { id: 'AO', title: t('CODAnalysisPage.Contents.items.AO') },
+    { id: 'Reflection', title: t('CODAnalysisPage.Contents.items.Reflection') },
+    { id: 'GI', title: t('CODAnalysisPage.Contents.items.GI') },
+    { id: 'Effects', title: t('CODAnalysisPage.Contents.items.Effects') },
+    { id: 'AE', title: t('CODAnalysisPage.Contents.items.AE') },
+    { id: 'Static', title: t('CODAnalysisPage.Contents.items.Static') },
+    { id: 'Animation', title: t('CODAnalysisPage.Contents.items.Animation') },
   ];
   
   useEffect(() => {
@@ -53,6 +62,146 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     index={index}
                     isLast={index === array.length - 1}
                     links={[`mailto:${INFO.main.email}`]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="DOF">
+              <h2>{t('CODAnalysisPage.DOF.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.DOF.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.DOF.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="AA">
+              <h2>{t('CODAnalysisPage.AA.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.AA.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.AA.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="AO">
+              <h2>{t('CODAnalysisPage.AO.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.AO.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.AO.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Reflection">
+              <h2>{t('CODAnalysisPage.Reflection.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Reflection.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Reflection.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="GI">
+              <h2>{t('CODAnalysisPage.GI.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.GI.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.GI.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Shadow">
+              <h2>{t('CODAnalysisPage.Shadow.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Shadow.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Shadow.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Effects">
+              <h2>{t('CODAnalysisPage.Effects.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Effects.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Effects.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="AE">
+              <h2>{t('CODAnalysisPage.AE.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.AE.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.AE.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Static">
+              <h2>{t('CODAnalysisPage.Static.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Static.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Static.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Animation">
+              <h2>{t('CODAnalysisPage.Animation.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Animation.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Animation.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
                     breakCount={2}
                   />
                 ))}
