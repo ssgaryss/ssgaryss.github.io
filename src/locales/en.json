@@ -16,7 +16,7 @@
                 "title": "Game Client Development",
                 "content": [
                     "I specialize in <1><2>game client development</2></1> with hands-on experience from my internship at <1><2>Tencent Lightspeed Studio</2></1>.",
-                    "I am skilled in using <1><2>RenderDoc</2></1> for frame capturing and reverse-engineering complex rendering workflows.",
+                    "I am skilled in using <1><2>RenderDoc</2></1> for frame capturing and reverse-engineering complex rendering workflows. During my internship, I conducted in-depth analysis of the rendering techniques used in several recent games, including <1><2>Call of Duty: Black Ops VI</2></1> and <1><2>Infinity Nikki</2></1>.",
                     "With a strong foundation in <1><2>OpenGL</2></1> and a portfolio of related projects, I also have a working knowledge of <1><2>Vulkan</2></1>.",
                     "Additionally, I am familiar with <1><2>Unreal Engine</2></1> and have experience developing custom plugins to extend its functionality."
                 ]
@@ -66,7 +66,7 @@
             },
             "project-cod-analysis": {
                 "title": "CoD: BO6 Analysis",
-                "description": "Conducted in-depth analysis of the 2024 Call of Duty: Black Ops VI rendering techniques during an internship at Tencent."
+                "description": "Conducted an in-depth analysis of the rendering techniques used in the 2024 release of Call of Duty: Black Ops VI during an internship at Tencent."
             },
             "project-raytracing": {
                 "title": "Ray-Tracing",
