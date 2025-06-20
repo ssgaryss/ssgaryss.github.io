@@ -80,6 +80,10 @@
                 "title": "PUBGConfigUpgrader",
                 "description": "PUBGConfigUpgrader is a UE Commandlet plugin designed to automate the conversion of configuration files for the Game for Peace (PUBG Mobile China) project during its migration from UE4 to UE5.4."
             },
+            "project-model-gray": {
+                "title": "ModelGray",
+                "description": "ModelGray is an AI-based heightmap generation plugin that I helped develop for Tencent’s art team. It enables convenient one-click creation of heightmaps for subsequent relief sculpting and more, and I supported versions for both ZBrush and Blender."
+            },
             "project-raytracing": {
                 "title": "Ray-Tracing",
 			    "description": "A ray-tracing practice project. Currently implemented with CPU multithreading; the goal is to migrate to Vulkan for GPU acceleration."
@@ -343,6 +347,22 @@
             "title": "Abstract",
             "content": [
                 "PUBGConfigUpgraderPage"
+            ]
+        }
+    },
+    
+    "ModelGrayPage": {
+        "Title": "ModelGray",
+        "Contents": {
+            "title": "Contents",
+            "items": {
+                "Abstract": "Abstract"
+            }
+        },
+        "Abstract": {
+            "title": "Abstract",
+            "content": [
+                "ModelGrayPage"
             ]
         }
     }

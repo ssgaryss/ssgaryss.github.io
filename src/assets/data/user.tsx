@@ -4,6 +4,7 @@ import codCover from '../images/project-cod-analysis/cover.png';
 import nikkiCover from '../images/project-nikki-analysis/cover.png';
 import rdcparserCover from '../images/project-rdc-parser/cover.png';
 import pubgupgraderCover from '../images/project-pubg-upgrader/cover.png';
+import modelgrayCover from '../images/project-model-gray/cover.png';
 
 const INFO = {
 	main: {
@@ -75,6 +76,19 @@ const INFO = {
 				"Tencent",
 				"UE Plugin",
 				"Game for Peace"
+			]
+		},
+		{
+			id: "project-model-gray",
+			title: "ModelGray",
+			date: "2025.3 - 2025.3",
+			path: "/projects/project-model-gray",
+			cover: modelgrayCover,
+			keyword: [
+				"Tencent",
+				"Model Heightmap Generation",
+				"ZBrush Plugin",
+				"Blender Plugin"
 			]
 		},
 		// {

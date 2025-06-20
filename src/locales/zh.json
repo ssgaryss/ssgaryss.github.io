@@ -80,6 +80,10 @@
                 "title": "PUBGConfigUpgrader",
                 "description": "PUBGConfigUpgrader是一个UE Commandlet插件工具，旨在帮助和平精英项目在从UE4迁移至UE5.4过程中，自动化转换其配置文件。"
             },
+            "project-model-gray": {
+                "title": "ModelGray",
+                "description": "ModelGray 是由我支持开发的供腾讯美术团队使用的 AI 高度图生成插件，可以方便一键生成高度图供后续浮雕生成等使用，我为其支持了 ZBrush 和 Blender 两个版本。"
+            },
             "project-raytracing": {
                 "title": "光线追踪",
                 "description": "一个光线追踪练习项目。目前已实现 CPU 多线程版本，目标是迁移至 Vulkan 实现 GPU 加速。"
