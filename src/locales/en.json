@@ -76,6 +76,10 @@
                 "title": "RDC-Parser",
                 "description": "RDC-Parser is a command-line tool that directly parses .rdc files, serializes their information into JSON format, and extracts associated mesh, texture, and shader data."
             },
+            "project-pubg-upgrader": {
+                "title": "PUBGConfigUpgrader",
+                "description": "PUBGConfigUpgrader is a UE Commandlet plugin designed to automate the conversion of configuration files for the Game for Peace (PUBG Mobile China) project during its migration from UE4 to UE5.4."
+            },
             "project-raytracing": {
                 "title": "Ray-Tracing",
 			    "description": "A ray-tracing practice project. Currently implemented with CPU multithreading; the goal is to migrate to Vulkan for GPU acceleration."
@@ -323,6 +327,22 @@
             "title": "Abstract",
             "content": [
                 "RDC-Parser"
+            ]
+        }
+    },
+
+    "PUBGConfigUpgraderPage": {
+        "Title": "PUBGConfigUpgrader",
+        "Contents": {
+            "title": "Contents",
+            "items": {
+                "Abstract": "Abstract"
+            }
+        },
+        "Abstract": {
+            "title": "Abstract",
+            "content": [
+                "PUBGConfigUpgraderPage"
             ]
         }
     }

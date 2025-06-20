@@ -13,6 +13,7 @@ import PikaEnginePage from './pages/PikaEnginePage';
 import CODAnalysisPage from './pages/CODAnalysisPage';
 import InfinityNikkiAnalysisPage from './pages/InfinityNikkiAnalysisPage';
 import RDCParserPage from './pages/RDCParserPage';
+import PUBGConfigUpgraderPage from './pages/PUBGConfigUpgraderPage';
 import RayTracingPage from './pages/RayTracingPage';
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
         'project-cod-analysis': CODAnalysisPage,
         'project-nikki-analysis': InfinityNikkiAnalysisPage,
         'project-rdc-parser': RDCParserPage,
-        'project-raytracing': RayTracingPage,
+        'project-pubg-upgrader': PUBGConfigUpgraderPage,
+        // 'project-raytracing': RayTracingPage,
     };
 
     return (

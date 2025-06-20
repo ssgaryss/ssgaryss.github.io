@@ -3,7 +3,7 @@ import pikaCover from '../images/project-pika-engine/cover.png';
 import codCover from '../images/project-cod-analysis/cover.png';
 import nikkiCover from '../images/project-nikki-analysis/cover.png';
 import rdcparserCover from '../images/project-rdc-parser/cover.png';
-import raytracingCover from '../images/project-raytracing/cover.png';
+import pubgupgraderCover from '../images/project-pubg-upgrader/cover.png';
 
 const INFO = {
 	main: {
@@ -63,6 +63,18 @@ const INFO = {
 			keyword: [
 				"Tencent",
 				"RenderDoc Tool"
+			]
+		},
+		{
+			id: "project-pubg-upgrader",
+			title: "PUBGConfigUpgrader",
+			date: "2025.3 - 2025.3",
+			path: "/projects/project-pubg-upgrader",
+			cover: pubgupgraderCover,
+			keyword: [
+				"Tencent",
+				"UE Plugin",
+				"Game for Peace"
 			]
 		},
 		// {
