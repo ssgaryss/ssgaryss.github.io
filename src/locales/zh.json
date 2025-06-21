@@ -194,6 +194,45 @@
         }
     },
 
+    "PUBGConfigUpgraderPage": {
+        "Title": "PUBGConfigUpgrader",
+        "Contents": {
+                "title": "目录",
+                "items": {
+                "Abstract": "摘要",
+                "Requirements": "需求",
+                "Challenges": "挑战",
+                "Outcomes": "成果"
+            }
+        },
+        "Abstract": {
+            "title": "摘要",
+            "content": [
+                "PUBGConfigUpgrader 是一个 UE Commandlet 插件工具，旨在将 <1><2><3>和平精英</3></2></1> 项目的配置文件从公版 UE4 和内部的 Galaxy UE4 版本自动迁移到 UE5.4。同时，根据项目组的需求对部分配置内容进行了定制修改，以适配 UE5.4 的特性并满足额外的兼容性需求。"
+            ]
+        },
+        "Requirements": {
+            "title": "需求",
+            "content": [
+                "项目组要求在 UE5.4 中完全兼容 UE4 的全部功能，并在此基础上加入了许多新的配置 —— 例如对部分 <1>鸿蒙设备</1> 的支持（一些敏感内容在此省略）。",
+                "该工具读取公版 UE4 的 3 个 `.ini` 配置文件和 Galaxy 版本的 2 个配置文件，然后生成对应的 3 个 UE5.4 配置文件。同时确保用户原本的配置（例如自定义的 `CVars`）被完整保留。此处省略了其他大量的特殊需求。"
+            ]
+        },
+        "Challenges": {
+            "title": "挑战",
+            "content1": [
+                "原始配置文件内容极为复杂，涵盖了和平精英大厅渲染配置、各个地图配置、不同机型的适配设置、白名单等内容。",
+                "我的任务是提取所有相关信息，生成对应的 UE5.4 配置版本，去除对低端不支持机型的过时配置，加入对新一代高端机型更细粒度的性能分级，并完成一系列相关任务。在此基础上，还需要确保原有 UE4 通用配置项能被正确且合理地迁移至 UE5.4。"
+            ]
+        },
+        "Outcomes": {
+            "title": "成果",
+            "content": [
+                "最终，我成功满足了所有需求，并交付了 PUBGConfigUpgrader 自动化工具。"
+            ]
+        }
+    },
+
     "ModelGrayPage": {
         "Title": "ModelGray",
         "Contents": {

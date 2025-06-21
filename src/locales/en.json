@@ -324,13 +324,34 @@
         "Contents": {
             "title": "Contents",
             "items": {
-                "Abstract": "Abstract"
+                "Abstract": "Abstract",
+                "Requirements": "Requirements",
+                "Challenges": "Challenges",
+                "Outcomes": "Outcomes"
             }
         },
         "Abstract": {
             "title": "Abstract",
             "content": [
                 "RDC-Parser"
+            ]
+        },
+        "Requirements": {
+            "title": "Requirements",
+            "content": [
+                "PUBGConfigUpgraderPage"
+            ]
+        },
+        "Challenges": {
+            "title": "Challenges",
+            "content": [
+                "PUBGConfigUpgraderPage"
+            ]
+        },
+        "Outcomes": {
+            "title": "Outcomes",
+            "content": [
+                "PUBGConfigUpgraderPage"
             ]
         }
     },
@@ -340,13 +361,36 @@
         "Contents": {
             "title": "Contents",
             "items": {
-                "Abstract": "Abstract"
+                "Abstract": "Abstract",
+                "Requirements": "Requirements",
+                "Challenges": "Challenges",
+                "Outcomes": "Outcomes"
             }
         },
         "Abstract": {
             "title": "Abstract",
             "content": [
-                "PUBGConfigUpgraderPage"
+                "PUBGConfigUpgrader is a UE Commandlet plugin tool designed to automate the migration of configuration files for the <1><2><3>Game for Peace</3></2></1> (PUBG Mobile China) project from both the public UE4 and the internal Galaxy version of UE4 to UE5.4. It also includes customized modifications based on project team requirements to align with the features of UE5.4 and ensure compatibility with additional needs."
+            ]
+        },
+        "Requirements": {
+            "title": "Requirements",
+            "content": [
+                "The project team required that UE5.4 maintain full compatibility with all UE4 functionalities, while also introducing many new configurations—such as support for some <1>HarmonyOS</1> devices (with several sensitive details omitted).",
+                "The tool reads data from three `.ini` configuration files of the public UE4 version and two from the Galaxy version, then generates three corresponding `.ini` files for UE5.4. It ensures that the user's original configurations—such as custom `CVars`—are preserved. Numerous additional special requirements have been omitted here."
+            ]
+        },
+        "Challenges": {
+            "title": "Challenges",
+            "content1": [
+                "The original configuration files were highly complex, covering rendering settings for the Game for Peace lobby configurations, individual map configurations, device-specific settings, whitelists, and more.",
+                "My task was to extract all relevant information while generating the corresponding UE5.4 versions, discarding outdated entries for unsupported low-end devices, introducing finer-grained performance tiers for newer, higher-end models, and carrying out a series of related tasks. On top of that, I had to ensure that all general-purpose content from the original UE4 configurations could be correctly and appropriately migrated to UE5.4."
+            ]
+        },
+        "Outcomes": {
+            "title": "Outcomes",
+            "content": [
+                "In the end, I successfully met all the requirements and delivered the PUBGConfigUpgrader automation tool."
             ]
         }
     },

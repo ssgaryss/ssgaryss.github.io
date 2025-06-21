@@ -92,7 +92,7 @@ const ModelGrayPage: React.FC<PageProps> = ({ mode }) => {
                 </p>
                 <TransList
                   i18nKey={"ModelGrayPage.Challenges.list" as any}
-                  count={2}  // 指定条目数量：0, 1, 2
+                  count={2}  // 指定条目数量：0, 1
                   variant="quote"
                 />
                 <p>

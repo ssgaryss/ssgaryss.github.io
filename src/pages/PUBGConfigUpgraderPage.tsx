@@ -6,7 +6,7 @@ import { Box, Typography, Divider } from '@mui/material';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
-import { TransText } from '../components/TransParagraph';
+import { TransText, TransList } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
 
 interface PageProps {
@@ -19,6 +19,9 @@ const PUBGConfigUpgraderPage: React.FC<PageProps> = ({ mode }) => {
   const project = INFO.projects.find(p => p.id === current_page_id)!;
   const contents = [
     { id: 'Abstract', title: t('PUBGConfigUpgraderPage.Contents.items.Abstract') },
+    { id: 'Requirements', title: t('PUBGConfigUpgraderPage.Contents.items.Requirements') },
+    { id: 'Challenges', title: t('PUBGConfigUpgraderPage.Contents.items.Challenges') },
+    { id: 'Outcomes', title: t('PUBGConfigUpgraderPage.Contents.items.Outcomes') },
   ];
   
   useEffect(() => {
@@ -50,6 +53,49 @@ const PUBGConfigUpgraderPage: React.FC<PageProps> = ({ mode }) => {
                   <TransText
                     key={index}
                     i18nKey={"PUBGConfigUpgraderPage.Abstract.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    links={["https://gp.qq.com"]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Requirements">
+              <h2>{t('PUBGConfigUpgraderPage.Requirements.title')}</h2>
+              <p>
+                {t('PUBGConfigUpgraderPage.Requirements.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PUBGConfigUpgraderPage.Requirements.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Challenges">
+              <h2>{t('PUBGConfigUpgraderPage.Challenges.title')}</h2>
+              <p>
+                {t('PUBGConfigUpgraderPage.Challenges.content1', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PUBGConfigUpgraderPage.Challenges.content1" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Outcomes">
+              <h2>{t('PUBGConfigUpgraderPage.Outcomes.title')}</h2>
+              <p>
+                {t('PUBGConfigUpgraderPage.Outcomes.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"PUBGConfigUpgraderPage.Outcomes.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
                     breakCount={2}

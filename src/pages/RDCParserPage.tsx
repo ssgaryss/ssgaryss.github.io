@@ -19,6 +19,9 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
   const project = INFO.projects.find(p => p.id === current_page_id)!;
   const contents = [
     { id: 'Abstract', title: t('RDCParserPage.Contents.items.Abstract') },
+    { id: 'Requirements', title: t('RDCParserPage.Contents.items.Requirements') },
+    { id: 'Challenges', title: t('RDCParserPage.Contents.items.Challenges') },
+    { id: 'Outcomes', title: t('RDCParserPage.Contents.items.Outcomes') },
   ];
   
   useEffect(() => {
@@ -52,7 +55,48 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"RDCParserPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={[`mailto:${INFO.main.email}`, "/files/无限暖暖渲染方案.png"]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Requirements">
+              <h2>{t('RDCParserPage.Requirements.title')}</h2>
+              <p>
+                {t('RDCParserPage.Requirements.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"RDCParserPage.Requirements.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Challenges">
+              <h2>{t('RDCParserPage.Challenges.title')}</h2>
+              <p>
+                {t('RDCParserPage.Challenges.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"RDCParserPage.Challenges.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Outcomes">
+              <h2>{t('RDCParserPage.Outcomes.title')}</h2>
+              <p>
+                {t('RDCParserPage.Outcomes.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"RDCParserPage.Outcomes.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
                     breakCount={2}
                   />
                 ))}

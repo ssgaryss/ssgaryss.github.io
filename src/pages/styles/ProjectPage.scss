@@ -89,7 +89,7 @@
       margin-bottom: 1rem;
       color: #2e3241;
       text-align: left;
-      margin: 1rem 4rem;
+      padding: 1rem 4rem;
     }
 
     p {
@@ -97,7 +97,7 @@
       line-height: 1.6;
       color: gray;
       text-align: left;
-      margin: 0 4rem;
+      padding: 0 4rem;
     }
 
     .trans-list-box {
@@ -161,7 +161,7 @@
 /* ============ 响应式：移动端 ============ */
 @media (max-width: 900px) {
   .project-page-wrapper {
-    padding: 0;
+    padding: 0rem;
   }
 
   .project-card {
@@ -171,7 +171,7 @@
   }
 
   .project-content {
-    padding: 0;
+    padding: 0rem;
 
     .project-title {
       font-size: 2.25rem;
@@ -186,6 +186,14 @@
 
       p {
         padding: 0 0.5rem;
+      }
+      
+      .trans-list-box {
+        margin: 0 1rem;
+      }
+      
+      .trans-list-ordered {
+        margin: 0 1rem;
       }
 
       img,
