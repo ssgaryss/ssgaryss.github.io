@@ -333,25 +333,34 @@
         "Abstract": {
             "title": "Abstract",
             "content": [
-                "RDC-Parser"
+                "<1><2><3>RenderDoc</3></2></1> is currently one of the most effective tool for debugging the GPU. It is especially indispensable in the game industry for analyzing rendered frames.",
+                "However, <1>.rdc</1> files are not human-readable, which means we have to manually analyze them in RenderDoc each time. This makes the process inefficient and time-consuming. Therefore, there is a strong need for a convenient tool to address this issue — and that’s the motivation behind RDC-Parser."
             ]
         },
         "Requirements": {
             "title": "Requirements",
             "content": [
-                "PUBGConfigUpgraderPage"
+                "RDC-Parser is required to parse the <1>RenderGraph</1> information from an .rdc file and export it into a JSON file, including associated Texture, Mesh, and Shader data.",
+                "In terms of functionality, future versions should also support visualizing the <1>.rdc</1> file as an interactive RenderGraph—similar to tools like <1><2><3>ARM Frame Advisor</3></2></1>—so that we can intuitively understand the full rendering pipeline. The following is the RenderGraph visualization from Frame Advisor."
             ]
         },
         "Challenges": {
             "title": "Challenges",
-            "content": [
-                "PUBGConfigUpgraderPage"
+            "content1": [
+                "The main challenges arise when parsing large .rdc files. Taking a frame capture from Infinity Nikki as an example, there are two major performance bottlenecks:"
+            ],
+            "list": {
+                "0": "The time complexity of RenderDoc's state-switching API is proportional to the size of the .rdc file.",
+                "1": "Saving Textures, Meshes, and Shaders locally requires significant disk time, as each draw call contains a large amount of data—including Textures, Render Targets, Meshes, Shaders, and more—that needs to be parsed."
+            },
+            "content2": [
+                "I performed extensive optimizations, such as high-concurrency I/O tasks and texture deduplication (since many textures are not render targets and do not change between draw calls). As a result, using a frame capture from my Pika Engine as an example, I reduced the processing time from over 150 seconds to under 10 seconds."
             ]
         },
         "Outcomes": {
             "title": "Outcomes",
             "content": [
-                "PUBGConfigUpgraderPage"
+                "The RDC-Parser tool represents only a portion of my responsibilities. There are additional extensions to this tool that will not be elaborated here. Below is the test result of RDC-Parser parsing a captured frame from <1><2><3>Infinity Nikki</3></2></1>."
             ]
         }
     },
@@ -424,8 +433,8 @@
                 "The ZBrush version of the plugin faced several challenges, primarily due to the limitations of ZBrush's native scripting language, <1><3>ZScript</3></1>, which lacks many advanced capabilities."
             ],
             "list": {
-                "0": "ZScript does not support <1>multithreading</1>.",
-                "1": "ZScript does not support <1>network requests</1>."
+                "0": "ZScript doesn't support <1>multithreading</1>.",
+                "1": "ZScript doesn't support <1>network requests</1>."
             },
             "content2": [
                 "Due to these limitations, tasks such as HTTP/HTTPS requests and SSL encryption had to be handled by calling C++ code through ZScript.",

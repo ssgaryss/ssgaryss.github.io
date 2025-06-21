@@ -194,6 +194,52 @@
         }
     },
 
+    "RDCParserPage": {
+        "Title": "RDC-Parser",
+        "Contents": {
+            "title": "目录",
+            "items": {
+            "Abstract": "摘要",
+            "Requirements": "需求",
+            "Challenges": "挑战",
+            "Outcomes": "成果"
+            }
+        },
+        "Abstract": {
+            "title": "摘要",
+            "content": [
+                "<1><2><3>RenderDoc</3></2></1> 是当前最有效的 GPU 调试工具之一，尤其在游戏行业中分析渲染画面时不可或缺。",
+                "然而，<1>.rdc</1> 文件并非可读格式，因此我们每次都必须手动在 RenderDoc 中进行分析，效率较低，流程繁琐。因此我们迫切需要一个高效的工具来解决这一问题——这就是 RDC-Parser 的设计初衷。"
+            ]
+        },
+        "Requirements": {
+            "title": "需求",
+            "content": [
+                "RDC-Parser 需要能够从 <1>.rdc</1> 文件中解析 <1>RenderGraph</1> 信息，并将其输出为 JSON 文件，同时包含相关的 Texture、Mesh 和 Shader 数据。",
+                "在功能层面，未来版本还应支持将 <1>.rdc</1> 文件可视化成交互式 RenderGraph 图形，类似于 <1><2><3>ARM Frame Advisor</3></2></1>，以便我们可以直观地了解整个渲染流程。以下是 Frame Advisor 的 RenderGraph 图形展示。"
+            ]
+        },
+        "Challenges": {
+            "title": "挑战",
+            "content1": [
+                "在解析大型 .rdc 文件时面临的主要挑战，以《无限暖暖》的截帧为例，有两个关键的性能瓶颈："
+            ],
+            "list": {
+                "0": "RenderDoc 切换状态的 API 时间复杂度与 .rdc 文件的大小成正比。",
+                "1": "将 Texture、Mesh 和 Shader 保存到本地需要大量磁盘读写时间，因为每个 drawcall 中都包含大量的 Texture、Render Target、Mesh 和 Shader 等数据需要解析。"
+            },
+            "content2": [
+                "我对流程进行了大量优化，例如高并发 I/O 任务、Texture 去重（很多 Texture 并不是 RenderTarget，不会在 drawcall 间发生变化）等。最终，以我 Pika 引擎的截帧为例，处理时间从 150 秒以上减少到了 10 秒以内。"
+            ]
+        },
+        "Outcomes": {
+            "title": "成果",
+            "content": [
+            "RDC-Parser 工具只是我负责工作的一部分，其它的扩展功能在此不做展开。以下是 RDC-Parser 对《<1><2><3>无限暖暖</3></2></1>》截帧进行解析的测试效果展示。"
+            ]
+        }
+    },
+
     "PUBGConfigUpgraderPage": {
         "Title": "PUBGConfigUpgrader",
         "Contents": {

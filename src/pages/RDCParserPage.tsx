@@ -6,8 +6,12 @@ import { Box, Typography, Divider } from '@mui/material';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
-import { TransText } from '../components/TransParagraph';
+import { TransText, TransList } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
+
+import FrameAdvisor from '../assets/images/project-rdc-parser/FrameAdvisor.png';
+import Challenges from '../assets/images/project-rdc-parser/Challenges.png';
+import Outcomes from '../assets/images/project-rdc-parser/Outcomes.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -55,6 +59,7 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"RDCParserPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={["https://renderdoc.org"]}
                     breakCount={2}
                   />
                 ))}
@@ -69,24 +74,43 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"RDCParserPage.Requirements.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={["https://developer.arm.com/Tools%20and%20Software/Frame%20Advisor"]}
                     breakCount={2}
                   />
                 ))}
               </p>
+              <img src={FrameAdvisor} alt="Unable to display image" />
             </section>
             <section id="Challenges">
               <h2>{t('RDCParserPage.Challenges.title')}</h2>
               <p>
-                {t('RDCParserPage.Challenges.content', { returnObjects: true }).map((_, index, array) => (
+                {t('RDCParserPage.Challenges.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
                     key={index}
-                    i18nKey={"RDCParserPage.Challenges.content" as any}
+                    i18nKey={"RDCParserPage.Challenges.content1" as any}
                     index={index}
                     isLast={index === array.length - 1}
                     breakCount={2}
                   />
                 ))}
               </p>
+              <TransList
+                i18nKey={"RDCParserPage.Challenges.list" as any}
+                count={2}  // 指定条目数量：0, 1
+                variant="ordered"
+              />
+              <p>
+                {t('RDCParserPage.Challenges.content2', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"RDCParserPage.Challenges.content2" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+              <img src={Challenges} alt="Unable to display image" />
             </section>
             <section id="Outcomes">
               <h2>{t('RDCParserPage.Outcomes.title')}</h2>
@@ -97,10 +121,12 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"RDCParserPage.Outcomes.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={["https://infinitynikki.nuanpaper.com/home"]}
                     breakCount={2}
                   />
                 ))}
               </p>
+              <img src={Outcomes} alt="Unable to display image" />
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">
