@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
-import TransText from '../components/TransParagraph';
+import { TransText } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
 
 import abstract1 from '../assets/images/project-pika-engine/abstract-2D.mp4';

@@ -89,7 +89,7 @@
       margin-bottom: 1rem;
       color: #2e3241;
       text-align: left;
-      padding: 1rem 4rem;
+      margin: 1rem 4rem;
     }
 
     p {
@@ -97,7 +97,36 @@
       line-height: 1.6;
       color: gray;
       text-align: left;
-      padding: 0 4rem;
+      margin: 0 4rem;
+    }
+
+    .trans-list-box {
+      padding-left: 0.8rem;
+      margin: 1.5em 5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: gray;
+      font-weight: 400;
+      text-align: left;
+
+      li {
+        list-style: none;
+        margin-bottom: 1em;
+      }
+    }
+
+    .trans-list-ordered {
+      padding-left: 1rem;
+      margin: 1.5em 5rem;
+      color: gray;
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: 400;
+      text-align: left;
+
+      li {
+        margin-bottom: 0.6em;
+      }
     }
 
     img {
@@ -177,7 +206,11 @@
     .project-subtitle,
     .project-authors,
     .project-detail h2,
-    .project-detail p {
+    .project-detail p,
+    .project-detail .trans-list-box,
+    .project-detail .trans-list-box li,
+    .project-detail .trans-list-ordered,
+    .project-detail .trans-list-ordered li {
       color: white;
     }
 

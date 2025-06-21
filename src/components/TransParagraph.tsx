@@ -6,7 +6,7 @@ interface TransTextProps {
   i18nKey: string;
   index?: number;
   isLast?: boolean;
-  links?: string[]; // 如 ['https://github.com/skypjack/entt', 'https://unity.com/', ...]
+  links?: string[];
   breakLine?: boolean;
   breakCount?: number;
 }
@@ -24,7 +24,6 @@ const TransText: React.FC<TransTextProps> = ({
     2: <em />,
   };
 
-  // 动态注册链接组件：从 <3> 开始编号
   links?.forEach((href, i) => {
     const tagIndex = i + 3;
     components[tagIndex] = (
@@ -61,4 +60,44 @@ const TransText: React.FC<TransTextProps> = ({
   );
 };
 
-export default TransText;
+interface TransListProps {
+  i18nKey: string;
+  count: number;
+  links?: string[][];
+  breakLine?: boolean;
+  breakCount?: number;
+  variant?: 'quote' | 'ordered';
+}
+
+const TransList: React.FC<TransListProps> = ({
+  i18nKey,
+  count,
+  links,
+  breakLine = true,
+  breakCount = 1,
+  variant = 'quote', // 默认 quote 样式
+}) => {
+  const Wrapper = variant === 'ordered' ? 'ol' : 'div';
+  const wrapperClass = variant === 'ordered' ? 'trans-list-ordered' : 'trans-list-box';
+
+  return (
+    <Wrapper className={wrapperClass}>
+      {Array.from({ length: count }, (_, index) => {
+        const item = (
+          <TransText
+            key={index}
+            i18nKey={i18nKey}
+            index={index}
+            isLast={index === count - 1}
+            links={links?.[index]}
+            breakLine={breakLine}
+            breakCount={breakCount}
+          />
+        );
+        return variant === 'ordered' ? <li key={index}>{item}</li> : item;
+      })}
+    </Wrapper>
+  );
+};
+
+export { TransText, TransList };

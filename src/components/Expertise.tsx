@@ -4,7 +4,7 @@ import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGamepad, faBookOpen, faFileCode } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
-import TransText from '../components/TransParagraph';
+import { TransText } from '../components/TransParagraph';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [

@@ -9,6 +9,25 @@
   color: #66bfff !important;
 }
 
+.trans-list-box {
+  border-left: 0.3rem solid #e2e8f0;
+  text-align: left; 
+  padding: 0.5em 0rem;
+
+  li {
+    list-style: none;
+    margin-bottom: 1em;
+  }
+}
+
+.trans-list-ordered {
+  text-align: left; 
+
+  li {
+    margin-bottom: 0.6em;
+  }
+}
+
 @media (max-width: 700px) {
   .dark-mode .custom-link {
     color: #ffffff !important;
