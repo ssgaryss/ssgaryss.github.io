@@ -55,7 +55,7 @@ const ModelGrayPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"ModelGrayPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={["https://www.maxon.net/en/zbrush", "https://www.blender.org"]}
+                    links={["https://www.maxon.net/en/zbrush", "https://www.blender.org", "/files/ModelGray.png"]}
                     breakCount={2}
                   />
                 ))}

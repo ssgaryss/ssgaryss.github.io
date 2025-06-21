@@ -55,7 +55,7 @@ const PUBGConfigUpgraderPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"PUBGConfigUpgraderPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={["https://gp.qq.com"]}
+                    links={["https://gp.qq.com", "/files/PUBGConfigUpgrader.png"]}
                     breakCount={2}
                   />
                 ))}

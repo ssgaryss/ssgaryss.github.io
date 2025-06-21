@@ -59,7 +59,7 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"RDCParserPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={["https://renderdoc.org"]}
+                    links={["https://renderdoc.org", "/files/RDC-Parser.png"]}
                     breakCount={2}
                   />
                 ))}
