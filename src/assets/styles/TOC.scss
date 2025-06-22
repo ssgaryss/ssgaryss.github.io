@@ -13,14 +13,35 @@
     list-style-type: disc;
 
     li {
-      text-align: left;
       margin-bottom: 0.5rem;
-      cursor: pointer;
-      color: #333;
 
-      &:hover {
-        color: #007acc;
-        text-decoration: underline;
+      .toc-title {
+        cursor: pointer;
+        color: #333;
+        font-weight: 500;
+        font-size: 1rem; // ✅ 明确主标题大小
+
+        &:hover {
+          color: #007acc;
+          text-decoration: underline;
+        }
+      }
+
+      .toc-subtitle {
+        cursor: pointer;
+        color: #555;
+        font-size: 0.95rem;
+
+        &:hover {
+          color: #007acc;
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        list-style-type: circle;
+        padding-left: 1.2rem;
+        margin-top: 0.3rem;
       }
     }
   }
@@ -32,15 +53,32 @@
       color: #f0f0f0;
     }
 
-    ul {
-      li {
-        color: #ccc;
+    .toc-title {
+      color: #ccc;
+      font-size: 1rem;
 
-        &:hover {
-          color: #66bfff;
-        }
+      &:hover {
+        color: #66bfff;
       }
+    }
+
+    .toc-subtitle {
+      color: #aaa;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: #66bfff;
+      }
+    }
+
+    // ✅ 主标题 bullet dot 颜色
+    ul > li::marker {
+      color: #ccc;
+    }
+
+    // ✅ 副标题 bullet dot 颜色
+    ul ul > li::marker {
+      color: #aaa;
     }
   }
 }
-

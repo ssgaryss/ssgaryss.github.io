@@ -19,14 +19,15 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
   const project = INFO.projects.find(p => p.id === current_page_id)!;
   const contents = [
     { id: 'Abstract', title: t('CODAnalysisPage.Contents.items.Abstract') },
-    { id: 'DOF', title: t('CODAnalysisPage.Contents.items.DOF') },
     { id: 'AA', title: t('CODAnalysisPage.Contents.items.AA') },
     { id: 'AO', title: t('CODAnalysisPage.Contents.items.AO') },
-    { id: 'Reflection', title: t('CODAnalysisPage.Contents.items.Reflection') },
     { id: 'GI', title: t('CODAnalysisPage.Contents.items.GI') },
+    { id: 'Shadow', title: t('CODAnalysisPage.Contents.items.Shadow') },
     { id: 'Effects', title: t('CODAnalysisPage.Contents.items.Effects') },
-    { id: 'AE', title: t('CODAnalysisPage.Contents.items.AE') },
     { id: 'Static', title: t('CODAnalysisPage.Contents.items.Static') },
+    { id: 'Reflection', title: t('CODAnalysisPage.Contents.items.Reflection') },
+    { id: 'AE', title: t('CODAnalysisPage.Contents.items.AE') },
+    { id: 'DOF', title: t('CODAnalysisPage.Contents.items.DOF') },
     { id: 'Animation', title: t('CODAnalysisPage.Contents.items.Animation') },
   ];
   
@@ -67,20 +68,6 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ))}
               </p>
             </section>
-            <section id="DOF">
-              <h2>{t('CODAnalysisPage.DOF.title')}</h2>
-              <p>
-                {t('CODAnalysisPage.DOF.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.DOF.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
-              </p>
-            </section>
             <section id="AA">
               <h2>{t('CODAnalysisPage.AA.title')}</h2>
               <p>
@@ -102,20 +89,6 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                   <TransText
                     key={index}
                     i18nKey={"CODAnalysisPage.AO.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
-              </p>
-            </section>
-            <section id="Reflection">
-              <h2>{t('CODAnalysisPage.Reflection.title')}</h2>
-              <p>
-                {t('CODAnalysisPage.Reflection.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.Reflection.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
                     breakCount={2}
@@ -165,6 +138,34 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ))}
               </p>
             </section>
+            <section id="Static">
+              <h2>{t('CODAnalysisPage.Static.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Static.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Static.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
+            <section id="Reflection">
+              <h2>{t('CODAnalysisPage.Reflection.title')}</h2>
+              <p>
+                {t('CODAnalysisPage.Reflection.content', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Reflection.content" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
+            </section>
             <section id="AE">
               <h2>{t('CODAnalysisPage.AE.title')}</h2>
               <p>
@@ -179,13 +180,13 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ))}
               </p>
             </section>
-            <section id="Static">
-              <h2>{t('CODAnalysisPage.Static.title')}</h2>
+            <section id="DOF">
+              <h2>{t('CODAnalysisPage.DOF.title')}</h2>
               <p>
-                {t('CODAnalysisPage.Static.content', { returnObjects: true }).map((_, index, array) => (
+                {t('CODAnalysisPage.DOF.content', { returnObjects: true }).map((_, index, array) => (
                   <TransText
                     key={index}
-                    i18nKey={"CODAnalysisPage.Static.content" as any}
+                    i18nKey={"CODAnalysisPage.DOF.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
                     breakCount={2}
