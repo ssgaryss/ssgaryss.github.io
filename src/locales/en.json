@@ -227,8 +227,8 @@
         },
         "AA": {
             "title": "Anti-Aliasing",
-            "content": [
-                "Anti-Aliasing"
+            "content1": [
+                "The anti-aliasing primarily combines frequency-domain <1><2><3>SMAA</3></2></1> (Subpixel Morphological Anti-Aliasing) with temporal <1><2><4>TAA</4></2></1> (Temporal Anti-Aliasing), and builds upon this with <1><2><5>NIS</5></2></1> (NVIDIA Image Scaling) upscaling to enhance resolution while adaptively sharpening edges, resulting in high-quality anti-aliasing."
             ]
         },
         "AO": {

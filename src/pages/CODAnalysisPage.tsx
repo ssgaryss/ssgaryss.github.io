@@ -71,12 +71,17 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             <section id="AA">
               <h2>{t('CODAnalysisPage.AA.title')}</h2>
               <p>
-                {t('CODAnalysisPage.AA.content', { returnObjects: true }).map((_, index, array) => (
+                {t('CODAnalysisPage.AA.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
                     key={index}
-                    i18nKey={"CODAnalysisPage.AA.content" as any}
+                    i18nKey={"CODAnalysisPage.AA.content1" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={[
+                      "https://www.iryoku.com/smaa", 
+                      "https://en.wikipedia.org/wiki/Temporal_anti-aliasing",
+                      "https://github.com/NVIDIAGameWorks/NVIDIAImageScaling"
+                    ]}
                     breakCount={2}
                   />
                 ))}
