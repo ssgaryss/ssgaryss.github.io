@@ -312,7 +312,7 @@
     },
 
     "InfinityNikkiAnalysisPage": {
-        "Title": "Infinity Nikki",
+        "Title": "Infinity Nikki Analysis",
         "Contents": {
             "title": "Contents",
             "items": {
@@ -331,15 +331,13 @@
         },
         "PPLL": {
             "title": "Per-Pixel Linked List OIT",
-            "content": [
-                "OIT"
-            ]
+            "content1": "<1><2><3>Per-Pixel Linked List (PPLL)</3></2></1> is a method for implementing Order-Independent Transparency (OIT). It constructs a linked list for each pixel to dynamically record all translucent fragments that pass through that pixel. Each fragment stores its color and depth information. During the rendering phase, all translucent fragments are inserted into the per-pixel lists. In the subsequent compositing phase, the fragments in each list are depth-sorted and blended one by one, resulting in a correct transparency effect regardless of the rendering order.",
+            "content2": "In <2>Infinity Nikki</2>, PPLL OIT is utilized, but unlike the typical implementation that uses a linked list structure to store per-pixel translucent values sorted by depth, this approach employs <1>two x4-sized buffers</1>, BufferA and BufferB as shown in the figure below, to store up to four color values and their corresponding depth information and indices per pixel. This means the system supports a maximum of four layers of translucent rendering.",
+            "content3": "Additionally, the <1><3>Shell-based fur</3></1> covered in the next section and <1>hair rendering</1> also involve transparency. BufferA and BufferB store not only the character's transparent clothing effects but also all alpha-blended data, which are composited together in a later dispatch."
         },
         "ShellFur": {
             "title": "Shell-Based Fur Rendering",
-            "content": [
-                "Shell-Based Fur Rendering"
-            ]
+            "content1": "<1><2><3>Shell-based Fur Rendering</3></2></1> is a technique used to simulate the appearance of fur by layering multiple transparent shells along the surface normal of a 3D model. Each shell is slightly offset from the base surface and uses alpha-masked textures to represent scattered strands of fur. When rendered together with alpha blending, these layers create the illusion of volume and softness."
         },
         "SSAO": {
             "title": "Screen Space Ambient Occlusion",

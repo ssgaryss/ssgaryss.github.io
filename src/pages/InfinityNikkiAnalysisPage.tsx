@@ -9,6 +9,11 @@ import TOC from '../components/TOC';
 import { TransText } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
 
+import PPLL_01 from '../assets/images/project-nikki-analysis/PPLL_01.jpeg';
+import PPLL_02 from '../assets/images/project-nikki-analysis/PPLL_02.png';
+import PPLL_03 from '../assets/images/project-nikki-analysis/PPLL_03.png';
+import ShellFur_01 from '../assets/images/project-nikki-analysis/ShellFur_01.jpeg';
+
 interface PageProps {
   mode: 'light' | 'dark';
 }
@@ -63,30 +68,37 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             </section>
             <section id="PPLL">
               <h2>{t('InfinityNikkiAnalysisPage.PPLL.title')}</h2>
+              <img src={PPLL_01} alt="Unable to display image" />
               <p>
-                {t('InfinityNikkiAnalysisPage.PPLL.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"InfinityNikkiAnalysisPage.PPLL.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
+                <TransText 
+                  i18nKey={"InfinityNikkiAnalysisPage.PPLL.content1" as any}
+                  links={[
+                    "https://www.slideshare.net/slideshow/oit-and-indirect-illumination-using-dx11-linked-lists/3443500#18"
+                  ]}
+                />
+              </p>
+              <img src={PPLL_02} alt="Unable to display image" />
+              <p>
+                <TransText i18nKey={"InfinityNikkiAnalysisPage.PPLL.content2" as any}/>
+              </p>
+              <img src={PPLL_03} alt="Unable to display image" />
+              <p>
+                <TransText 
+                  i18nKey={"InfinityNikkiAnalysisPage.PPLL.content3" as any}
+                  links={["#ShellFur"]}
+                />
               </p>
             </section>
             <section id="ShellFur">
               <h2>{t('InfinityNikkiAnalysisPage.ShellFur.title')}</h2>
+              <img src={ShellFur_01} alt="Unable to display image" />
               <p>
-                {t('InfinityNikkiAnalysisPage.ShellFur.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"InfinityNikkiAnalysisPage.ShellFur.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
+                <TransText 
+                  i18nKey={"InfinityNikkiAnalysisPage.ShellFur.content1" as any}
+                  links={[
+                    "https://zhuanlan.zhihu.com/p/669728014"
+                  ]}
+                />
               </p>
             </section>
             <section id="SSAO">
