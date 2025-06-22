@@ -92,6 +92,14 @@
       padding: 1rem 4rem;
     }
 
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0rem;
+      color: #424759;
+      text-align: center;
+      padding: 0rem;
+    }
+
     p {
       font-size: 1rem;
       line-height: 1.6;
@@ -214,6 +222,7 @@
     .project-subtitle,
     .project-authors,
     .project-detail h2,
+    .project-detail h3,
     .project-detail p,
     .project-detail .trans-list-box,
     .project-detail .trans-list-box li,

@@ -227,15 +227,45 @@
         },
         "AA": {
             "title": "Anti-Aliasing",
+            "content0": "<1>The anti-aliasing techniques used in the game</1>:",
+            "list0": {
+                "0": "<3><1><2>SMAA</2></1>: Subpixel Morphological Anti-Aliasing</3>",
+                "1": "<3><1><2><3>TAA</2></1>: Temporal Anti-Aliasing</3>",
+                "2": "<3><1><2>NIS</2></1>: NVIDIA Image Scaling</3>"
+            },
             "content1": [
-                "The anti-aliasing primarily combines frequency-domain <1><2><3>SMAA</3></2></1> (Subpixel Morphological Anti-Aliasing) with temporal <1><2><4>TAA</4></2></1> (Temporal Anti-Aliasing), and builds upon this with <1><2><5>NIS</5></2></1> (NVIDIA Image Scaling) upscaling to enhance resolution while adaptively sharpening edges, resulting in high-quality anti-aliasing."
-            ]
+                "The anti-aliasing primarily combines frequency-domain <1><2><3>SMAA</3></2></1> (Subpixel Morphological Anti-Aliasing) with temporal <1><2><4>TAA</4></2></1> (Temporal Anti-Aliasing), and builds upon this with <1><2><5>NIS</5></2></1> (NVIDIA Image Scaling) upscaling to enhance resolution while adaptively sharpening edges, resulting in high-quality anti-aliasing. The image below illustrates the dispatches corresponding to each algorithm within a captured frame."
+            ],
+            "Subsections": {
+                "SMAA": {
+                    "title": "SMAA",
+                    "content1": "aaa"
+                },
+                "TAA": {
+                    "title": "TAA",
+                    "content1": "bbb"
+                },
+                "NIS": {
+                    "title": "NIS",
+                    "content1": "ccc"
+                }
+            }
         },
         "AO": {
             "title": "Ambient Occlusion",
-            "content": [
-                "Ambient Occlusion"
-            ]
+            "content0": "<1>The ambient occlusion techniques used in the game</1>:",
+            "list0": {
+                "0": "<3><1><2>GTAO</2></1>: Ground Truth Ambient Occlusion</3>"
+            },
+            "content1": [
+                "<2>Call of Duty: Black Ops 6</2> uses <1><2><3>GTAO</3></2></1> to compute high-quality ambient occlusion. As shown in the image above, the AO quality is visibly excellent. In this implementation, GTAO-related data is calculated in a single dispatch using inputs such as normals and depth, and is later combined with shadow computations to generate a shared visibility texture, which is then used in the final rendering process."
+            ],
+            "Subsections": {
+                "GTAO": {
+                    "title": "GTAO",
+                    "content1": "ddd"
+                }
+            }
         },
         "Reflection": {
             "title": "Reflection",

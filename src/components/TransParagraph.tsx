@@ -26,14 +26,36 @@ const TransText: React.FC<TransTextProps> = ({
 
   links?.forEach((href, i) => {
     const tagIndex = i + 3;
-    components[tagIndex] = (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="custom-link"
-      />
-    );
+
+    if (href.startsWith("#")) {
+      const targetId = href.substring(1);
+      components[tagIndex] = (
+        <a
+          href={href}
+          onClick={(e) => {
+            e.preventDefault();
+            const section = document.getElementById(targetId);
+            const navbar = document.getElementById("navigation");
+            const offset = navbar?.clientHeight || 64;
+
+            if (section) {
+              const y = section.getBoundingClientRect().top + window.scrollY - offset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }}
+          className="custom-link"
+        />
+      );
+    } else {
+      components[tagIndex] = (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="custom-link"
+        />
+      );
+    }
   });
 
   const i18nPath = index !== undefined ? `${i18nKey}.${index}` : i18nKey;

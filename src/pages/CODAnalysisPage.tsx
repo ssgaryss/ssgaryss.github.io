@@ -6,8 +6,12 @@ import { Box, Typography, Divider } from '@mui/material';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
-import { TransText } from '../components/TransParagraph';
+import { TransText, TransList } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
+
+import AA_01 from '../assets/images/project-cod-analysis/AA_01.png';
+import AA_02 from '../assets/images/project-cod-analysis/AA_02.png';
+import AO_01 from '../assets/images/project-cod-analysis/AO_01.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -71,6 +75,20 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             <section id="AA">
               <h2>{t('CODAnalysisPage.AA.title')}</h2>
               <p>
+                <TransText i18nKey={"CODAnalysisPage.AA.content0" as any}/>
+              </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.AA.list0" as any}
+                count={3}
+                links={[
+                  ["#smaa-section"],
+                  ["#taa-section"],
+                  ["#nis-section"]
+                ]}
+                variant="quote"
+              />
+              <img src={AA_01} alt="Unable to display image" />
+              <p>
                 {t('CODAnalysisPage.AA.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
                     key={index}
@@ -86,20 +104,58 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
+              <img src={AA_02} alt="Unable to display image" />
+              <section id="smaa-section">
+                <h3>{t('CODAnalysisPage.AA.Subsections.SMAA.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.AA.Subsections.SMAA.content1" as any}/>
+                </p>
+              </section>
+              <section id="taa-section">
+                <h3>{t('CODAnalysisPage.AA.Subsections.TAA.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.AA.Subsections.TAA.content1" as any}/>
+                </p>
+              </section>
+              <section id="nis-section">
+                <h3>{t('CODAnalysisPage.AA.Subsections.NIS.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.AA.Subsections.NIS.content1" as any}/>
+                </p>
+              </section>
             </section>
             <section id="AO">
               <h2>{t('CODAnalysisPage.AO.title')}</h2>
               <p>
-                {t('CODAnalysisPage.AO.content', { returnObjects: true }).map((_, index, array) => (
+                <TransText i18nKey={"CODAnalysisPage.AO.content0" as any}/>
+              </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.AO.list0" as any}
+                count={1}
+                links={[
+                  ["#gtao-section"]
+                ]}
+                variant="quote"
+              />
+              <img src={AO_01} alt="Unable to display image" />
+              <p>
+                {t('CODAnalysisPage.AO.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
                     key={index}
-                    i18nKey={"CODAnalysisPage.AO.content" as any}
+                    i18nKey={"CODAnalysisPage.AO.content1" as any}
                     index={index}
                     isLast={index === array.length - 1}
+                    links={["https://zhuanlan.zhihu.com/p/150178776"]}
                     breakCount={2}
                   />
                 ))}
               </p>
+              <section id="gtao-section">
+                <h3>{t('CODAnalysisPage.AO.Subsections.GTAO.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.AO.Subsections.GTAO.content1" as any}/>
+                </p>
+              </section>
             </section>
             <section id="GI">
               <h2>{t('CODAnalysisPage.GI.title')}</h2>
