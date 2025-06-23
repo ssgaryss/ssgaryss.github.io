@@ -9,6 +9,8 @@ import TOC from '../components/TOC';
 import { TransText, TransList } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
 
+import Outcomes from '../assets/images/project-model-gray/Outcomes.png';
+
 interface PageProps {
   mode: 'light' | 'dark';
 }
@@ -121,6 +123,7 @@ const ModelGrayPage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
+              <img src={Outcomes} alt="Unable to display image" />
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">

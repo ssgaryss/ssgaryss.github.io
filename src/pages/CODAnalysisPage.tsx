@@ -108,8 +108,25 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               <section id="smaa-section">
                 <h3>{t('CODAnalysisPage.AA.Subsections.SMAA.title')}</h3>
                 <p>
-                  <TransText i18nKey={"CODAnalysisPage.AA.Subsections.SMAA.content1" as any}/>
+                  {t('CODAnalysisPage.AA.Subsections.SMAA.content1', { returnObjects: true }).map((_, index, array) => (
+                    <TransText
+                      key={index}
+                      i18nKey={"CODAnalysisPage.AA.Subsections.SMAA.content1" as any}
+                      index={index}
+                      isLast={index === array.length - 1}
+                      links={[
+                        "https://www.iryoku.com/smaa",
+                        "https://en.wikipedia.org/wiki/Morphological_antialiasing"
+                      ]}
+                      breakCount={2}
+                    />
+                  ))}
                 </p>
+                <TransList
+                    i18nKey={"CODAnalysisPage.AA.Subsections.SMAA.list1" as any}
+                    count={3}
+                    variant="ordered"
+                  />
               </section>
               <section id="taa-section">
                 <h3>{t('CODAnalysisPage.AA.Subsections.TAA.title')}</h3>

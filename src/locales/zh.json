@@ -194,6 +194,42 @@
         }
     },
 
+    "InfinityNikkiAnalysisPage": {
+        "Title": "《无限暖暖》渲染分析",
+        "Contents": {
+            "title": "目录",
+            "items": {
+                "Abstract": "摘要",
+                "PPLL": "Per-Pixel Linked List OIT",
+                "ShellFur": "Shell-Based Fur Rendering",
+                "SSAO": "Screen Space Ambient Occlusion"
+            }
+        },
+        "Abstract": {
+            "title": "摘要",
+            "content": [
+                "<1>免责声明</1>：本文内容仅用于学习交流与项目展示，若存在侵权行为，请<3>联系本人</3>以便及时删除。",
+                "本博客整理了我对<1><2><4>《无限暖暖》</4></2></1>渲染效果的分析与总结，并对其相关渲染技术进行了简要回顾。为了保持内容简洁，仅展示关键部分——完整分析请下载详细文档。完整分析文档可通过标题下方的<1><5>Doc</5></1>按钮下载。"
+            ]
+        },
+        "PPLL": {
+            "title": "Per-Pixel Linked List OIT",
+            "content1": "<1><2><3>Per-Pixel Linked List OIT（基于像素链表的OIT）</3></2></1>是一种实现顺序无关透明（OIT）的方法。它为每个像素构建一个链表，动态记录所有经过该像素的半透明片元。每个片元包含颜色和深度信息。在渲染阶段，所有半透明片元会被插入各自像素的链表中；随后在合成阶段，根据深度对链表中的片元排序并逐一混合，从而实现正确的透明度混合效果。",
+            "content2": "在<2>《无限暖暖》</2>中也采用了PPLL OIT，但不同于传统用链表结构按深度存储像素半透明值的做法，这里使用了<1>两个×4大小的Buffer</1>（如下图所示的BufferA和BufferB），每个像素最多可以存储四个颜色值及其对应的深度信息与索引。这意味着该系统最多支持四层的半透明渲染。",
+            "content3": "此外，下一章节提到的<1><3>Shell毛发渲染</3></1>与<1>头发渲染</1>同样涉及透明混合。BufferA和BufferB中不仅包含角色服饰的透明丝绸效果，还包含所有需要Alpha Blending的数据，这些内容会在后续的一个dispatch中统一混合。"
+        },
+        "ShellFur": {
+            "title": "Shell-Based Fur Rendering",
+            "content1": "<1><2><3>Shell-Based Fur Rendering（基于Shell的毛发渲染）</3></2></1>是一种通过沿模型法线方向堆叠多层透明“壳”来模拟毛发体积的技术。每一层Shell都会略微偏离模型表面，并使用带Alpha遮罩的纹理来呈现稀疏的毛发丝。多个Shell通过Alpha混合渲染后，形成柔和且具有体积感的毛发效果。",
+            "content2": "可以看到游戏中的毛发采用的是<1>四层Shell-Fur</1>渲染技术。在上方Render图中，边缘部位能明显看到Shell的分层现象，这是该技术常见的“露馅”现象。但整体视觉效果依然出色。四层Shell正好可以存储进×4大小的PPLL缓冲区中，方便后续统一混合处理。"
+        },
+        "SSAO": {
+            "title": "Screen Space Ambient Occlusion",
+            "content1": "<1><2><3>Screen Space Ambient Occlusion（屏幕空间环境光遮蔽）</3></2></1>是一种在实时图形中广泛使用的环境遮蔽技术，它在屏幕空间内近似计算环境光遮蔽效果。不同于在世界空间中处理几何关系，SSAO通过分析像素周围的深度和法线信息来估算遮蔽程度。",
+            "content2": "通过反编译shader可以发现，这里SSAO并未直接使用Normal Buffer，而是通过Depth来推导出法线。Auxiliary map可能作为增强AO效果的遮罩（尚不确定）。该dispatch会输出如下图所示的AO-only结果，供之后渲染流程使用。"
+        }
+    },
+
     "RDCParserPage": {
         "Title": "RDC-Parser",
         "Contents": {

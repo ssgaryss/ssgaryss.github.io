@@ -239,7 +239,15 @@
             "Subsections": {
                 "SMAA": {
                     "title": "SMAA",
-                    "content1": "aaa"
+                    "content1": [
+                        "<1><2><3>SMAA (Subpixel Morphological Anti-Aliasing)</3></2></1> is a widely used post-processing anti-aliasing algorithm, particularly effective in PC games with deferred rendering pipelines. It is an improvement over <1><2><4>MLAA (Morphological Anti-Aliasing)</4></2></1>, offering more accurate edge detection and subpixel precision to enhance sharpness and anti-aliasing quality.",
+                        "<1>SMAA is mainly divided into three stages, as shown below:</1>"
+                    ],
+                    "list1": {
+                        "0": "<1><2>Edge Detection</2></1>",
+                        "1": "<1><2>Blending Weight Calculation</2></1>",
+                        "2": "<1><2>Neighborhood Blending</2></1>"
+                    }
                 },
                 "TAA": {
                     "title": "TAA",
@@ -337,13 +345,13 @@
         },
         "ShellFur": {
             "title": "Shell-Based Fur Rendering",
-            "content1": "<1><2><3>Shell-based Fur Rendering</3></2></1> is a technique used to simulate the appearance of fur by layering multiple transparent shells along the surface normal of a 3D model. Each shell is slightly offset from the base surface and uses alpha-masked textures to represent scattered strands of fur. When rendered together with alpha blending, these layers create the illusion of volume and softness."
+            "content1": "<1><2><3>Shell-based Fur Rendering</3></2></1> is a technique used to simulate the appearance of fur by layering multiple transparent shells along the surface normal of a 3D model. Each shell is slightly offset from the base surface and uses alpha-masked textures to represent scattered strands of fur. When rendered together with alpha blending, these layers create the illusion of volume and softness.",
+            "content2": "We can see that the fur rendering in the game adopts a <1>4-layer Shell-Fur</1> technique. In the rendering shown above, shell layering is clearly visible at the edges—an artifact commonly associated with shell-based fur rendering. Nevertheless, the overall visual quality remains impressive. The four shell layers neatly fit into the ×4-sized PPLL buffers, enabling unified blending in subsequent passes."
         },
         "SSAO": {
             "title": "Screen Space Ambient Occlusion",
-            "content": [
-                "Screen Space Ambient Occlusion"
-            ]
+            "content1": "<1><2><3>SSAO (Screen Space Ambient Occlusion)</3></2></1> is a widely used technique in real-time graphics to approximate ambient occlusion in screen space. Instead of evaluating geometry in world space, SSAO estimates the occlusion level of each pixel by analyzing the depth and normal information of neighboring pixels on the screen. ",
+            "content2": "By decompiling the shader, we can see that the SSAO here does not directly use a normal buffer, but instead derives normals from the depth buffer. The auxiliary map may serve as a mask to enhance the AO effect (though this is not entirely certain). In this dispatch, an AO-only output is generated, as shown in the figure below, and will be used in subsequent rendering passes."
         }
     },
 

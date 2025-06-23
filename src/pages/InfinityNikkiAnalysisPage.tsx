@@ -13,6 +13,10 @@ import PPLL_01 from '../assets/images/project-nikki-analysis/PPLL_01.jpeg';
 import PPLL_02 from '../assets/images/project-nikki-analysis/PPLL_02.png';
 import PPLL_03 from '../assets/images/project-nikki-analysis/PPLL_03.png';
 import ShellFur_01 from '../assets/images/project-nikki-analysis/ShellFur_01.jpeg';
+import ShellFur_02 from '../assets/images/project-nikki-analysis/ShellFur_02.png';
+import SSAO_01 from '../assets/images/project-nikki-analysis/SSAO_01.jpg';
+import SSAO_02 from '../assets/images/project-nikki-analysis/SSAO_02.png';
+import SSAO_03 from '../assets/images/project-nikki-analysis/SSAO_03.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -100,20 +104,25 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                   ]}
                 />
               </p>
+              <img src={ShellFur_02} alt="Unable to display image" />
+              <p>
+                <TransText i18nKey={"InfinityNikkiAnalysisPage.ShellFur.content2" as any}/>
+              </p>
             </section>
             <section id="SSAO">
               <h2>{t('InfinityNikkiAnalysisPage.SSAO.title')}</h2>
+              <img src={SSAO_01} alt="Unable to display image" />
               <p>
-                {t('InfinityNikkiAnalysisPage.SSAO.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"InfinityNikkiAnalysisPage.SSAO.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
+                <TransText
+                  i18nKey={"InfinityNikkiAnalysisPage.SSAO.content1" as any}
+                  links={["https://en.wikipedia.org/wiki/Screen_space_ambient_occlusion"]}
+                />
               </p>
+              <img src={SSAO_02} alt="Unable to display image" />
+              <p>
+                <TransText i18nKey={"InfinityNikkiAnalysisPage.SSAO.content2" as any}/>
+              </p>
+              <img src={SSAO_03} alt="Unable to display image" />
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">
