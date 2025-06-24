@@ -230,7 +230,7 @@
             "content0": "<1>The anti-aliasing techniques used in the game</1>:",
             "list0": {
                 "0": "<3><1><2>SMAA</2></1> : Subpixel Morphological Anti-Aliasing</3>",
-                "1": "<3><1><2><3>TAA</2></1> : Temporal Anti-Aliasing</3>",
+                "1": "<3><1><2>TAA</2></1> : Temporal Anti-Aliasing</3>",
                 "2": "<3><1><2>NIS</2></1> : NVIDIA Image Scaling</3>"
             },
             "content1": [
@@ -284,21 +284,32 @@
         },
         "Reflection": {
             "title": "Reflection",
-            "content": [
-                "Reflection"
-            ]
+            "content0": "<1>The reflection rendering techniques used in the game</1>:",
+            "list0": {
+                "0": "<3><1><2>SSR</2></1> : Screen Space Reflections</3>",
+                "1": "<3><1><2>Reflection Probe</2></1></3>"
+            },
+            "content1": "Reflection..."
         },
         "GI": {
             "title": "Global Illumination",
-            "content": [
-                "Global Illumination"
-            ]
+            "content0": "<1>The global illumination techniques used in the game</1>:",
+            "list0": {
+                "0": "<3><1><2>Lightmap</2></1></3>",
+                "1": "<3><1><2>GTAO</2></1> : Ground Truth Ambient Occlusion</3>",
+                "2": "<3><1><2>SSR</2></1> : Screen Space Reflections</3>",
+                "3": "<3><1><2>Reflection Probe</2></1></3>"
+            },
+            "content1": "GI..."
         },
         "Shadow": {
             "title": "Shadow",
-            "content": [
-                "Shadow"
-            ]
+            "content0": "<1>The shadow techniques used in the game</1>:",
+            "list0": {
+                "0": "<3><1><2>CSM</2></1> : Cascaded Shadow Maps</3>",
+                "1": "<3><1><2>PCF</2></1> : Percentage Closer Filtering</3>"
+            },
+            "content1": "Shadow..."
         },
         "Effects": {
             "title": "Effects",
@@ -314,9 +325,14 @@
         },
         "Static": {
             "title": "Static Geometry Rendering",
-            "content": [
-                "Static Geometry Rendering"
-            ]
+            "content0": "<1>The static geometry rendering techniques used in the game</1>:",
+            "list0": {
+                "0": "<3><1><2>LOD</2></1> : Level of Detail</3>",
+                "1": "<3><1><2>Culling</2></1> : Frustum Culling, Occlusion Culling, etc</3>",
+                "2": "<3><1><2>GPU Instancing</2></1></3>",
+                "3": "<3><1><2>Static Batching</2></1></3>"
+            },
+            "content1": "Static..."
         },
         "Animation": {
             "title": "Animation",

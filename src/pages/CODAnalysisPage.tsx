@@ -22,6 +22,15 @@ import AO_01 from '../assets/images/project-cod-analysis/AO_01.png';
 import AO_GTAO_01 from '../assets/images/project-cod-analysis/AO_GTAO_01.png';
 import AO_GTAO_02 from '../assets/images/project-cod-analysis/AO_GTAO_02.png';
 import AO_GTAO_03 from '../assets/images/project-cod-analysis/AO_GTAO_03.png';
+// GI
+import GI_01 from '../assets/images/project-cod-analysis/GI_01.png';
+// Shadow
+import Shadow_01 from '../assets/images/project-cod-analysis/Shadow_01.png';
+
+// Static
+import Static_01 from '../assets/images/project-cod-analysis/Static_01.png';
+// Reflection
+import Reflection_01 from '../assets/images/project-cod-analysis/Reflection_01.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -234,114 +243,126 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             <section id="GI">
               <h2>{t('CODAnalysisPage.GI.title')}</h2>
               <p>
-                {t('CODAnalysisPage.GI.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.GI.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
+                <TransText i18nKey={"CODAnalysisPage.GI.content0" as any}/>
               </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.GI.list0" as any}
+                count={4}
+                links={[
+                  ["#lightmap-section"],
+                  ["#gtao-section"],
+                  ["#ssr-section"],
+                  ["#reflection-probe-section"],
+                ]}
+                variant="quote"
+              />
+              <img src={GI_01} alt="Unable to display image" />
+              <p>
+                <TransText
+                  i18nKey={"CODAnalysisPage.GI.content1" as any}
+                />
+              </p>
+              <section id="lightmap-section">
+
+              </section>
             </section>
             <section id="Shadow">
               <h2>{t('CODAnalysisPage.Shadow.title')}</h2>
               <p>
-                {t('CODAnalysisPage.Shadow.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.Shadow.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
+                <TransText i18nKey={"CODAnalysisPage.Shadow.content0" as any}/>
               </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.Shadow.list0" as any}
+                count={2}
+                links={[
+                  ["#csm-section"],
+                  ["#pcf-section"],
+                ]}
+                variant="quote"
+              />
+              {/* <img src={Shadow_01} alt="Unable to display image" /> */}
+              <p>
+                <TransText
+                  i18nKey={"CODAnalysisPage.Shadow.content1" as any}
+                />
+              </p>
+              <section id="csm-section">
+
+              </section>
+              <section id="pcf-section">
+
+              </section>
             </section>
             <section id="Effects">
               <h2>{t('CODAnalysisPage.Effects.title')}</h2>
-              <p>
-                {t('CODAnalysisPage.Effects.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.Effects.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
-              </p>
             </section>
             <section id="Static">
               <h2>{t('CODAnalysisPage.Static.title')}</h2>
               <p>
-                {t('CODAnalysisPage.Static.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.Static.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
+                <TransText i18nKey={"CODAnalysisPage.Static.content0" as any}/>
               </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.Static.list0" as any}
+                count={4}
+                links={[
+                  ["#lod-section"],
+                  ["#culling-section"],
+                  ["#instancing-section"],
+                  ["#batch-section"],
+                ]}
+                variant="quote"
+              />
+              <img src={Static_01} alt="Unable to display image" />
+              <p>
+                <TransText
+                  i18nKey={"CODAnalysisPage.Static.content1" as any}
+                />
+              </p>
+              <section id="lod-section">
+
+              </section>
+              <section id="culling-section">
+
+              </section>
+              <section id="batch-section">
+
+              </section>
             </section>
             <section id="Reflection">
               <h2>{t('CODAnalysisPage.Reflection.title')}</h2>
               <p>
-                {t('CODAnalysisPage.Reflection.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.Reflection.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
+                <TransText i18nKey={"CODAnalysisPage.Reflection.content0" as any}/>
               </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.Reflection.list0" as any}
+                count={2}
+                links={[
+                  ["#ssr-section"],
+                  ["#reflection-probe-section"],
+                ]}
+                variant="quote"
+              />
+              <img src={Reflection_01} alt="Unable to display image" />
+              <p>
+                <TransText
+                  i18nKey={"CODAnalysisPage.Reflection.content1" as any}
+                />
+              </p>
+              <section id="ssr-section">
+
+              </section>
+              <section id="reflection-probe-section">
+
+              </section>
             </section>
             <section id="AE">
               <h2>{t('CODAnalysisPage.AE.title')}</h2>
-              <p>
-                {t('CODAnalysisPage.AE.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.AE.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
-              </p>
             </section>
             <section id="DOF">
               <h2>{t('CODAnalysisPage.DOF.title')}</h2>
-              <p>
-                {t('CODAnalysisPage.DOF.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.DOF.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
-              </p>
             </section>
             <section id="Animation">
               <h2>{t('CODAnalysisPage.Animation.title')}</h2>
-              <p>
-                {t('CODAnalysisPage.Animation.content', { returnObjects: true }).map((_, index, array) => (
-                  <TransText
-                    key={index}
-                    i18nKey={"CODAnalysisPage.Animation.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
-                  />
-                ))}
-              </p>
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">
