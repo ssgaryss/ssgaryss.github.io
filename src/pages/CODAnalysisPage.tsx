@@ -19,6 +19,9 @@ import AA_TAA_02 from '../assets/images/project-cod-analysis/AA_TAA_02.png';
 import AA_NIS_01 from '../assets/images/project-cod-analysis/AA_NIS_01.png';
 // AO
 import AO_01 from '../assets/images/project-cod-analysis/AO_01.png';
+import AO_GTAO_01 from '../assets/images/project-cod-analysis/AO_GTAO_01.png';
+import AO_GTAO_02 from '../assets/images/project-cod-analysis/AO_GTAO_02.png';
+import AO_GTAO_03 from '../assets/images/project-cod-analysis/AO_GTAO_03.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -204,7 +207,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"CODAnalysisPage.AO.content1" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={["https://zhuanlan.zhihu.com/p/150178776"]}
+                    links={["https://zhuanlan.zhihu.com/p/342210503", "#Shadow"]}
                     breakCount={2}
                   />
                 ))}
@@ -214,6 +217,18 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.AO.Subsections.GTAO.content1" as any}/>
                 </p>
+                <img src={AO_GTAO_01} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.AO.Subsections.GTAO.content2" as any}/>
+                </p>
+                <img src={AO_GTAO_02} alt="Unable to display image" />
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.AO.Subsections.GTAO.content3" as any}
+                    links={["https://blog.csdn.net/bugrunner/article/details/7272902"]}
+                  />
+                </p>
+                <img src={AO_GTAO_03} alt="Unable to display image" />
               </section>
             </section>
             <section id="GI">
