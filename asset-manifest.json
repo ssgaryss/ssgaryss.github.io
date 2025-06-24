@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.718a5c09.css",
-    "main.js": "/static/js/main.17e4c641.js",
+    "main.js": "/static/js/main.484b8a43.js",
     "static/js/453.eeebb05b.chunk.js": "/static/js/453.eeebb05b.chunk.js",
     "static/media/Lighting.mp4": "/static/media/Lighting.b17a3af2c5982bce6d3f.mp4",
     "static/media/abstract-3D.mp4": "/static/media/abstract-3D.49a457f37e460c931066.mp4",
@@ -16,7 +16,9 @@
     "static/media/abstract-2D.mp4": "/static/media/abstract-2D.bce353ec96dc31b91b6d.mp4",
     "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
     "static/media/bg-dark.png": "/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/AO_GTAO_02.png": "/static/media/AO_GTAO_02.b881bb7e2b80e89f05ae.png",
     "static/media/Material.png": "/static/media/Material.a723a49d5de7cbff2bc9.png",
+    "static/media/AO_GTAO_01.png": "/static/media/AO_GTAO_01.4dc1b8b2b8f7c517355a.png",
     "static/media/PPLL_02.png": "/static/media/PPLL_02.ba459348fb00b11f396f.png",
     "static/media/AA_SMAA_01.png": "/static/media/AA_SMAA_01.599bf7321b0706969409.png",
     "static/media/SSAO_01.jpg": "/static/media/SSAO_01.f085b18ad0fba44ba7a4.jpg",
@@ -28,17 +30,18 @@
     "static/media/ShellFur_02.png": "/static/media/ShellFur_02.06c7af5c67bc70885254.png",
     "static/media/PPLL_03.png": "/static/media/PPLL_03.de6f3ac1b161e35a0fdd.png",
     "static/media/AA_02.png": "/static/media/AA_02.bdd434c5cb18223cc47b.png",
+    "static/media/AO_GTAO_03.png": "/static/media/AO_GTAO_03.ae639291cd289439dcc8.png",
     "static/media/Physics.png": "/static/media/Physics.7e01d5448035d6f317ec.png",
     "static/media/AA_TAA_01.png": "/static/media/AA_TAA_01.50969a68321ffb7009c7.png",
     "static/media/ECS.png": "/static/media/ECS.e12a0f1e6e7e9f342bfe.png",
     "static/media/SSAO_03.png": "/static/media/SSAO_03.5ce2a4abfdff68fdf429.png",
     "index.html": "/index.html",
     "main.718a5c09.css.map": "/static/css/main.718a5c09.css.map",
-    "main.17e4c641.js.map": "/static/js/main.17e4c641.js.map",
+    "main.484b8a43.js.map": "/static/js/main.484b8a43.js.map",
     "453.eeebb05b.chunk.js.map": "/static/js/453.eeebb05b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.718a5c09.css",
-    "static/js/main.17e4c641.js"
+    "static/js/main.484b8a43.js"
   ]
 }
