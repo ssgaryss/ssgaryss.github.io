@@ -34,6 +34,10 @@ import Static_Culling_01 from '../assets/images/project-cod-analysis/Static_Cull
 import Static_Batching_01 from '../assets/images/project-cod-analysis/Static_Batching_01.png';
 // Reflection
 import Reflection_01 from '../assets/images/project-cod-analysis/Reflection_01.png';
+import Reflection_SSR_01 from '../assets/images/project-cod-analysis/Reflection_SSR_01.gif';
+import Reflection_SSR_02 from '../assets/images/project-cod-analysis/Reflection_SSR_02.png';
+import Reflection_SSR_03 from '../assets/images/project-cod-analysis/Reflection_SSR_03.png';
+import Reflection_ReflectionProbe_01 from '../assets/images/project-cod-analysis/Reflection_ReflectionProbe_01.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -369,10 +373,35 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 />
               </p>
               <section id="ssr-section">
-
+                <h3>{t('CODAnalysisPage.Reflection.Subsections.SSR.title')}</h3>
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content1" as any}
+                    links={["https://lettier.github.io/3d-game-shaders-for-beginners/screen-space-reflection.html"]}
+                  />
+                </p>
+                <img src={Reflection_SSR_01} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content2" as any}/>
+                </p>
+                <img src={Reflection_SSR_02} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content3" as any}/>
+                </p>
+                <img src={Reflection_SSR_03} alt="Unable to display image" />
               </section>
               <section id="reflection-probe-section">
-
+                <h3>{t('CODAnalysisPage.Reflection.Subsections.ReflectionProbe.title')}</h3>
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Reflection.Subsections.ReflectionProbe.content1" as any}
+                    links={["https://zhuanlan.zhihu.com/p/438022045"]}
+                  />
+                </p>
+                <img src={Reflection_ReflectionProbe_01} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.ReflectionProbe.content2" as any}/>
+                </p>
               </section>
             </section>
             <section id="AE">
