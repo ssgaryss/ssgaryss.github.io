@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.718a5c09.css",
-    "main.js": "/static/js/main.f8b1d07c.js",
+    "main.js": "/static/js/main.c369b75d.js",
     "static/js/453.eeebb05b.chunk.js": "/static/js/453.eeebb05b.chunk.js",
+    "static/media/Shadow_01.png": "/static/media/Shadow_01.6fa56c197c9533b3ffaa.png",
     "static/media/Lighting.mp4": "/static/media/Lighting.b17a3af2c5982bce6d3f.mp4",
     "static/media/Static_01.png": "/static/media/Static_01.b9f3d4832ae9536c6212.png",
     "static/media/abstract-3D.mp4": "/static/media/abstract-3D.49a457f37e460c931066.mp4",
@@ -11,13 +12,15 @@
     "static/media/AA_TAA_02.png": "/static/media/AA_TAA_02.a3bec753fd33a6eae413.png",
     "static/media/cover.png": "/static/media/cover.1978eb26ec7a3c2c3d19.png",
     "static/media/FrameAdvisor.png": "/static/media/FrameAdvisor.b9290b1289d0f57573d1.png",
-    "static/media/Reflection_01.png": "/static/media/Reflection_01.f69659cb2986ff151dd4.png",
     "static/media/AO_01.png": "/static/media/AO_01.bc5b9c699ed28f2a8e8b.png",
     "static/media/AA_01.png": "/static/media/AA_01.311c4b1bbc59045b03cc.png",
+    "static/media/Static_LOD_01.png": "/static/media/Static_LOD_01.ca5f6c7d857c98e4ce6c.png",
     "static/media/AA_SMAA_02.png": "/static/media/AA_SMAA_02.afe503b8e305d339eac9.png",
     "static/media/Serialization.mp4": "/static/media/Serialization.472a02a74caf95707731.mp4",
     "static/media/abstract-2D.mp4": "/static/media/abstract-2D.bce353ec96dc31b91b6d.mp4",
     "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/Static_Culling_01.png": "/static/media/Static_Culling_01.3f494e408ee583569e2a.png",
+    "static/media/Reflection_01.png": "/static/media/Reflection_01.0c54f644712c370add59.png",
     "static/media/bg-dark.png": "/static/media/bg-dark.f420c6b8458af72de935.png",
     "static/media/AO_GTAO_02.png": "/static/media/AO_GTAO_02.b881bb7e2b80e89f05ae.png",
     "static/media/Material.png": "/static/media/Material.a723a49d5de7cbff2bc9.png",
@@ -35,16 +38,17 @@
     "static/media/AA_02.png": "/static/media/AA_02.bdd434c5cb18223cc47b.png",
     "static/media/AO_GTAO_03.png": "/static/media/AO_GTAO_03.ae639291cd289439dcc8.png",
     "static/media/Physics.png": "/static/media/Physics.7e01d5448035d6f317ec.png",
+    "static/media/Static_Batching_01.png": "/static/media/Static_Batching_01.0455bec61c19b98049fb.png",
     "static/media/AA_TAA_01.png": "/static/media/AA_TAA_01.50969a68321ffb7009c7.png",
     "static/media/ECS.png": "/static/media/ECS.e12a0f1e6e7e9f342bfe.png",
     "static/media/SSAO_03.png": "/static/media/SSAO_03.5ce2a4abfdff68fdf429.png",
     "index.html": "/index.html",
     "main.718a5c09.css.map": "/static/css/main.718a5c09.css.map",
-    "main.f8b1d07c.js.map": "/static/js/main.f8b1d07c.js.map",
+    "main.c369b75d.js.map": "/static/js/main.c369b75d.js.map",
     "453.eeebb05b.chunk.js.map": "/static/js/453.eeebb05b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.718a5c09.css",
-    "static/js/main.f8b1d07c.js"
+    "static/js/main.c369b75d.js"
   ]
 }
