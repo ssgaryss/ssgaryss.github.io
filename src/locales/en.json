@@ -215,7 +215,7 @@
         "Abstract": {
             "title": "Abstract",
             "content": [
-                "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <1><3>contact me</3></1> for prompt removal.",
+                "<1>Disclaimer</1>: This content is intended solely for educational and project showcase purposes. If any infringement is found, please <3>contact me</3> for prompt removal.",
                 "This blog presents a summary of my <1>rendering analysis</1> of <1><2><4>Call of Duty: Black Ops VI</4></2></1> and a review of the associated rendering techniques. To keep the blog concise, only key highlights are covered here — for the full analysis, please download the detailed documentation. The full analysis document is available for download via the <1><5>Doc</5></1> button below the title."
             ]
         },
@@ -255,7 +255,7 @@
                 "TAA": {
                     "title": "TAA",
                     "content1": "<1><2><3>TAA (Temporal Anti-Aliasing)</3></2></1> is a commonly used anti-aliasing technique in modern games. It blends pixel information from the current frame with data from previous frames using motion vectors, effectively reducing jagged edges and temporal flickering. Compared to spatial techniques like <1>SMAA</1> or <1>FXAA</1>, TAA handles sub-pixel details better but may introduce artifacts like ghosting if not properly filtered.",
-                    "content2": "As shown in the figure above, the game implements TAA by using <1>motion vectors</1>, <1>translucency masks</1>, and <1>SMAA weights</1> from two historical frames to perform temporal anti-aliasing and reduce flickering artifacts. The final result of combining SMAA and TAA is shown at the bottom."
+                    "content2": "As shown in the figure above, the game implements TAA by using <1>motion vectors</1>, <1>translucency masks</1>, and <1>SMAA weights</1> from the current frame and two previous frames to perform temporal anti-aliasing and reduce flickering artifacts. The final result of combining SMAA and TAA is shown at the bottom."
                 },
                 "NIS": {
                     "title": "NIS",
@@ -336,8 +336,16 @@
         },
         "Effects": {
             "title": "Effects",
+            "content0": "<1>The effects techniques used in the game</1>:",
+            "list0": {
+                "0": "<3><1><2>Motion Blur</2></1></3>",
+                "1": "<3><1><2>Bloom</2></1></3>",
+                "2": "<3><1><2>SSFS</2></1> : Screen Space Fog Scattering</3>",
+                "3": "<3><1><2>Volumetric Fog</2></1></3>",
+                "4": "<3><1><2>Volumetric Light</2></1></3>"
+            },
             "content": [
-                "Effects"
+                "Effects..."
             ]
         },
         "AE": {

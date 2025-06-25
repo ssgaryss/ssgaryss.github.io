@@ -322,6 +322,21 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             </section>
             <section id="Effects">
               <h2>{t('CODAnalysisPage.Effects.title')}</h2>
+              <p>
+                <TransText i18nKey={"CODAnalysisPage.Effects.content0" as any}/>
+              </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.Effects.list0" as any}
+                count={5}
+                links={[
+                  ["#motion-blur-section"],
+                  ["#bloom-section"],
+                  ["#ssfs-section"],
+                  ["#volumetric-fog-section"],
+                  ["#volumetric-light-section"],
+                ]}
+                variant="quote"
+              />
             </section>
             <section id="Static">
               <h2>{t('CODAnalysisPage.Static.title')}</h2>
