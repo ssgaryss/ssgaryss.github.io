@@ -29,6 +29,9 @@ import Shadow_01 from '../assets/images/project-cod-analysis/Shadow_01.png';
 
 // Static
 import Static_01 from '../assets/images/project-cod-analysis/Static_01.png';
+import Static_LOD_01 from '../assets/images/project-cod-analysis/Static_LOD_01.png';
+import Static_Culling_01 from '../assets/images/project-cod-analysis/Static_Culling_01.png';
+import Static_Batching_01 from '../assets/images/project-cod-analysis/Static_Batching_01.png';
 // Reflection
 import Reflection_01 from '../assets/images/project-cod-analysis/Reflection_01.png';
 
@@ -280,7 +283,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ]}
                 variant="quote"
               />
-              {/* <img src={Shadow_01} alt="Unable to display image" /> */}
+              <img src={Shadow_01} alt="Unable to display image" />
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.Shadow.content1" as any}
@@ -303,11 +306,10 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               </p>
               <TransList
                 i18nKey={"CODAnalysisPage.Static.list0" as any}
-                count={4}
+                count={3}
                 links={[
                   ["#lod-section"],
                   ["#culling-section"],
-                  ["#instancing-section"],
                   ["#batch-section"],
                 ]}
                 variant="quote"
@@ -319,13 +321,31 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 />
               </p>
               <section id="lod-section">
-
+                <h3>{t('CODAnalysisPage.Static.Subsections.LOD.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Static.Subsections.LOD.content1" as any}/>
+                </p>
+                <img src={Static_LOD_01} alt="Unable to display image" />
               </section>
               <section id="culling-section">
-
+                <h3>{t('CODAnalysisPage.Static.Subsections.Culling.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Static.Subsections.Culling.content1" as any}/>
+                </p>
+                <img src={Static_Culling_01} alt="Unable to display image" />
               </section>
               <section id="batch-section">
-
+                <h3>{t('CODAnalysisPage.Static.Subsections.Batching.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Static.Subsections.Batching.content1" as any}/>
+                </p>
+                <img src={Static_Batching_01} alt="Unable to display image" />
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Static.Subsections.Batching.content2" as any}
+                    links={["https://discussions.unity.com/t/gpu-instancing-and-static-batching/712655/3"]}
+                  />
+                </p>
               </section>
             </section>
             <section id="Reflection">
