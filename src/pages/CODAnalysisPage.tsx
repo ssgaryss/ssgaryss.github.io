@@ -26,6 +26,8 @@ import AO_GTAO_03 from '../assets/images/project-cod-analysis/AO_GTAO_03.png';
 import GI_01 from '../assets/images/project-cod-analysis/GI_01.png';
 // Shadow
 import Shadow_01 from '../assets/images/project-cod-analysis/Shadow_01.png';
+import Shadow_CSM_01 from '../assets/images/project-cod-analysis/Shadow_CSM_01.png';
+import Shadow_PCF_01 from '../assets/images/project-cod-analysis/Shadow_PCF_01.png';
 
 // Static
 import Static_01 from '../assets/images/project-cod-analysis/Static_01.png';
@@ -291,13 +293,31 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.Shadow.content1" as any}
+                  links={[
+                    "https://www.unishiki.cc/2025/02/21/Mathematical-Visualization-12/",
+                    "https://dev.epicgames.com/documentation/en-us/unreal-engine/contact-shadows-in-unreal-engine?application_version=5.0",
+                    "https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/Override-Micro-Shadows.html",
+                    "https://zhuanlan.zhihu.com/p/478472753",
+                    "https://zhuanlan.zhihu.com/p/605111811"
+                  ]}
                 />
               </p>
               <section id="csm-section">
-
+                <h3>{t('CODAnalysisPage.Shadow.Subsections.CSM.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Shadow.Subsections.CSM.content1" as any}/>
+                </p>
+                <img src={Shadow_CSM_01} alt="Unable to display image" />
               </section>
               <section id="pcf-section">
-
+                <h3>{t('CODAnalysisPage.Shadow.Subsections.PCF.title')}</h3>
+                <p>
+                  <TransText 
+                  i18nKey={"CODAnalysisPage.Shadow.Subsections.PCF.content1" as any}
+                  links={["https://www.shadertoy.com/view/4l3yRM"]}
+                  />
+                </p>
+                <img src={Shadow_PCF_01} alt="Unable to display image" />
               </section>
             </section>
             <section id="Effects">

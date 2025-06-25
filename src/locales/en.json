@@ -322,7 +322,17 @@
                 "0": "<3><1><2>CSM</2></1> : Cascaded Shadow Maps</3>",
                 "1": "<3><1><2>PCF</2></1> : Percentage Closer Filtering</3>"
             },
-            "content1": "Shadow..."
+            "content1": "After reverse-engineering the shader, I was surprised to find that Call of Duty: Black Ops 6 doesn’t use more advanced, high-quality shadow techniques (like <3>SDF shadows</3>, <4>contact shadows</4>, <5>micro shadows</5>, etc.). It’s really just <6>CSM</6> combined with <7>PCF</7> edge anti-aliasing using Vogel Disk Rotation sampling—presumably because a fast-paced first-person shooter demands high FPS, and shadow quality isn’t the top priority.",
+            "Subsections": {
+                "CSM": {
+                    "title": "CSM",
+                    "content1": "You can see in the image below the three 2K-resolution CSM shadow maps, which correspond to the near, middle, and far slices of the view frustum."
+                },
+                "PCF": {
+                    "title": "PCF",
+                    "content1": "Based on my shader reverse‐engineering, the shadow‐edge anti‐aliasing appears to be implemented with a 16‐sample PCF using <3>Vogel‐disk rotation</3>. Below is the combined shadow visibility map, which will be uniformly sampled in the subsequent GI pass."
+                }
+            }
         },
         "Effects": {
             "title": "Effects",
