@@ -295,7 +295,7 @@
                     "title": "SSR",
                     "content1": "<1><2><3>Screen-Space Reflections (SSR)</3></2></1> leverage the <1>depth</1> and <1>normal</1> buffers of the already rendered frame to perform stepwise sampling (ray marching) along the reflection vector in screen space. By comparing depths, the algorithm determines when the ray “hits” visible geometry, then samples the reflection color from the color buffer. The entire process can be simply understood as performing ray marching on a 2D image, as illustrated below.",
                     "content2": "It should be noted that Call of Duty: Black Ops 6 uses SSR optimized with a <1>Hierarchical Z-Buffer (HZB)</1> to accelerate ray-marching intersection. Since per-pixel ray marching in screen space is prohibitively expensive, a Hierarchical Z-Buffer is pre-generated to speed up this process. The image below illustrates how the HZB optimizes the intersection steps.",
-                    "content3": "The image below shows the dispatch used to pre-generate the Hierarchical Z-Buffer (HZB) for the game's subsequent SSR ray-marching. It also employs a <1>ping-pong</1> buffering strategy that alternates reads and writes between two identical HZB slices, eliminating read/write conflicts within a single pass, enabling efficient multi-level downsampling without rebinding or reallocating textures at each mip level, and simplifying resource management by using a single two-slice Texture2DArray for the entire pipeline."
+                    "content3": "The image below shows the dispatch used to pre-generate the Hierarchical Z-Buffer (HZB) for the game's subsequent SSR ray-marching. It also employs a <1>ping-pong</1> buffering strategy that alternates reads and writes between two identical HZB slices, eliminating read/write conflicts within a single pass, enabling efficient multi-level downsampling without rebinding or reallocating textures at each mip level."
                 },
                 "ReflectionProbe": {
                     "title": "Reflection Probe",
@@ -338,15 +338,36 @@
             "title": "Effects",
             "content0": "<1>The effects techniques used in the game</1>:",
             "list0": {
-                "0": "<3><1><2>Motion Blur</2></1></3>",
-                "1": "<3><1><2>Bloom</2></1></3>",
-                "2": "<3><1><2>SSFS</2></1> : Screen Space Fog Scattering</3>",
-                "3": "<3><1><2>Volumetric Fog</2></1></3>",
+                "0": "<3><1><2>SSFS</2></1> : Screen Space Fog Scattering</3>",
+                "1": "<3><1><2>Volumetric Fog</2></1></3>",
+                "2": "<3><1><2>Bloom</2></1></3>",
+                "3": "<3><1><2>Motion Blur</2></1></3>",
                 "4": "<3><1><2>Volumetric Light</2></1></3>"
             },
-            "content": [
-                "Effects..."
-            ]
+            "content1":"Call of Duty: Black Ops VI features a wide array of visual effects. Here, I‘ll introduce some of the most common effects and the principles behind them.",
+            "Subsections": {
+                "SSFS": {
+                    "title": "SSFS",
+                    "content1": "<3>Screen-Space Fog Scattering (SSFS)</3> is a screen-space post-process that, in a first pass, normalizes scene depth, computes smooth depth-based weights and preliminary scattering contributions over small pixel neighborhoods, and in a second pass reads those intermediate results to apply brightness gain, accumulate, and normalize, delivering natural fog without costly 3D volume integration while remaining highly performant and easy to integrate.",
+                    "content2": "The illustration above shows several key textures. In SSFS, multiple dispatches are used to perform successive fog-weight computations, ultimately producing the fog map shown below. In later rendering passes, this fog map is applied in a depth-dependent post-process fog effect (areas with greater depth receive stronger fog)."
+                },
+                "VolumetricFog": {
+                    "title": "Volumetric Fog",
+                    "content1": "VolumetricFog..."
+                },
+                "Bloom": {
+                    "title": "Bloom",
+                    "content1": "Bloom..."
+                },
+                "MotionBlur": {
+                    "title": "Motion Blur",
+                    "content1": "<3>Motion blur</3> is a very common post-processing effect that makes moving objects appear more realistic. The image below shows direct evidence of motion blur in the game."
+                },
+                "VolumetricLight": {
+                    "title": "Volumetric Light",
+                    "content1": "VolumetricLight..."
+                }
+            }
         },
         "AE": {
             "title": "Auto Exposure",
@@ -362,7 +383,7 @@
                 "1": "<3><1><2>Culling</2></1> : Frustum Culling, Occlusion Culling, etc</3>",
                 "2": "<3><1><2>Static Batching</2></1></3>"
             },
-            "content1": "There are many optimization techniques for static geometry rendering to ensure that the mesh data in a single frame remains constrained and doesn’t overload the GPU—for example, Unreal Engine’s <1>Nanite</1>.",
+            "content1": "There are many optimization techniques for static geometry rendering to ensure that the mesh data in a single frame remains constrained and doesn’t overload the GPU—for example, Unreal Engine’s <1><3>Nanite</3></1>.",
             "Subsections": {
                 "LOD": {
                     "title": "LOD",

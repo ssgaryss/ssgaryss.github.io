@@ -22,24 +22,27 @@ import AO_01 from '../assets/images/project-cod-analysis/AO_01.png';
 import AO_GTAO_01 from '../assets/images/project-cod-analysis/AO_GTAO_01.png';
 import AO_GTAO_02 from '../assets/images/project-cod-analysis/AO_GTAO_02.png';
 import AO_GTAO_03 from '../assets/images/project-cod-analysis/AO_GTAO_03.png';
-// GI
-import GI_01 from '../assets/images/project-cod-analysis/GI_01.png';
-// Shadow
-import Shadow_01 from '../assets/images/project-cod-analysis/Shadow_01.png';
-import Shadow_CSM_01 from '../assets/images/project-cod-analysis/Shadow_CSM_01.png';
-import Shadow_PCF_01 from '../assets/images/project-cod-analysis/Shadow_PCF_01.png';
-
-// Static
-import Static_01 from '../assets/images/project-cod-analysis/Static_01.png';
-import Static_LOD_01 from '../assets/images/project-cod-analysis/Static_LOD_01.png';
-import Static_Culling_01 from '../assets/images/project-cod-analysis/Static_Culling_01.png';
-import Static_Batching_01 from '../assets/images/project-cod-analysis/Static_Batching_01.png';
 // Reflection
 import Reflection_01 from '../assets/images/project-cod-analysis/Reflection_01.png';
 import Reflection_SSR_01 from '../assets/images/project-cod-analysis/Reflection_SSR_01.gif';
 import Reflection_SSR_02 from '../assets/images/project-cod-analysis/Reflection_SSR_02.png';
 import Reflection_SSR_03 from '../assets/images/project-cod-analysis/Reflection_SSR_03.png';
 import Reflection_ReflectionProbe_01 from '../assets/images/project-cod-analysis/Reflection_ReflectionProbe_01.png';
+// GI
+import GI_01 from '../assets/images/project-cod-analysis/GI_01.png';
+// Shadow
+import Shadow_01 from '../assets/images/project-cod-analysis/Shadow_01.png';
+import Shadow_CSM_01 from '../assets/images/project-cod-analysis/Shadow_CSM_01.png';
+import Shadow_PCF_01 from '../assets/images/project-cod-analysis/Shadow_PCF_01.png';
+// Effects
+import Effects_SSFS_01 from '../assets/images/project-cod-analysis/Effects_SSFS_01.png';
+import Effects_SSFS_02 from '../assets/images/project-cod-analysis/Effects_SSFS_02.png';
+import Effects_SSFS_03 from '../assets/images/project-cod-analysis/Effects_SSFS_03.png';
+// Static
+import Static_01 from '../assets/images/project-cod-analysis/Static_01.png';
+import Static_LOD_01 from '../assets/images/project-cod-analysis/Static_LOD_01.png';
+import Static_Culling_01 from '../assets/images/project-cod-analysis/Static_Culling_01.png';
+import Static_Batching_01 from '../assets/images/project-cod-analysis/Static_Batching_01.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -53,11 +56,11 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
     { id: 'Abstract', title: t('CODAnalysisPage.Contents.items.Abstract') },
     { id: 'AA', title: t('CODAnalysisPage.Contents.items.AA') },
     { id: 'AO', title: t('CODAnalysisPage.Contents.items.AO') },
+    { id: 'Reflection', title: t('CODAnalysisPage.Contents.items.Reflection') },
     { id: 'GI', title: t('CODAnalysisPage.Contents.items.GI') },
     { id: 'Shadow', title: t('CODAnalysisPage.Contents.items.Shadow') },
     { id: 'Effects', title: t('CODAnalysisPage.Contents.items.Effects') },
     { id: 'Static', title: t('CODAnalysisPage.Contents.items.Static') },
-    { id: 'Reflection', title: t('CODAnalysisPage.Contents.items.Reflection') },
     { id: 'AE', title: t('CODAnalysisPage.Contents.items.AE') },
     { id: 'DOF', title: t('CODAnalysisPage.Contents.items.DOF') },
     { id: 'Animation', title: t('CODAnalysisPage.Contents.items.Animation') },
@@ -249,6 +252,58 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 <img src={AO_GTAO_03} alt="Unable to display image" />
               </section>
             </section>
+            <section id="Reflection">
+              <h2>{t('CODAnalysisPage.Reflection.title')}</h2>
+              <p>
+                <TransText i18nKey={"CODAnalysisPage.Reflection.content0" as any}/>
+              </p>
+              <TransList
+                i18nKey={"CODAnalysisPage.Reflection.list0" as any}
+                count={2}
+                links={[
+                  ["#ssr-section"],
+                  ["#reflection-probe-section"],
+                ]}
+                variant="quote"
+              />
+              <img src={Reflection_01} alt="Unable to display image" />
+              <p>
+                <TransText
+                  i18nKey={"CODAnalysisPage.Reflection.content1" as any}
+                />
+              </p>
+              <section id="ssr-section">
+                <h3>{t('CODAnalysisPage.Reflection.Subsections.SSR.title')}</h3>
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content1" as any}
+                    links={["https://lettier.github.io/3d-game-shaders-for-beginners/screen-space-reflection.html"]}
+                  />
+                </p>
+                <img src={Reflection_SSR_01} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content2" as any}/>
+                </p>
+                <img src={Reflection_SSR_02} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content3" as any}/>
+                </p>
+                <img src={Reflection_SSR_03} alt="Unable to display image" />
+              </section>
+              <section id="reflection-probe-section">
+                <h3>{t('CODAnalysisPage.Reflection.Subsections.ReflectionProbe.title')}</h3>
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Reflection.Subsections.ReflectionProbe.content1" as any}
+                    links={["https://zhuanlan.zhihu.com/p/438022045"]}
+                  />
+                </p>
+                <img src={Reflection_ReflectionProbe_01} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.ReflectionProbe.content2" as any}/>
+                </p>
+              </section>
+            </section>
             <section id="GI">
               <h2>{t('CODAnalysisPage.GI.title')}</h2>
               <p>
@@ -329,14 +384,60 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 i18nKey={"CODAnalysisPage.Effects.list0" as any}
                 count={5}
                 links={[
-                  ["#motion-blur-section"],
-                  ["#bloom-section"],
                   ["#ssfs-section"],
                   ["#volumetric-fog-section"],
+                  ["#bloom-section"],
+                  ["#motion-blur-section"],
                   ["#volumetric-light-section"],
                 ]}
                 variant="quote"
               />
+              <section id="ssfs-section">
+                <h3>{t('CODAnalysisPage.Effects.Subsections.SSFS.title')}</h3>
+                <img src={Effects_SSFS_01} alt="Unable to display image" />
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Effects.Subsections.SSFS.content1" as any}
+                    links={["https://www.bilibili.com/video/BV1wNwfeaEPE/"]}
+                  />
+                </p>
+                <img src={Effects_SSFS_02} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.SSFS.content2" as any}/>
+                </p>
+                <img src={Effects_SSFS_03} alt="Unable to display image" />
+              </section>
+              <section id="volumetric-fog-section">
+                <h3>{t('CODAnalysisPage.Effects.Subsections.VolumetricFog.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content1" as any}/>
+                </p>
+                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
+              </section>
+              <section id="bloom-section">
+                <h3>{t('CODAnalysisPage.Effects.Subsections.Bloom.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.Bloom.content1" as any}/>
+                </p>
+                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
+              </section>
+              <section id="motion-blur-section">
+                <h3>{t('CODAnalysisPage.Effects.Subsections.MotionBlur.title')}</h3>
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Effects.Subsections.MotionBlur.content1" as any}
+                    links={["https://zhuanlan.zhihu.com/p/441786650"]}
+                  />
+                </p>
+                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
+              </section>
+              <section id="volumetric-light-section">
+                <h3>{t('CODAnalysisPage.Effects.Subsections.VolumetricLight.title')}</h3>
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricLight.content1" as any}/>
+                </p>
+                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
+              </section>
             </section>
             <section id="Static">
               <h2>{t('CODAnalysisPage.Static.title')}</h2>
@@ -357,6 +458,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.Static.content1" as any}
+                  links={["https://dev.epicgames.com/documentation/zh-cn/unreal-engine/nanite-virtualized-geometry-in-unreal-engine"]}
                 />
               </p>
               <section id="lod-section">
@@ -384,58 +486,6 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"CODAnalysisPage.Static.Subsections.Batching.content2" as any}
                     links={["https://discussions.unity.com/t/gpu-instancing-and-static-batching/712655/3"]}
                   />
-                </p>
-              </section>
-            </section>
-            <section id="Reflection">
-              <h2>{t('CODAnalysisPage.Reflection.title')}</h2>
-              <p>
-                <TransText i18nKey={"CODAnalysisPage.Reflection.content0" as any}/>
-              </p>
-              <TransList
-                i18nKey={"CODAnalysisPage.Reflection.list0" as any}
-                count={2}
-                links={[
-                  ["#ssr-section"],
-                  ["#reflection-probe-section"],
-                ]}
-                variant="quote"
-              />
-              <img src={Reflection_01} alt="Unable to display image" />
-              <p>
-                <TransText
-                  i18nKey={"CODAnalysisPage.Reflection.content1" as any}
-                />
-              </p>
-              <section id="ssr-section">
-                <h3>{t('CODAnalysisPage.Reflection.Subsections.SSR.title')}</h3>
-                <p>
-                  <TransText 
-                    i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content1" as any}
-                    links={["https://lettier.github.io/3d-game-shaders-for-beginners/screen-space-reflection.html"]}
-                  />
-                </p>
-                <img src={Reflection_SSR_01} alt="Unable to display image" />
-                <p>
-                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content2" as any}/>
-                </p>
-                <img src={Reflection_SSR_02} alt="Unable to display image" />
-                <p>
-                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content3" as any}/>
-                </p>
-                <img src={Reflection_SSR_03} alt="Unable to display image" />
-              </section>
-              <section id="reflection-probe-section">
-                <h3>{t('CODAnalysisPage.Reflection.Subsections.ReflectionProbe.title')}</h3>
-                <p>
-                  <TransText 
-                    i18nKey={"CODAnalysisPage.Reflection.Subsections.ReflectionProbe.content1" as any}
-                    links={["https://zhuanlan.zhihu.com/p/438022045"]}
-                  />
-                </p>
-                <img src={Reflection_ReflectionProbe_01} alt="Unable to display image" />
-                <p>
-                  <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.ReflectionProbe.content2" as any}/>
                 </p>
               </section>
             </section>
