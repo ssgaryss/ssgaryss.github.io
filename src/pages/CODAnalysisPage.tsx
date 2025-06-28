@@ -38,6 +38,11 @@ import Shadow_PCF_01 from '../assets/images/project-cod-analysis/Shadow_PCF_01.p
 import Effects_SSFS_01 from '../assets/images/project-cod-analysis/Effects_SSFS_01.png';
 import Effects_SSFS_02 from '../assets/images/project-cod-analysis/Effects_SSFS_02.png';
 import Effects_SSFS_03 from '../assets/images/project-cod-analysis/Effects_SSFS_03.png';
+import Effects_Volumetric_fog_01 from '../assets/images/project-cod-analysis/Effects_Volumetric_fog_01.png';
+import Effects_Volumetric_fog_02 from '../assets/images/project-cod-analysis/Effects_Volumetric_fog_02.png';
+import Effects_Volumetric_fog_03 from '../assets/images/project-cod-analysis/Effects_Volumetric_fog_03.png';
+import Effects_Bloom_01 from '../assets/images/project-cod-analysis/Effects_Bloom_01.png';
+import Effects_Lens_Flare_01 from '../assets/images/project-cod-analysis/Effects_Lens_Flare_01.png';
 // Static
 import Static_01 from '../assets/images/project-cod-analysis/Static_01.png';
 import Static_LOD_01 from '../assets/images/project-cod-analysis/Static_LOD_01.png';
@@ -61,9 +66,9 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
     { id: 'Shadow', title: t('CODAnalysisPage.Contents.items.Shadow') },
     { id: 'Effects', title: t('CODAnalysisPage.Contents.items.Effects') },
     { id: 'Static', title: t('CODAnalysisPage.Contents.items.Static') },
-    { id: 'AE', title: t('CODAnalysisPage.Contents.items.AE') },
-    { id: 'DOF', title: t('CODAnalysisPage.Contents.items.DOF') },
-    { id: 'Animation', title: t('CODAnalysisPage.Contents.items.Animation') },
+    // { id: 'AE', title: t('CODAnalysisPage.Contents.items.AE') },
+    // { id: 'DOF', title: t('CODAnalysisPage.Contents.items.DOF') },
+    // { id: 'Animation', title: t('CODAnalysisPage.Contents.items.Animation') },
   ];
   
   useEffect(() => {
@@ -71,6 +76,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
   }, []);
 
   const { id, cover } = project;
+  const documentPath: string = "/files/COD Black Op 6 Analysis.png";
 
   return (
     <div className={`project-page-wrapper ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
@@ -81,7 +87,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
           </div>
           <h1 className="project-title">{t('CODAnalysisPage.Title')}</h1>
           <div className="project-links">
-            {/* <LinkButton href="/files/项目介绍.pptx" label="PPT" icon={<InsertDriveFileIcon />} /> */}
+            <LinkButton href={documentPath} label="Doc" icon={<InsertDriveFileIcon />} />
           </div>
           <div className="project-contents">
             <TOC title={t('CODAnalysisPage.Contents.title')} items={contents} />
@@ -97,7 +103,11 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"CODAnalysisPage.Abstract.content" as any}
                     index={index}
                     isLast={index === array.length - 1}
-                    links={[`mailto:${INFO.main.email}`, "https://www.callofduty.com/cn/zh/blackops6"]}
+                    links={[
+                      `mailto:${INFO.main.email}`, 
+                      "https://www.callofduty.com/cn/zh/blackops6",
+                      documentPath
+                    ]}
                     breakCount={2}
                   />
                 ))}
@@ -382,16 +392,35 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               </p>
               <TransList
                 i18nKey={"CODAnalysisPage.Effects.list0" as any}
-                count={5}
+                count={4}
                 links={[
                   ["#ssfs-section"],
                   ["#volumetric-fog-section"],
                   ["#bloom-section"],
-                  ["#motion-blur-section"],
-                  ["#volumetric-light-section"],
+                  ["#lens-flare-section"]
                 ]}
                 variant="quote"
               />
+              <p>
+                {t('CODAnalysisPage.Effects.content1', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                    key={index}
+                    i18nKey={"CODAnalysisPage.Effects.content1" as any}
+                    index={index}
+                    isLast={index === array.length - 1}
+                    links={[
+                      "https://www.bilibili.com/video/BV1wNwfeaEPE/",
+                      "https://zhuanlan.zhihu.com/p/366083234",
+                      "https://zhuanlan.zhihu.com/p/525500877",
+                      "https://xiaoiver.github.io/coding/2019/02/06/Lensflare.html",
+                      "https://users.oden.utexas.edu/~arbogast/cam397/dawson_v2.pdf",
+                      "https://zhuanlan.zhihu.com/p/362175935",
+                      documentPath
+                    ]}
+                    breakCount={2}
+                  />
+                ))}
+              </p>
               <section id="ssfs-section">
                 <h3>{t('CODAnalysisPage.Effects.Subsections.SSFS.title')}</h3>
                 <img src={Effects_SSFS_01} alt="Unable to display image" />
@@ -410,33 +439,48 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               <section id="volumetric-fog-section">
                 <h3>{t('CODAnalysisPage.Effects.Subsections.VolumetricFog.title')}</h3>
                 <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content0" as any}
+                    links={["https://zhuanlan.zhihu.com/p/366083234"]}
+                  />
+                </p>
+                <TransList
+                  i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.list0" as any}
+                  count={2}
+                  variant="quote"
+                />
+                <p>
                   <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content1" as any}/>
                 </p>
-                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
+                <img src={Effects_Volumetric_fog_01} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content2" as any}/>
+                </p>
+                <img src={Effects_Volumetric_fog_02} alt="Unable to display image" />
+                <p>
+                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content3" as any}/>
+                </p>
+                <img src={Effects_Volumetric_fog_03} alt="Unable to display image" />
               </section>
               <section id="bloom-section">
                 <h3>{t('CODAnalysisPage.Effects.Subsections.Bloom.title')}</h3>
-                <p>
-                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.Bloom.content1" as any}/>
-                </p>
-                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
-              </section>
-              <section id="motion-blur-section">
-                <h3>{t('CODAnalysisPage.Effects.Subsections.MotionBlur.title')}</h3>
+                <img src={Effects_Bloom_01} alt="Unable to display image" />
                 <p>
                   <TransText 
-                    i18nKey={"CODAnalysisPage.Effects.Subsections.MotionBlur.content1" as any}
-                    links={["https://zhuanlan.zhihu.com/p/441786650"]}
+                    i18nKey={"CODAnalysisPage.Effects.Subsections.Bloom.content1" as any}
+                    links={["https://zhuanlan.zhihu.com/p/525500877"]}
                   />
                 </p>
-                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
               </section>
-              <section id="volumetric-light-section">
-                <h3>{t('CODAnalysisPage.Effects.Subsections.VolumetricLight.title')}</h3>
+              <section id="lens-flare-section">
+                <h3>{t('CODAnalysisPage.Effects.Subsections.LensFlare.title')}</h3>
+                <img src={Effects_Lens_Flare_01} alt="Unable to display image" />
                 <p>
-                  <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricLight.content1" as any}/>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.Effects.Subsections.LensFlare.content1" as any}
+                    links={["https://xiaoiver.github.io/coding/2019/02/06/Lensflare.html"]}
+                  />
                 </p>
-                {/* <img src={Static_LOD_01} alt="Unable to display image" /> */}
               </section>
             </section>
             <section id="Static">
@@ -489,7 +533,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 </p>
               </section>
             </section>
-            <section id="AE">
+            {/* <section id="AE">
               <h2>{t('CODAnalysisPage.AE.title')}</h2>
             </section>
             <section id="DOF">
@@ -497,7 +541,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             </section>
             <section id="Animation">
               <h2>{t('CODAnalysisPage.Animation.title')}</h2>
-            </section>
+            </section> */}
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">
               <PageTurningButton
