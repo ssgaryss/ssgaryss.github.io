@@ -149,7 +149,7 @@
             "title": "Lighting & Shadow",
             "content1": [
                 "The Pika engine currently supports point lights, spotlights, and directional lights, each with integrated shadow mapping. Additional lighting types, such as area lights and emissive surfaces, are planned for future updates.",
-                "To reduce common shadow mapping artifacts—particularly <1>moiré patterns</1> and <1>surface acne</1>—the engine leverages <1>reverse-Z</1> buffering alongside enhanced depth precision techniques to improve visual fidelity. <1>Depth bias</1> remains a particularly tricky aspect; a dynamic, slope-aware biasing strategy is planned for future implementation to adapt to varying light directions and surface normals, which is expected to effectively mitigate such artifacts."
+                "To reduce common shadow mapping artifacts—particularly <1>moiré patterns</1> and <1>surface acne</1>—The engine employs a <1>reversed-Z depth buffer</1> to mitigate precision issues: because floating-point depth values use an exponent representation, they offer higher precision for smaller values, and the non-linear perspective transform further skews precision distribution. Reversed-Z counteracts this imbalance, yielding a more uniform depth precision overall. <1>Depth bias</1> remains a particularly tricky aspect; a dynamic, slope-aware biasing strategy is planned for future implementation to adapt to varying light directions and surface normals, which is expected to effectively mitigate such artifacts."
             ],
             "content2": [
                 "More advanced shadowing techniques such as <1>Cascaded Shadow Maps (CSM)</1>, <1>Percentage Closer Filtering (PCF)</1>, and <1>Percentage Closer Soft Shadows (PCSS)</1> have not yet been implemented, but are planned for future integration as the engine evolves."
@@ -259,7 +259,7 @@
                 },
                 "NIS": {
                     "title": "NIS",
-                    "content1": "<1><2><3>NVIDIA Image Scaling (NIS)</3></2></1> is a spatial <1>upscaling</1> and <1>sharpening</1> technique developed by NVIDIA. It aims to boost image resolution and visual clarity with minimal performance overhead. Unlike <1><2><4>DLSS</4></2></1>, NIS does not rely on deep learning, making it compatible with a wider range of GPUs and platforms. While NIS is not strictly an anti-aliasing method, its adaptive sharpening significantly enhances edge quality and closely relates to anti-aliasing in this context, hence it is analyzed here as part of the anti-aliasing pipeline.",
+                    "content1": "<1><2><3>NVIDIA Image Scaling (NIS)</3></2></1> is a spatial <1>super-resolution</1> and <1>sharpening</1> technique developed by NVIDIA. It aims to boost image resolution and visual clarity with minimal performance overhead. Unlike <1><2><4>DLSS</4></2></1>, NIS does not rely on deep learning, making it compatible with a wider range of GPUs and platforms. While NIS is not strictly an anti-aliasing method, its adaptive sharpening significantly enhances edge quality and closely relates to anti-aliasing in this context, hence it is analyzed here as part of the anti-aliasing pipeline.",
                     "content2": "The image above shows the result after NIS upscaling (from 912×512 to 1366×768). The inputs here are the <1>NIS scaling factor table</1> and the <1>NIS sharpening factor table</1>."
                 }
             }
@@ -277,7 +277,7 @@
                 "GTAO": {
                     "title": "GTAO",
                     "content1": "GTAO works by subdividing the view-direction hemisphere at each pixel into a set of angular “<1>slices</1>,” then for each slice sampling the maximum visible angle—that is, the largest depth interval along that direction that remains unoccluded. These per-slice visibility values are weighted by both distance falloff and the surface normal’s orientation, accumulated across all slices, and normalized to yield a single ambient occlusion coefficient. By focusing on the maximum unblocked angle per slice rather than dense random samples, GTAO achieves high-quality AO with fewer probes, lower noise, and efficient performance.",
-                    "content2": "In Call of Duty: Black Ops 6, GTAO is computed in a single dispatch. The image below shows some of its <1>inputs</1>: the depth buffer (including both a <1>standard Z-buffer</1> and a <1>reversed Z-buffer</1>), the <1>normal buffer</1> and a <1>random texture</1> for constructing the hemisphere’s base sampling directions and introducing per-slice randomness to suppress noise. There are actually additional inputs—such as data from the previous frame—but limited shader readability prevented a full reverse-engineering of every detail. Overall, the algorithm follows the standard GTAO approach—performing hemisphere sampling and per-slice integration to compute the final AO value.",
+                    "content2": "In <2>Call of Duty: Black Ops 6</2>, GTAO is computed in a single dispatch. The image below shows some of its <1>inputs</1>: the depth buffer (including both a <1>standard Z-buffer</1> and a <1>reversed Z-buffer</1>), the <1>normal buffer</1> and a <1>random texture</1> for constructing the hemisphere’s base sampling directions and introducing per-slice randomness to suppress noise. It’s worth noting that the input also includes historical frame data, and the game’s GTAO algorithm is also temporal, preventing flickering artifacts. Overall, the algorithm follows the standard GTAO approach—performing hemisphere sampling and per-slice integration to compute the final AO value.",
                     "content3": "Shown below are the outputs, both in <1>R32_UINT</1> format: the image on the left displays the computed <1>AO values</1>, and the one on the right shows the <1><3>Bent Normal</3></1> (the weighted average direction of all unoccluded sample rays over the hemisphere around the surface normal, used to guide environment and indirect lighting sampling)."
                 }
             }
@@ -293,8 +293,8 @@
             "Subsections": {
                 "SSR": {
                     "title": "SSR",
-                    "content1": "<1><2><3>Screen-Space Reflections (SSR)</3></2></1> leverage the <1>depth</1> and <1>normal</1> buffers of the already rendered frame to perform stepwise sampling (ray marching) along the reflection vector in screen space. By comparing depths, the algorithm determines when the ray “hits” visible geometry, then samples the reflection color from the color buffer. The entire process can be simply understood as performing ray marching on a 2D image, as illustrated below.",
-                    "content2": "It should be noted that Call of Duty: Black Ops 6 uses SSR optimized with a <1>Hierarchical Z-Buffer (HZB)</1> to accelerate ray-marching intersection. Since per-pixel ray marching in screen space is prohibitively expensive, a Hierarchical Z-Buffer is pre-generated to speed up this process. The image below illustrates how the HZB optimizes the intersection steps.",
+                    "content1": "<1><2><3>Screen-Space Reflections (SSR)</3></2></1> leverage the <1>depth</1> and <1>normal</1> buffers of the already rendered frame to perform stepwise sampling (ray marching) along the reflection vector in screen space. By comparing depths, the algorithm determines when the ray “hits” visible geometry, then samples the reflection color from the color buffer. The entire process can be simply understood as performing <1>ray marching</1> on a 2D image, as illustrated below.",
+                    "content2": "It should be noted that <2>Call of Duty: Black Ops 6</2> uses SSR optimized with a <1>Hierarchical Z-Buffer (HZB)</1> to accelerate ray-marching intersection. Since per-pixel ray marching in screen space is prohibitively expensive, a Hierarchical Z-Buffer is pre-generated to speed up this process. The image below illustrates how the HZB optimizes the intersection steps.",
                     "content3": "The image below shows the dispatch used to pre-generate the Hierarchical Z-Buffer (HZB) for the game's subsequent SSR ray-marching. It also employs a <1>ping-pong</1> buffering strategy that alternates reads and writes between two identical HZB slices, eliminating read/write conflicts within a single pass, enabling efficient multi-level downsampling without rebinding or reallocating textures at each mip level."
                 },
                 "ReflectionProbe": {
@@ -322,15 +322,15 @@
                 "0": "<3><1><2>CSM</2></1> : Cascaded Shadow Maps</3>",
                 "1": "<3><1><2>PCF</2></1> : Percentage Closer Filtering</3>"
             },
-            "content1": "After reverse-engineering the shader, I was surprised to find that Call of Duty: Black Ops 6 doesn’t use more advanced, high-quality shadow techniques (like <3>SDF shadows</3>, <4>contact shadows</4>, <5>micro shadows</5>, etc.). It’s really just <6>CSM</6> combined with <7>PCF</7> edge anti-aliasing using Vogel Disk Rotation sampling—presumably because a fast-paced first-person shooter demands high FPS, and shadow quality isn’t the top priority.",
+            "content1": "After reverse-engineering the shader, I was surprised to find that <2>Call of Duty: Black Ops 6</2> doesn’t use more advanced, high-quality shadow techniques (like <3>SDF shadows</3>, <4>contact shadows</4>, <5>micro shadows</5>, etc.). It’s really just <6>CSM</6> combined with <7>PCF</7> edge anti-aliasing using Vogel Disk Rotation sampling—presumably because a fast-paced first-person shooter demands high FPS, and shadow quality isn’t the top priority.",
             "Subsections": {
                 "CSM": {
                     "title": "CSM",
-                    "content1": "You can see in the image below the three 2K-resolution CSM shadow maps, which correspond to the near, middle, and far slices of the view frustum."
+                    "content1": "The image below shows three 2K-resolution CSM shadow maps, corresponding to the near, mid, and far slices of the view frustum. It’s worth noting that the CSM is further optimized via cluster-based mesh culling to avoid rendering unnecessary meshes during CSM generation—I found the corresponding implementation in the shader."
                 },
                 "PCF": {
                     "title": "PCF",
-                    "content1": "Based on my shader reverse‐engineering, the shadow‐edge anti‐aliasing appears to be implemented with a 16‐sample PCF using <3>Vogel‐disk rotation</3>. Below is the combined shadow visibility map, which will be uniformly sampled in the subsequent GI pass."
+                    "content1": "Through reverse-engineering the shader, it’s clear that shadow edge anti-aliasing is implemented via PCF based on <3>Vogel disk rotation</3> sampling (16 samples per pixel). The image below shows the final shadow visibility map, where you can plainly see that PCF eliminates any jagged edges, producing a very smooth result."
                 }
             }
         },
@@ -346,33 +346,33 @@
                 "5": "<3><1><2>Volumetric Light</2></1></3>"
             },
             "content1":[
-                "<2>Call of Duty: Black Ops 6</2> contains a large number of visual effects: such as <3>SSFS</3> and <4>volumetric fog</4> generated mist effects, post-processing lighting effects (e.g. <5>Bloom</5> and <6>lens flares</6>), water rendering implemented based on the <7>Shallow Water Equations (SWE)</7>, hair rendering using a certain variant of the <8>Marschner model</8>, as well as <1>particle effects</1>, <1>HUD outline effects</1>, etc.",
-                "However, due to limited captured frames, even though the shader implementations of some effects have been identified by me, they do not appear in my limited footage. Therefore, I have selected some of the effects I analyzed in detail for demonstration (<9>download</9> the full document to view complete content)."
+                "<2>Call of Duty: Black Ops 6</2> contains a large variety of visual effects: fog effects implemented by combining <3>SSFS</3> and <4>volumetric fog</4>, post-processing lighting effects (such as <5>Bloom</5> and <6>lens flares</6>), water rendering based on the <7>Shallow Water Equations (SWE)</7>, hair rendering implemented using a variant of the <8>Marschner model</8>, as well as <1>particle effects</1>, <1>HUD outline effects</1>, and more.",
+                "However, due to limited captures, even though I have identified the shader implementations of some effects, they do not appear in my captures. Therefore, I have selected only those effects that I analyzed in detail and have corresponding visual examples for demonstration (<9>download</9> the full document to view complete content)."
             ],
             "Subsections": {
                 "SSFS": {
                     "title": "SSFS",
-                    "content1": "<3>Screen-Space Fog Scattering (SSFS)</3> is a screen-space post-process that, in a first pass, normalizes scene depth, computes smooth depth-based weights and preliminary scattering contributions over small pixel neighborhoods, and in a second pass reads those intermediate results to apply brightness gain, accumulate, and normalize, delivering natural fog without costly 3D volume integration while remaining highly performant and easy to integrate.",
+                    "content1": "<3>Screen-Space Fog Scattering (SSFS)</3> is a screen-space post-processing technique that is generally divided into two phases: in the first phase, scene depth is normalized and depth-based smoothing weights and preliminary scattering contributions are computed; in the second phase, those intermediate results are read back to apply brightness gain, accumulation, and normalization—delivering natural fog without expensive 3D volume integration, while remaining both highly performant and easy to integrate.",
                     "content2": "The illustration above shows several key textures. In SSFS, multiple dispatches are used to perform successive fog-weight computations, ultimately producing the fog map shown below. In later rendering passes, this fog map is applied in a depth-dependent post-process fog effect (areas with greater depth receive stronger fog)."
                 },
                 "VolumetricFog": {
                     "title": "Volumetric Fog",
-                    "content0": "In the game, in addition to the post-process screen-space fog (SSFS), a ray-marching and froxel-based <3>volumetric fog</3> system is also used. <1>It is primarily divided into:</1>",
+                    "content0": "In the game, in addition to post-process screen-space fog (SSFS), <3>volumetric fog</3> implemented via <1>Ray Marching</1> and <1>Froxel</1> is also used. <1>It can be broadly categorized into: </1>",
                     "list0": {
                         "0": "<1><2>Global volumetric fog (height fog)</2></1>",
                         "1": "<1><2>Local volumetric fog (emitter fog)</2></1>"
                     },
                     "content1": "The volumetric fog rendering in this game uses a relatively common voxel-based approach: after computing the intersection between the fog volume’s <2>voxels</2> and the view-frustum <2>froxels</2> to generate the corresponding froxels, the fog effect is rendered via <1>ray marching</1>. The diagram below illustrates this principle:",
-                    "content2": "<1>Global volumetric fog is height-based fog.</1> In the image below, you can clearly see pronounced height fog in the sky—it’s obvious that the fog density correlates with world-space height, and I’ve even found direct evidence of this in the shader.",
+                    "content2": "<1>Global volumetric fog is primarily height-based fog</1> (with direct evidence in the shader). In the image below, you can clearly see the height fog present in the sky—its density correlates with world-space height.",
                     "content3": "<1>Local fog is primarily emitter fog.</1> In the image below, you can clearly see a distinct local volumetric fog effect, and there’s a corresponding implementation in the shader. The combination of <1>SSFS</1> and <1>volumetric fog</1> delivers exceptionally realistic fog effects in <2>Call of Duty: Black Ops 6</2>."
                 },
                 "Bloom": {
                     "title": "Bloom",
-                    "content1": "The <3>bloom effect</3> is also a common post-processing technique for better simulating real-world lighting. Notably, this game’s bloom implementation is <1>temporal</1>, effectively reducing flickering artifacts. The image above shows the <1>bloom-only</1> intermediate result; since its implementation is relatively straightforward, I won’t analyze it in depth here."
+                    "content1": "The <3>bloom effect</3> is also a common post-processing technique for better simulating real-world lighting. Notably, this game’s bloom implementation is likewise temporal, effectively reducing flickering artifacts. The image above shows the <1>bloom-only</1> intermediate result; since its implementation is relatively straightforward, it won’t be analyzed in depth here."
                 },
                 "LensFlare": {
                     "title": "Lens Flare",
-                    "content1": "The <3>lens flare effect</3> is a common post-processing technique used to simulate the scattering and reflection of bright light sources within a camera lens. It typically works by identifying intensely bright areas in the scene (such as the sun or strong lights), then procedurally generating <1>ghost images</1> and streaks—often using chromatic aberration, anamorphic streak patterns, or circular halo kernels—and finally additively blending these artifacts over the rendered image to mimic real-world optical imperfections."
+                    "content1": "The <3>lens flare effect</3> is a common post-processing technique used to simulate the scattering and reflection of bright light sources within a camera lens. It typically works by identifying intensely bright areas in the scene (such as the sun or strong lights), then procedurally generating <1>ghost images</1> and streaks—often using chromatic aberration, anamorphic streak patterns, or circular halo kernels—and finally additively blending these artifacts over the rendered image to mimic real-world optical imperfections. I’ve detailed the relevant steps in the document and will not elaborate on them here."
                 }
             }
         },
@@ -398,7 +398,7 @@
                 },
                 "Culling": {
                     "title": "Culling",
-                    "content1": "Here, it’s evident that <1>cluster-based frustum culling</1> and <1>occlusion culling</1> are employed, which can reduce unnecessary mesh rendering and optimize performance."
+                    "content1": "In this implementation, cluster-based <1>frustum culling</1> and <1>occlusion culling</1> are employed to reduce unnecessary mesh rendering and improve performance. I uncovered direct evidence supporting this conclusion while reverse-engineering the mesh-processing shaders."
                 },
                 "Batching": {
                     "title": "Static Batching",
