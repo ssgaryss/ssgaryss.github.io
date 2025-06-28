@@ -14,4 +14,4 @@ If you’d like to learn more about me, click [here](https://www.huidiqiu.com) t
 
 - [PUBGConfigUpgrader](https://ssgaryss.github.io/#/projects/project-pubg-upgrader)  
 
-- [ModelGray](https://ssgaryss.github.io/#/projects/project-pubg-upgrader)  
+- [ModelGray](https://ssgaryss.github.io/#/projects/project-model-gray)  
