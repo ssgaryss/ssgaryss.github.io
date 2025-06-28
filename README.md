@@ -1,6 +1,6 @@
 # This Is My Personal Website
 
-If you’d like to learn more about me, click [here](https://www.huidiqiu.com) to visit my personal site.
+If you’d like to learn more about me, click [here](https://ssgaryss.github.io/) to visit my personal site.
 
 ## Contents
 
