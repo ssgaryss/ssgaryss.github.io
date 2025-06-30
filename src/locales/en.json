@@ -308,12 +308,23 @@
             "title": "Global Illumination",
             "content0": "<1>The global illumination techniques used in the game</1>:",
             "list0": {
-                "0": "<3><1><2>Lightmap</2></1></3>",
-                "1": "<3><1><2>GTAO</2></1> : Ground Truth Ambient Occlusion</3>",
-                "2": "<3><1><2>SSR</2></1> : Screen Space Reflections</3>",
-                "3": "<3><1><2>Reflection Probe</2></1></3>"
+                "0": "<3><1><2>GTAO</2></1> : Ground Truth Ambient Occlusion</3>",
+                "1": "<3><1><2>SSR</2></1> : Screen Space Reflections</3>",
+                "2": "<3><1><2>Reflection Probe</2></1></3>",
+                "3": "<3><1><2>NLG</2></1> : Neural Light Grid</3>",
+                "4": "<3><1><2>IBL</2></1> : Image-Based Lighting</3>"
             },
-            "content1": "GI..."
+            "content1": "The global illumination technique used in <2>Call of Duty: Black Ops 6</2> is complex. After reverse-engineering the shaders, I have roughly confirmed the presence of the aforementioned methods (these are the ones I’ve been able to identify at this stage). Among them, <1>GTAO</1>, <1>SSR</1>, and <1>Reflection Probe</1> have already been discussed in earlier sections. Here, the focus is mainly on analyzing the new GI method <3>Neural Light Grid</3> presented at <1>SIGGRAPH 2024</1>, as well as the commonly used and effective <4>Image-Based Lighting</4>. For detailed analysis, please refer to the documentation.",
+            "Subsections": {
+                "NLG": {
+                    "title": "Neural Light Grid",
+                    "content1": "<3>Neural Light Grid (NLG)</3> is a neural network-based global illumination representation proposed in next-generation real-time rendering research such as SIGGRAPH 2024. Its core idea is to encode and query scene global illumination (GI) using a dense 3D grid combined with a neural network, enabling efficient and high-quality indirect lighting."
+                },
+                "IBL": {
+                    "title": "IBL",
+                    "content1": "The <3>Image-Based Lighting (IBL)</3> algorithm in this game is primarily implemented through four preprocessed textures, as shown in the figure: the <1>Specular PDF Map</1> is used for importance sampling weights, the <1>Prefiltered Radiance Map</1> represents environment reflections at different roughness levels, the <1>Sampling Direction LUT</1> provides fast lookup for sampling directions, and the <1>BRDF Integration Map</1> stores precomputed BRDF integrals for efficient reflection intensity calculation."
+                }
+            }
         },
         "Shadow": {
             "title": "Shadow",
@@ -437,7 +448,7 @@
             "title": "Per-Pixel Linked List OIT",
             "content1": "<1><2><3>Per-Pixel Linked List (PPLL)</3></2></1> is a method for implementing Order-Independent Transparency (OIT). It constructs a linked list for each pixel to dynamically record all translucent fragments that pass through that pixel. Each fragment stores its color and depth information. During the rendering phase, all translucent fragments are inserted into the per-pixel lists. In the subsequent compositing phase, the fragments in each list are depth-sorted and blended one by one, resulting in a correct transparency effect regardless of the rendering order.",
             "content2": "In <2>Infinity Nikki</2>, PPLL OIT is utilized, but unlike the typical implementation that uses a linked list structure to store per-pixel translucent values sorted by depth, this approach employs <1>two x4-sized buffers</1>, BufferA and BufferB as shown in the figure below, to store up to four color values and their corresponding depth information and indices per pixel. This means the system supports a maximum of four layers of translucent rendering.",
-            "content3": "Additionally, the <1><3>Shell-based fur</3></1> covered in the next section and <1>hair rendering</1> also involve transparency. BufferA and BufferB store not only the character's transparent clothing effects but also all alpha-blended data, which are composited together in a later dispatch."
+            "content3": "Additionally, <1>hair rendering</1> and the <1><3>shell-based fur rendering</3></1> covered in the next section also involve transparency. BufferA and BufferB store not only the character's transparent clothing effects but also all alpha-blended data, which are composited together in a later dispatch."
         },
         "ShellFur": {
             "title": "Shell-Based Fur Rendering",
@@ -480,7 +491,7 @@
         "Challenges": {
             "title": "Challenges",
             "content1": [
-                "The main challenges arise when parsing large .rdc files. Taking a frame capture from Infinity Nikki as an example, there are two major performance bottlenecks:"
+                "Parsing large .rdc files—such as frame captures from <2>Infinity Nikki</2> with complex rendering—poses significant performance challenges, with the bottlenecks primarily consisting of the following two aspects:"
             ],
             "list": {
                 "0": "The time complexity of RenderDoc's state-switching API is proportional to the size of the .rdc file.",

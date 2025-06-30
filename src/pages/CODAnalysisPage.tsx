@@ -30,6 +30,7 @@ import Reflection_SSR_03 from '../assets/images/project-cod-analysis/Reflection_
 import Reflection_ReflectionProbe_01 from '../assets/images/project-cod-analysis/Reflection_ReflectionProbe_01.png';
 // GI
 import GI_01 from '../assets/images/project-cod-analysis/GI_01.png';
+import GI_IBL_01 from '../assets/images/project-cod-analysis/GI_IBL_01.png';
 // Shadow
 import Shadow_01 from '../assets/images/project-cod-analysis/Shadow_01.png';
 import Shadow_CSM_01 from '../assets/images/project-cod-analysis/Shadow_CSM_01.png';
@@ -321,12 +322,13 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               </p>
               <TransList
                 i18nKey={"CODAnalysisPage.GI.list0" as any}
-                count={4}
+                count={5}
                 links={[
-                  ["#lightmap-section"],
                   ["#gtao-section"],
                   ["#ssr-section"],
                   ["#reflection-probe-section"],
+                  ["#neural-light-grid-section"],
+                  ["#ibl-section"],
                 ]}
                 variant="quote"
               />
@@ -334,10 +336,31 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.GI.content1" as any}
+                  links={[
+                    "https://www.activision.com/cdn/research/Neural_Light_Grid.pdf",
+                    "https://wolfand11.github.io/blogs/graphics/IBL.html"
+                  ]}
                 />
               </p>
-              <section id="lightmap-section">
-
+              <section id="neural-light-grid-section">
+                <h3>{t('CODAnalysisPage.GI.Subsections.NLG.title')}</h3>
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.GI.Subsections.NLG.content1" as any}
+                    links={["https://www.activision.com/cdn/research/Neural_Light_Grid.pdf"]}
+                  />
+                </p>
+                <img src={Shadow_CSM_01} alt="Unable to display image" />
+              </section>
+              <section id="ibl-section">
+                <h3>{t('CODAnalysisPage.GI.Subsections.IBL.title')}</h3>
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.GI.Subsections.IBL.content1" as any}
+                    links={["https://wolfand11.github.io/blogs/graphics/IBL.html"]}
+                  />
+                </p>
+                <img src={GI_IBL_01} alt="Unable to display image" />
               </section>
             </section>
             <section id="Shadow">
