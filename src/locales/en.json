@@ -318,7 +318,20 @@
             "Subsections": {
                 "NLG": {
                     "title": "Neural Light Grid",
-                    "content1": "<3>Neural Light Grid (NLG)</3> is a neural network-based global illumination representation proposed in next-generation real-time rendering research such as SIGGRAPH 2024. Its core idea is to encode and query scene global illumination (GI) using a dense 3D grid combined with a neural network, enabling efficient and high-quality indirect lighting."
+                    "content1": "<3>Neural Light Grid (NLG)</3> is a neural network–based method for reconstructing low-frequency global indirect illumination: it learns a set of probe lighting values and spatial weighting functions, feeds the eight vertex positions of each voxel into the network to produce corresponding Spherical Harmonics (SH) lighting data, and then uses trilinear interpolation across those eight vertices to compute low-frequency indirect lighting at any position.",
+                    "content2": [
+                        "I carefully reviewed the original <3>PPT</3> explaining the principles of NLG by authors who work at <4>Activision</4>. While I can't claim to understand every detail, I’ve gained a preliminary understanding of how it works.",
+                        "<1>The following is my personal understanding of the NLG algorithm's core principles (for reference only):</1>"
+                    ],
+                    "list1": {
+                        "0": "Places a set of probes in the scene, each storing Spherical Harmonics (SH) lighting coefficients converted from RGB samples taken in 9 directions.",
+                        "1": "Learns a position-dependent weighting function for each probe, which determines its contribution to lighting estimation at any spatial point.",
+                        "2": "Formulates lighting reconstruction as a global error minimization problem, optimizing both the probe values and their associated weighting functions.",
+                        "3": "Uses neural networks to efficiently model the weighting functions, balancing quality and real-time performance.",
+                        "4": "Ultimately builds a lightweight, trainable, and GPU-friendly approximation of low-frequency indirect lighting."
+                    },
+                    "content3": "As shown in the figure below, the left part of the figure shows the core formula used for training the NLG network, while the right part illustrates how lighting at any given position is computed by feeding the four surrounding probes into the network, obtaining their respective outputs, and then interpolating them to produce the final lighting result at that position.",
+                    "content4": "The figure below shows the NLG network’s output (Texture3D) from the corresponding dispatch in <2>Call of Duty: Black Ops 6</2>: the left volume encodes each voxel’s flux, density, or anisotropy coefficients; the right volume stores the indirect-lighting results produced by feeding each voxel’s eight vertices into the network (packed as 2×2×2 texel blocks), which can then be sampled via trilinear interpolation to compute low-frequency lighting at any position."
                 },
                 "IBL": {
                     "title": "IBL",

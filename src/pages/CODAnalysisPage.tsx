@@ -30,6 +30,9 @@ import Reflection_SSR_03 from '../assets/images/project-cod-analysis/Reflection_
 import Reflection_ReflectionProbe_01 from '../assets/images/project-cod-analysis/Reflection_ReflectionProbe_01.png';
 // GI
 import GI_01 from '../assets/images/project-cod-analysis/GI_01.png';
+import GI_NLG_01 from '../assets/images/project-cod-analysis/GI_NLG_01.png';
+import GI_NLG_02 from '../assets/images/project-cod-analysis/GI_NLG_02.png';
+import GI_NLG_03 from '../assets/images/project-cod-analysis/GI_NLG_03.png';
 import GI_IBL_01 from '../assets/images/project-cod-analysis/GI_IBL_01.png';
 // Shadow
 import Shadow_01 from '../assets/images/project-cod-analysis/Shadow_01.png';
@@ -337,7 +340,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 <TransText
                   i18nKey={"CODAnalysisPage.GI.content1" as any}
                   links={[
-                    "https://www.activision.com/cdn/research/Neural_Light_Grid.pdf",
+                    "https://www.realtimerendering.com/advances/s2024/content/Iwanicki/Advances_SIGGRAPH_2024_Neural_LightGrid.pdf",
                     "https://wolfand11.github.io/blogs/graphics/IBL.html"
                   ]}
                 />
@@ -345,12 +348,46 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               <section id="neural-light-grid-section">
                 <h3>{t('CODAnalysisPage.GI.Subsections.NLG.title')}</h3>
                 <p>
-                  <TransText 
+                  <TransText
                     i18nKey={"CODAnalysisPage.GI.Subsections.NLG.content1" as any}
-                    links={["https://www.activision.com/cdn/research/Neural_Light_Grid.pdf"]}
+                    links={[
+                      "https://www.realtimerendering.com/advances/s2024/content/Iwanicki/Advances_SIGGRAPH_2024_Neural_LightGrid.pdf",
+                    ]}
                   />
                 </p>
-                <img src={Shadow_CSM_01} alt="Unable to display image" />
+                <img src={GI_NLG_01} alt="Unable to display image" />
+                <p>
+                  {t('CODAnalysisPage.GI.Subsections.NLG.content2', { returnObjects: true }).map((_, index, array) => (
+                    <TransText
+                      key={index}
+                      i18nKey={"CODAnalysisPage.GI.Subsections.NLG.content2" as any}
+                      index={index}
+                      isLast={index === array.length - 1}
+                      links={[
+                        "https://www.realtimerendering.com/advances/s2024/content/Iwanicki/Advances_SIGGRAPH_2024_Neural_LightGrid.pdf",
+                        "https://www.activision.com/",
+                      ]}
+                      breakCount={2}
+                    />
+                  ))}
+                </p>
+                <TransList
+                  i18nKey={"CODAnalysisPage.GI.Subsections.NLG.list1" as any}
+                  count={5}
+                  variant="ordered"
+                />
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.GI.Subsections.NLG.content3" as any}
+                    /> 
+                </p>   
+                <img src={GI_NLG_02} alt="Unable to display image" />         
+                <p>
+                  <TransText 
+                    i18nKey={"CODAnalysisPage.GI.Subsections.NLG.content4" as any}
+                    /> 
+                </p>   
+                <img src={GI_NLG_03} alt="Unable to display image" />         
               </section>
               <section id="ibl-section">
                 <h3>{t('CODAnalysisPage.GI.Subsections.IBL.title')}</h3>
