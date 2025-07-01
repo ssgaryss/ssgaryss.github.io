@@ -28,3 +28,19 @@
     font-size: 0.88rem !important
   }
 }
+
+@media (max-width: 900px) {
+  .dark-mode .link-chip {
+    background-color: #d3d3d3 !important;
+    color: black !important;
+  }
+
+  .dark-mode .link-chip:hover {
+    background-color: #bfbfbf !important;
+  }
+
+  .dark-mode .link-chip .MuiChip-icon,
+  .dark-mode .link-chip .MuiChip-label {
+    color: black !important;
+  }
+}
