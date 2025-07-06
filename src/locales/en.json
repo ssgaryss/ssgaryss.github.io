@@ -466,7 +466,7 @@
         "ShellFur": {
             "title": "Shell-Based Fur Rendering",
             "content1": "<1><2><3>Shell-based Fur Rendering</3></2></1> is a technique used to simulate the appearance of fur by layering multiple transparent shells along the surface normal of a 3D model. Each shell is slightly offset from the base surface and uses alpha-masked textures to represent scattered strands of fur. When rendered together with alpha blending, these layers create the illusion of volume and softness.",
-            "content2": "We can see that the fur rendering in the game adopts a <1>4-layer Shell-Fur</1> technique. In the rendering shown above, shell layering is clearly visible at the edges—an artifact commonly associated with shell-based fur rendering. Nevertheless, the overall visual quality remains impressive. The four shell layers neatly fit into the ×4-sized PPLL buffers, enabling unified blending in subsequent passes."
+            "content2": "We can see that the fur rendering in the game adopts a <1>4-layer Shell-Fur</1> technique. In the rendering shown above, shell layering is clearly visible at the edges—an artifact commonly associated with shell-based fur rendering. Nevertheless, the overall visual quality remains impressive. The four shell layers neatly fit into the ×4-sized (2x2) PPLL buffers, enabling unified blending in subsequent passes."
         },
         "SSAO": {
             "title": "Screen Space Ambient Occlusion",
