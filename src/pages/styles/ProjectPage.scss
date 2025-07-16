@@ -5,6 +5,7 @@
   padding: 1.5rem 0;
   margin-top: 3rem;
   background-color: #f5f7fa;
+  background-image: url("../../assets/images/project-page-lightmode-background.png");
 
   .project-contents {
     display: flex;
@@ -164,6 +165,7 @@
 /* ============ 深色模式 - 默认（PC） ============ */
 .dark-mode .project-page-wrapper {
   background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../../assets/images/project-page-darkmode-background.png");
 }
 
 /* ============ 响应式：移动端 ============ */
