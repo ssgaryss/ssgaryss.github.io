@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
-import { Box, Typography, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';

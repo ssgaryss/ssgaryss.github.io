@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState } from "react";
 import { I18nextProvider } from 'react-i18next';
 import i18n from './locales/i18n';
 import { HashRouter, Routes, Route } from 'react-router-dom';
@@ -16,7 +16,6 @@ import RDCParserPage from './pages/RDCParserPage';
 import PUBGConfigUpgraderPage from './pages/PUBGConfigUpgraderPage';
 import MAppLinkPage from './pages/MAppLinkPage';
 import ModelGrayPage from './pages/ModelGrayPage';
-import RayTracingPage from './pages/RayTracingPage';
 
 function App() {
     const [mode, setMode] = useState<string>('dark');
@@ -37,7 +36,6 @@ function App() {
         'project-pubg-upgrader': PUBGConfigUpgraderPage,
         'project-mapplink': MAppLinkPage,
         'project-model-gray': ModelGrayPage,
-        // 'project-raytracing': RayTracingPage,
     };
 
     return (

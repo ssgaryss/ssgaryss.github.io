@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
-import { Box, Typography, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
@@ -111,7 +111,7 @@ const PikaEnginePage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={ECS} alt="Unable to display image" />
+              <img src={ECS} alt="Unable to display" />
               <p>
                 {t('PikaEnginePage.ECS.content2', { returnObjects: true }).map((_, index, array) => (
                   <TransText
@@ -166,7 +166,7 @@ const PikaEnginePage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={Material} alt="Unable to display image" />
+              <img src={Material} alt="Unable to display" />
             </section>
             <section id="Render">
               <h2>{t('PikaEnginePage.Render.title')}</h2>
@@ -196,7 +196,7 @@ const PikaEnginePage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={Physics} alt="Unable to display image" />
+              <img src={Physics} alt="Unable to display" />
             </section>
             <section id="Serialization">
               <h2>{t('PikaEnginePage.Serialization.title')}</h2>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
-import { Box, Typography, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
@@ -132,7 +132,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ]}
                 variant="quote"
               />
-              <img src={AA_01} alt="Unable to display image" />
+              <img src={AA_01} alt="Unable to display" />
               <p>
                 {t('CODAnalysisPage.AA.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
@@ -149,7 +149,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={AA_02} alt="Unable to display image" />
+              <img src={AA_02} alt="Unable to display" />
               <section id="smaa-section">
                 <h3>{t('CODAnalysisPage.AA.Subsections.SMAA.title')}</h3>
                 <p>
@@ -181,11 +181,11 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     ]}
                   />
                 </p>
-                <img src={AA_SMAA_01} alt="Unable to display image" />
+                <img src={AA_SMAA_01} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.AA.Subsections.SMAA.content3" as any}/>
                 </p>
-                <img src={AA_SMAA_02} alt="Unable to display image" />
+                <img src={AA_SMAA_02} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.AA.Subsections.SMAA.content4" as any}/>
                 </p>
@@ -198,11 +198,11 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     links={["https://en.wikipedia.org/wiki/Temporal_anti-aliasing"]}
                   />
                 </p>
-                <img src={AA_TAA_01} alt="Unable to display image" />
+                <img src={AA_TAA_01} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.AA.Subsections.TAA.content2" as any}/>
                 </p>
-                <img src={AA_TAA_02} alt="Unable to display image" />
+                <img src={AA_TAA_02} alt="Unable to display" />
               </section>
               <section id="nis-section">
                 <h3>{t('CODAnalysisPage.AA.Subsections.NIS.title')}</h3>
@@ -215,7 +215,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     ]}
                     />
                 </p>
-                <img src={AA_NIS_01} alt="Unable to display image" />
+                <img src={AA_NIS_01} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.AA.Subsections.NIS.content2" as any}/>
                 </p>
@@ -234,7 +234,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ]}
                 variant="quote"
               />
-              <img src={AO_01} alt="Unable to display image" />
+              <img src={AO_01} alt="Unable to display" />
               <p>
                 {t('CODAnalysisPage.AO.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
@@ -252,18 +252,18 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.AO.Subsections.GTAO.content1" as any}/>
                 </p>
-                <img src={AO_GTAO_01} alt="Unable to display image" />
+                <img src={AO_GTAO_01} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.AO.Subsections.GTAO.content2" as any}/>
                 </p>
-                <img src={AO_GTAO_02} alt="Unable to display image" />
+                <img src={AO_GTAO_02} alt="Unable to display" />
                 <p>
                   <TransText 
                     i18nKey={"CODAnalysisPage.AO.Subsections.GTAO.content3" as any}
                     links={["https://blog.csdn.net/bugrunner/article/details/7272902"]}
                   />
                 </p>
-                <img src={AO_GTAO_03} alt="Unable to display image" />
+                <img src={AO_GTAO_03} alt="Unable to display" />
               </section>
             </section>
             <section id="Reflection">
@@ -280,7 +280,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ]}
                 variant="quote"
               />
-              <img src={Reflection_01} alt="Unable to display image" />
+              <img src={Reflection_01} alt="Unable to display" />
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.Reflection.content1" as any}
@@ -294,15 +294,15 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     links={["https://lettier.github.io/3d-game-shaders-for-beginners/screen-space-reflection.html"]}
                   />
                 </p>
-                <img src={Reflection_SSR_01} alt="Unable to display image" />
+                <img src={Reflection_SSR_01} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content2" as any}/>
                 </p>
-                <img src={Reflection_SSR_02} alt="Unable to display image" />
+                <img src={Reflection_SSR_02} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.SSR.content3" as any}/>
                 </p>
-                <img src={Reflection_SSR_03} alt="Unable to display image" />
+                <img src={Reflection_SSR_03} alt="Unable to display" />
               </section>
               <section id="reflection-probe-section">
                 <h3>{t('CODAnalysisPage.Reflection.Subsections.ReflectionProbe.title')}</h3>
@@ -312,7 +312,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     links={["https://zhuanlan.zhihu.com/p/438022045"]}
                   />
                 </p>
-                <img src={Reflection_ReflectionProbe_01} alt="Unable to display image" />
+                <img src={Reflection_ReflectionProbe_01} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Reflection.Subsections.ReflectionProbe.content2" as any}/>
                 </p>
@@ -335,7 +335,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ]}
                 variant="quote"
               />
-              <img src={GI_01} alt="Unable to display image" />
+              <img src={GI_01} alt="Unable to display" />
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.GI.content1" as any}
@@ -355,7 +355,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     ]}
                   />
                 </p>
-                <img src={GI_NLG_01} alt="Unable to display image" />
+                <img src={GI_NLG_01} alt="Unable to display" />
                 <p>
                   {t('CODAnalysisPage.GI.Subsections.NLG.content2', { returnObjects: true }).map((_, index, array) => (
                     <TransText
@@ -381,13 +381,13 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     i18nKey={"CODAnalysisPage.GI.Subsections.NLG.content3" as any}
                     /> 
                 </p>   
-                <img src={GI_NLG_02} alt="Unable to display image" />         
+                <img src={GI_NLG_02} alt="Unable to display" />         
                 <p>
                   <TransText 
                     i18nKey={"CODAnalysisPage.GI.Subsections.NLG.content4" as any}
                     /> 
                 </p>   
-                <img src={GI_NLG_03} alt="Unable to display image" />         
+                <img src={GI_NLG_03} alt="Unable to display" />         
               </section>
               <section id="ibl-section">
                 <h3>{t('CODAnalysisPage.GI.Subsections.IBL.title')}</h3>
@@ -397,7 +397,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                     links={["https://wolfand11.github.io/blogs/graphics/IBL.html"]}
                   />
                 </p>
-                <img src={GI_IBL_01} alt="Unable to display image" />
+                <img src={GI_IBL_01} alt="Unable to display" />
               </section>
             </section>
             <section id="Shadow">
@@ -414,7 +414,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ]}
                 variant="quote"
               />
-              <img src={Shadow_01} alt="Unable to display image" />
+              <img src={Shadow_01} alt="Unable to display" />
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.Shadow.content1" as any}
@@ -432,7 +432,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Shadow.Subsections.CSM.content1" as any}/>
                 </p>
-                <img src={Shadow_CSM_01} alt="Unable to display image" />
+                <img src={Shadow_CSM_01} alt="Unable to display" />
               </section>
               <section id="pcf-section">
                 <h3>{t('CODAnalysisPage.Shadow.Subsections.PCF.title')}</h3>
@@ -442,7 +442,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                   links={["https://www.shadertoy.com/view/4l3yRM"]}
                   />
                 </p>
-                <img src={Shadow_PCF_01} alt="Unable to display image" />
+                <img src={Shadow_PCF_01} alt="Unable to display" />
               </section>
             </section>
             <section id="Effects">
@@ -483,18 +483,18 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               </p>
               <section id="ssfs-section">
                 <h3>{t('CODAnalysisPage.Effects.Subsections.SSFS.title')}</h3>
-                <img src={Effects_SSFS_01} alt="Unable to display image" />
+                <img src={Effects_SSFS_01} alt="Unable to display" />
                 <p>
                   <TransText 
                     i18nKey={"CODAnalysisPage.Effects.Subsections.SSFS.content1" as any}
                     links={["https://www.bilibili.com/video/BV1wNwfeaEPE/"]}
                   />
                 </p>
-                <img src={Effects_SSFS_02} alt="Unable to display image" />
+                <img src={Effects_SSFS_02} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.SSFS.content2" as any}/>
                 </p>
-                <img src={Effects_SSFS_03} alt="Unable to display image" />
+                <img src={Effects_SSFS_03} alt="Unable to display" />
               </section>
               <section id="volumetric-fog-section">
                 <h3>{t('CODAnalysisPage.Effects.Subsections.VolumetricFog.title')}</h3>
@@ -512,19 +512,19 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content1" as any}/>
                 </p>
-                <img src={Effects_Volumetric_fog_01} alt="Unable to display image" />
+                <img src={Effects_Volumetric_fog_01} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content2" as any}/>
                 </p>
-                <img src={Effects_Volumetric_fog_02} alt="Unable to display image" />
+                <img src={Effects_Volumetric_fog_02} alt="Unable to display" />
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Effects.Subsections.VolumetricFog.content3" as any}/>
                 </p>
-                <img src={Effects_Volumetric_fog_03} alt="Unable to display image" />
+                <img src={Effects_Volumetric_fog_03} alt="Unable to display" />
               </section>
               <section id="bloom-section">
                 <h3>{t('CODAnalysisPage.Effects.Subsections.Bloom.title')}</h3>
-                <img src={Effects_Bloom_01} alt="Unable to display image" />
+                <img src={Effects_Bloom_01} alt="Unable to display" />
                 <p>
                   <TransText 
                     i18nKey={"CODAnalysisPage.Effects.Subsections.Bloom.content1" as any}
@@ -534,7 +534,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
               </section>
               <section id="lens-flare-section">
                 <h3>{t('CODAnalysisPage.Effects.Subsections.LensFlare.title')}</h3>
-                <img src={Effects_Lens_Flare_01} alt="Unable to display image" />
+                <img src={Effects_Lens_Flare_01} alt="Unable to display" />
                 <p>
                   <TransText 
                     i18nKey={"CODAnalysisPage.Effects.Subsections.LensFlare.content1" as any}
@@ -558,7 +558,7 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 ]}
                 variant="quote"
               />
-              <img src={Static_01} alt="Unable to display image" />
+              <img src={Static_01} alt="Unable to display" />
               <p>
                 <TransText
                   i18nKey={"CODAnalysisPage.Static.content1" as any}
@@ -570,21 +570,21 @@ const CODAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Static.Subsections.LOD.content1" as any}/>
                 </p>
-                <img src={Static_LOD_01} alt="Unable to display image" />
+                <img src={Static_LOD_01} alt="Unable to display" />
               </section>
               <section id="culling-section">
                 <h3>{t('CODAnalysisPage.Static.Subsections.Culling.title')}</h3>
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Static.Subsections.Culling.content1" as any}/>
                 </p>
-                <img src={Static_Culling_01} alt="Unable to display image" />
+                <img src={Static_Culling_01} alt="Unable to display" />
               </section>
               <section id="batch-section">
                 <h3>{t('CODAnalysisPage.Static.Subsections.Batching.title')}</h3>
                 <p>
                   <TransText i18nKey={"CODAnalysisPage.Static.Subsections.Batching.content1" as any}/>
                 </p>
-                <img src={Static_Batching_01} alt="Unable to display image" />
+                <img src={Static_Batching_01} alt="Unable to display" />
                 <p>
                   <TransText 
                     i18nKey={"CODAnalysisPage.Static.Subsections.Batching.content2" as any}

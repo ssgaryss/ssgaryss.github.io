@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
-import { Box, Typography, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
@@ -76,7 +76,7 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             </section>
             <section id="PPLL">
               <h2>{t('InfinityNikkiAnalysisPage.PPLL.title')}</h2>
-              <img src={PPLL_01} alt="Unable to display image" />
+              <img src={PPLL_01} alt="Unable to display" />
               <p>
                 <TransText 
                   i18nKey={"InfinityNikkiAnalysisPage.PPLL.content1" as any}
@@ -85,11 +85,11 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                   ]}
                 />
               </p>
-              <img src={PPLL_02} alt="Unable to display image" />
+              <img src={PPLL_02} alt="Unable to display" />
               <p>
                 <TransText i18nKey={"InfinityNikkiAnalysisPage.PPLL.content2" as any}/>
               </p>
-              <img src={PPLL_03} alt="Unable to display image" />
+              <img src={PPLL_03} alt="Unable to display" />
               <p>
                 <TransText 
                   i18nKey={"InfinityNikkiAnalysisPage.PPLL.content3" as any}
@@ -99,7 +99,7 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
             </section>
             <section id="ShellFur">
               <h2>{t('InfinityNikkiAnalysisPage.ShellFur.title')}</h2>
-              <img src={ShellFur_01} alt="Unable to display image" />
+              <img src={ShellFur_01} alt="Unable to display" />
               <p>
                 <TransText 
                   i18nKey={"InfinityNikkiAnalysisPage.ShellFur.content1" as any}
@@ -108,25 +108,25 @@ const InfinityNikkiAnalysisPage: React.FC<PageProps> = ({ mode }) => {
                   ]}
                 />
               </p>
-              <img src={ShellFur_02} alt="Unable to display image" />
+              <img src={ShellFur_02} alt="Unable to display" />
               <p>
                 <TransText i18nKey={"InfinityNikkiAnalysisPage.ShellFur.content2" as any}/>
               </p>
             </section>
             <section id="SSAO">
               <h2>{t('InfinityNikkiAnalysisPage.SSAO.title')}</h2>
-              <img src={SSAO_01} alt="Unable to display image" />
+              <img src={SSAO_01} alt="Unable to display" />
               <p>
                 <TransText
                   i18nKey={"InfinityNikkiAnalysisPage.SSAO.content1" as any}
                   links={["https://en.wikipedia.org/wiki/Screen_space_ambient_occlusion"]}
                 />
               </p>
-              <img src={SSAO_02} alt="Unable to display image" />
+              <img src={SSAO_02} alt="Unable to display" />
               <p>
                 <TransText i18nKey={"InfinityNikkiAnalysisPage.SSAO.content2" as any}/>
               </p>
-              <img src={SSAO_03} alt="Unable to display image" />
+              <img src={SSAO_03} alt="Unable to display" />
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">

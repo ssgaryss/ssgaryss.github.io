@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/ProjectPage.scss';
 import INFO from '../assets/data/user';
-import { Box, Typography, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import LinkButton from '../components/LinkButton';
 import TOC from '../components/TOC';
@@ -79,7 +79,7 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={FrameAdvisor} alt="Unable to display image" />
+              <img src={FrameAdvisor} alt="Unable to display" />
             </section>
             <section id="Challenges">
               <h2>{t('RDCParserPage.Challenges.title')}</h2>
@@ -110,7 +110,7 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={Challenges} alt="Unable to display image" />
+              <img src={Challenges} alt="Unable to display" />
             </section>
             <section id="Outcomes">
               <h2>{t('RDCParserPage.Outcomes.title')}</h2>
@@ -126,7 +126,7 @@ const RDCParserPage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={Outcomes} alt="Unable to display image" />
+              <img src={Outcomes} alt="Unable to display" />
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">

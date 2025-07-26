@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGamepad, faBookOpen, faFileCode } from '@fortawesome/free-solid-svg-icons';

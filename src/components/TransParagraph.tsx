@@ -44,6 +44,7 @@ const TransText: React.FC<TransTextProps> = ({
             }
           }}
           className="custom-link"
+          aria-label={`link to ${href}`}
         />
       );
     } else {
@@ -53,6 +54,7 @@ const TransText: React.FC<TransTextProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           className="custom-link"
+          aria-label={`link to ${href}`}
         />
       );
     }
