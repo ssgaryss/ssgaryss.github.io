@@ -80,6 +80,10 @@
                 "title": "PUBGConfigUpgrader",
                 "description": "PUBGConfigUpgrader是一个UE Commandlet插件工具，旨在帮助和平精英项目在从UE4迁移至UE5.4过程中，自动化转换其配置文件。"
             },
+            "project-mapplink": {
+                "title": "MAppLink",
+                "description": "MAppLink 是一个 3ds Max 插件，可将模型截图导出到 Photoshop，并将绘制结果直接映射至模型材质并保证像素级精度。"
+            },
             "project-model-gray": {
                 "title": "ModelGray",
                 "description": "ModelGray 是由我支持开发的供腾讯美术团队使用的 AI 高度图生成插件，可以方便一键生成高度图供后续浮雕生成等使用，我为其支持了 ZBrush 和 Blender 两个版本。"
@@ -604,6 +608,51 @@
             "title": "成果",
             "content": [
                 "ModelGray 已正式发布，供公司美术团队内部使用。以下为 ZBrush 和 Blender 版本插件的展示图。"
+            ]
+        }
+    },
+
+    "MAppLinkPage": {
+        "Title": "MAppLink",
+        "Contents": {
+            "title": "目录",
+            "items": {
+            "Abstract": "摘要",
+            "Requirements": "需求",
+            "Challenges": "挑战",
+            "Outcomes": "成果"
+            }
+        },
+        "Abstract": {
+            "title": "摘要",
+            "content": [
+                "MAppLink 是我在实习期间开发的 <1><2><3>3ds Max 2022</3></2></1> 插件。它直接集成于软件中：用户可点击打开查看窗口，选择任意角度进行截图，截图会被发送到 <1><2><4>Photoshop</4></2></1> 进行绘制。绘制完成后，结果可直接映射回材质。该插件旨在简化 <1>逍遥游工作室</1> 美术团队在 <1><2><5>《英雄联盟手游》</5></2></1> 项目开发中的工作流程。",
+                "您可以点击标题下方的 <1><6>文档</6></1> 按钮下载详细文档。"
+            ]
+        },
+        "Requirements": {
+            "title": "需求",
+            "content": [
+            "项目团队需要一个用于直接材质绘制的 3ds Max 插件，以简化美术同学的工作流程。它必须支持从 3ds Max 捕获截图到 Photoshop 进行绘制，并能将编辑结果直接保存回材质，同时优化整个流程在约五秒内完成，并保证绘制结果具备像素级精度。"
+            ]
+        },
+        "Challenges": {
+            "title": "挑战",
+            "content1": [
+            "插件开发的主要挑战源于 3ds Max 未能直接满足我们的需求。首先，材质映射要求像素级精度，因此我们需要至少 RG16F 格式的 <1>UV-坐标</1> 渲染目标，而不是标准的 R8G8B8A8——但 3ds Max 并未暴露此能力。其次，美术同学需要像素级的绘制精度，而直接截屏的采样频率不足会导致 <1>aliasing</1> 问题。"
+            ],
+            "list": {
+            "0": "3ds Max 不支持修改渲染目标格式。",
+            "1": "3ds Max 不支持屏幕超采样。"
+            },
+            "content2": [
+            "由于这些限制，我从头构建了一个自定义渲染器 (<1>MAppLinkRenderer</1>)，使用 C++ 实现了完整的基于 OpenGL 的渲染引擎，并通过 <1><2><3>pybind</3></2></1> 将其暴露给 Python。这使得可以自由修改渲染的每一个细节，最终满足项目团队的需求。"
+            ]
+        },
+        "Outcomes": {
+            "title": "成果",
+            "content": [
+            "MAppLink 已正式发布供公司艺术团队内部使用。以下是演示视频："
             ]
         }
     }

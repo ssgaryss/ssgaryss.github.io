@@ -14,6 +14,7 @@ import CODAnalysisPage from './pages/CODAnalysisPage';
 import InfinityNikkiAnalysisPage from './pages/InfinityNikkiAnalysisPage';
 import RDCParserPage from './pages/RDCParserPage';
 import PUBGConfigUpgraderPage from './pages/PUBGConfigUpgraderPage';
+import MAppLinkPage from './pages/MAppLinkPage';
 import ModelGrayPage from './pages/ModelGrayPage';
 import RayTracingPage from './pages/RayTracingPage';
 
@@ -34,6 +35,7 @@ function App() {
         'project-nikki-analysis': InfinityNikkiAnalysisPage,
         'project-rdc-parser': RDCParserPage,
         'project-pubg-upgrader': PUBGConfigUpgraderPage,
+        'project-mapplink': MAppLinkPage,
         'project-model-gray': ModelGrayPage,
         // 'project-raytracing': RayTracingPage,
     };
@@ -46,20 +48,15 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     {INFO.projects.map(project => {
-                    const Component = ProjectPageMap[project.id];
+                        const Component = ProjectPageMap[project.id];
 
-                    // 判断是否需要传 props
-                    const element = project.id === 'project-pika-engine'
-                        ? <Component mode={mode} />
-                        : <Component />;
-
-                    return (
-                        <Route 
-                            key={project.id}
-                            path={project.path}
-                            element={element}
-                        />
-                    );
+                        return (
+                            <Route
+                                key={project.id}
+                                path={project.path}
+                                element={<Component mode={mode} />}
+                            />
+                        );
                     })}
                 </Routes>
                 <Footer />

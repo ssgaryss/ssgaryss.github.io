@@ -1,9 +1,9 @@
-import { toBeChecked } from '@testing-library/jest-dom/matchers';
 import pikaCover from '../images/project-pika-engine/cover.png';
 import codCover from '../images/project-cod-analysis/cover.png';
 import nikkiCover from '../images/project-nikki-analysis/cover.png';
 import rdcparserCover from '../images/project-rdc-parser/cover.png';
 import pubgupgraderCover from '../images/project-pubg-upgrader/cover.png';
+import mapplinkCover from '../images/project-mapplink/cover.png';
 import modelgrayCover from '../images/project-model-gray/cover.png';
 
 const INFO = {
@@ -76,6 +76,18 @@ const INFO = {
 				"Tencent",
 				"UE Plugin",
 				"Game for Peace"
+			]
+		},
+		{
+			id: "project-mapplink",
+			title: "MAppLink",
+			date: "2025.7 - 2025.7",
+			path: "/projects/project-mapplink",
+			cover: mapplinkCover,
+			keyword: [
+				"Tencent",
+				"3ds Max Plugin",
+				"Model Painting",
 			]
 		},
 		{

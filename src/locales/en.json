@@ -80,6 +80,10 @@
                 "title": "PUBGConfigUpgrader",
                 "description": "PUBGConfigUpgrader is a UE Commandlet plugin designed to automate the conversion of configuration files for the Game for Peace (PUBG Mobile China) project during its migration from UE4 to UE5.4."
             },
+            "project-mapplink": {
+                "title": "MAppLink",
+                "description": "MAppLink is a 3ds Max plugin that exports model screenshots to Photoshop and directly maps the painted results back onto the model’s materials with pixel‑level precision."
+            },
             "project-model-gray": {
                 "title": "ModelGray",
                 "description": "ModelGray is an AI-based heightmap generation plugin that I helped develop for Tencent’s art team. It enables convenient one-click creation of heightmaps for subsequent relief sculpting and more, and I supported versions for both ZBrush and Blender."
@@ -604,6 +608,51 @@
             "title": "Outcomes",
             "content": [
                 "ModelGray has been officially released for internal use by the company’s art team. Below are showcase images of the ZBrush and Blender plugin versions."
+            ]
+        }
+    },
+
+    "MAppLinkPage": {
+        "Title": "MAppLink",
+        "Contents": {
+            "title": "Contents",
+            "items": {
+                "Abstract": "Abstract",
+                "Requirements": "Requirements",
+                "Challenges": "Challenges",
+                "Outcomes": "Outcomes"
+            }
+        },
+        "Abstract": {
+            "title": "Abstract",
+            "content": [
+                "MAppLink is a <1><2><3>3ds Max 2022</3></2></1> plugin that I developed during my internship. It integrates directly into the software: Users can click to open a viewer window, choose any desired angle for painting, and capture a screenshot that’s sent to <1><2><4>Photoshop</4></2></1>. Once the artwork is complete, the painted result can be directly mapped back onto the material. This plugin is primarily designed to support the art team at <1>Anyplay Studio</1> working on the <1><2><5>League of Legends: Wild Rift</5></2></1> project.",
+                "You can download the detailed documentation by clicking the <1><6>Doc</6></1> button below the title."
+            ]
+        },
+        "Requirements": {
+            "title": "Requirements",
+            "content": [
+                "The project team requires a 3ds Max plugin for direct material painting to streamline artists’ workflows. It must support capturing screenshots from 3ds Max to Photoshop for painting, directly saving edits back into the material, ensuring pixel‑level precision in the painted results, and be optimized to complete the entire process in around five seconds."
+            ]
+        },
+        "Challenges": {
+            "title": "Challenges",
+            "content1": [
+                "The main challenges in plugin development stem from 3ds Max’s lack of direct support for our requirements. First, material mapping demand pixel-level precision, so we need <1>uv coordinates</1> render target in at least RG16F format rather than standard R8G8B8A8—but 3ds Max doesn’t expose that capability. Second, artists require pixel-perfect accuracy, and a straight screenshot introduces <1>aliasing artifacts</1>."
+            ],
+            "list": {
+                "0": "3ds Max does not support modifying the render-target format.",
+                "1": "3ds Max does not support screen supersampling."
+            },
+            "content2": [
+                "Due to these limitations, I built a custom renderer (<1>MAppLinkRenderer</1>) from scratch, implementing a full OpenGL-based rendering engine in C++ and exposing it to Python via <1><2><3>pybind</3></2></1>. This allows free modification of every rendering detail and ultimately satisfies the project team’s requirements."
+            ]
+        },
+        "Outcomes": {
+            "title": "Outcomes",
+            "content": [
+                "MAppLink has been officially released for internal use by the company’s art team. Here is a demonstration video:"
             ]
         }
     }
