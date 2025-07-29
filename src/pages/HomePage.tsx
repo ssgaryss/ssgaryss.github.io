@@ -14,7 +14,6 @@ function HomePage() {
 
     useEffect(() => {
         const sectionId = location.state?.scrollTo;
-        console.log(sectionId)
 
         if (sectionId) {
             setTimeout(() => {

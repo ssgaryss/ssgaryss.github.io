@@ -7,6 +7,7 @@ import {
     Navigation,
     Footer,
 } from "./components";
+import GoogleAnalytics from './hooks/GoogleAnalytics';
 import INFO from "./assets/data/user";
 import HomePage from './pages/HomePage';
 import PikaEnginePage from './pages/PikaEnginePage';
@@ -37,30 +38,31 @@ function App() {
         'project-mapplink': MAppLinkPage,
         'project-model-gray': ModelGrayPage,
     };
-
+    
     return (
-    <I18nextProvider i18n={i18n}>
-        <HashRouter>
-            <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-                <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    {INFO.projects.map(project => {
-                        const Component = ProjectPageMap[project.id];
-
-                        return (
-                            <Route
-                                key={project.id}
-                                path={project.path}
-                                element={<Component mode={mode} />}
-                            />
-                        );
-                    })}
-                </Routes>
-                <Footer />
-            </div>
-        </HashRouter>
-    </I18nextProvider>
+      <I18nextProvider i18n={i18n}>
+          <HashRouter>
+              <GoogleAnalytics />
+              <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
+                  <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
+                  <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      {INFO.projects.map(project => {
+                          const Component = ProjectPageMap[project.id];
+  
+                          return (
+                              <Route
+                                  key={project.id}
+                                  path={project.path}
+                                  element={<Component mode={mode} />}
+                              />
+                          );
+                      })}
+                  </Routes>
+                  <Footer />
+              </div>
+          </HashRouter>
+      </I18nextProvider>
     );
 }
 
