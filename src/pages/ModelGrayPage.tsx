@@ -9,7 +9,8 @@ import TOC from '../components/TOC';
 import { TransText, TransList } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
 
-import Outcomes from '../assets/images/project-model-gray/Outcomes.png';
+import Challenges_01 from '../assets/images/project-model-gray/Challenges_01.png';
+import Outcomes_01 from '../assets/images/project-model-gray/Outcomes_01.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -99,16 +100,17 @@ const ModelGrayPage: React.FC<PageProps> = ({ mode }) => {
                 />
                 <p>
                     {t('ModelGrayPage.Challenges.content2', { returnObjects: true }).map((_, index, array) => (
-                        <TransText
-                        key={index}
-                        i18nKey={"ModelGrayPage.Challenges.content2" as any}
-                        index={index}
-                        isLast={index === array.length - 1}
-                        links={["https://help.maxon.net/zbr/en-us/Content/html/user-guide/customizing-zbrush/zscripting/zscripting.html"]}
-                        breakCount={2}
-                        />
+                      <TransText
+                      key={index}
+                      i18nKey={"ModelGrayPage.Challenges.content2" as any}
+                      index={index}
+                      isLast={index === array.length - 1}
+                      links={["https://help.maxon.net/zbr/en-us/Content/html/user-guide/customizing-zbrush/zscripting/zscripting.html"]}
+                      breakCount={2}
+                      />
                     ))}
                 </p>
+                <img src={Challenges_01} alt="Unable to display" />
             </section>
             <section id="Outcomes">
               <h2>{t('ModelGrayPage.Outcomes.title')}</h2>
@@ -123,7 +125,7 @@ const ModelGrayPage: React.FC<PageProps> = ({ mode }) => {
                   />
                 ))}
               </p>
-              <img src={Outcomes} alt="Unable to display" />
+              <img src={Outcomes_01} alt="Unable to display" />
             </section>
             <Divider className="contents-divider" />
             <div className="page-turning-wrapper">

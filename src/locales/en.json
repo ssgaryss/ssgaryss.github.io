@@ -601,7 +601,8 @@
             },
             "content2": [
                 "Due to these limitations, tasks such as HTTP/HTTPS requests and SSL encryption had to be handled by calling C++ code through ZScript.",
-                "The Blender version, on the other hand, was much more straightforward to develop, as it allowed direct implementation using <1>Python</1>."
+                "The Blender version, on the other hand, was much more straightforward to develop, as it allowed direct implementation using <1>Python</1>.",
+                "The following showcases the effect of the generated relief:"
             ]
         },
         "Outcomes": {
