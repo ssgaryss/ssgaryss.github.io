@@ -9,7 +9,8 @@ import TOC from '../components/TOC';
 import { TransText, TransList } from '../components/TransParagraph';
 import PageTurningButton from '../components/PageTurningButton';
 
-import Outcomes from '../assets/images/project-mapplink/Outcomes.mp4';
+import Challenges_01 from '../assets/images/project-mapplink/Challenges_01.png';
+import Outcomes_01 from '../assets/images/project-mapplink/Outcomes_01.mp4';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -86,13 +87,13 @@ const MAppLinkPage: React.FC<PageProps> = ({ mode }) => {
                 <h2>{t('MAppLinkPage.Challenges.title')}</h2>
                 <p>
                     {t('MAppLinkPage.Challenges.content1', { returnObjects: true }).map((_, index, array) => (
-                        <TransText
-                        key={index}
-                        i18nKey={"MAppLinkPage.Challenges.content1" as any}
-                        index={index}
-                        isLast={index === array.length - 1}
-                        breakCount={2}
-                        />
+                      <TransText
+                      key={index}
+                      i18nKey={"MAppLinkPage.Challenges.content1" as any}
+                      index={index}
+                      isLast={index === array.length - 1}
+                      breakCount={2}
+                      />
                     ))}
                 </p>
                 <TransList
@@ -102,16 +103,17 @@ const MAppLinkPage: React.FC<PageProps> = ({ mode }) => {
                 />
                 <p>
                     {t('MAppLinkPage.Challenges.content2', { returnObjects: true }).map((_, index, array) => (
-                        <TransText
-                        key={index}
-                        i18nKey={"MAppLinkPage.Challenges.content2" as any}
-                        index={index}
-                        isLast={index === array.length - 1}
-                        links={["https://github.com/pybind/pybind11"]}
-                        breakCount={2}
-                        />
+                      <TransText
+                      key={index}
+                      i18nKey={"MAppLinkPage.Challenges.content2" as any}
+                      index={index}
+                      isLast={index === array.length - 1}
+                      links={["https://github.com/pybind/pybind11"]}
+                      breakCount={2}
+                      />
                     ))}
                 </p>
+                <img src={Challenges_01} alt="Unable to display" />
             </section>
             <section id="Outcomes">
               <h2>{t('MAppLinkPage.Outcomes.title')}</h2>
@@ -127,7 +129,7 @@ const MAppLinkPage: React.FC<PageProps> = ({ mode }) => {
                 ))}
               </p>
               <video controls>
-                <source src={Outcomes} type="video/mp4" />
+                <source src={Outcomes_01} type="video/mp4" />
                 Failed to load video. Please check your connection or try again later.
               </video>
             </section>

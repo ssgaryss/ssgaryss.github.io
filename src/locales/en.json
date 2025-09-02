@@ -647,7 +647,8 @@
                 "1": "3ds Max does not support screen supersampling."
             },
             "content2": [
-                "Due to these limitations, I built a custom renderer (<1>MAppLinkRenderer</1>) from scratch, implementing a full OpenGL-based rendering engine in C++ and exposing it to Python via <1><2><3>pybind</3></2></1>. This allows free modification of every rendering detail and ultimately satisfies the project team’s requirements."
+                "Due to these limitations, I built a custom renderer (<1>MAppLinkRenderer</1>) from scratch, implementing a full OpenGL-based rendering engine in C++ and exposing it to Python via <1><2><3>pybind</3></2></1>. This allows free modification of every rendering detail and ultimately satisfies the project team’s requirements.",
+                "Below is a schematic of the plugin’s technical implementation:"
             ]
         },
         "Outcomes": {
