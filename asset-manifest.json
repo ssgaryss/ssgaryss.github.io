@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.fd4de4aa.css",
-    "main.js": "/static/js/main.7daa8134.js",
+    "main.js": "/static/js/main.561bac31.js",
     "static/js/453.eeebb05b.chunk.js": "/static/js/453.eeebb05b.chunk.js",
-    "static/media/Outcomes.mp4": "/static/media/Outcomes.46e3a5201282968c6b82.mp4",
+    "static/media/Outcomes_01.mp4": "/static/media/Outcomes_01.46e3a5201282968c6b82.mp4",
     "static/media/Lighting.mp4": "/static/media/Lighting.b17a3af2c5982bce6d3f.mp4",
     "static/media/abstract-3D.mp4": "/static/media/abstract-3D.49a457f37e460c931066.mp4",
     "static/media/Shadow_01.png": "/static/media/Shadow_01.daf2004655f654511c01.png",
@@ -20,6 +20,7 @@
     "static/media/GI_NLG_01.png": "/static/media/GI_NLG_01.a534c37cf1751c6a1767.png",
     "static/media/Static_LOD_01.png": "/static/media/Static_LOD_01.ca5f6c7d857c98e4ce6c.png",
     "static/media/AA_SMAA_02.png": "/static/media/AA_SMAA_02.afe503b8e305d339eac9.png",
+    "static/media/Challenges_01.png": "/static/media/Challenges_01.a5d031a638a0a8b45ef7.png",
     "static/media/Serialization.mp4": "/static/media/Serialization.472a02a74caf95707731.mp4",
     "static/media/AA_TAA_02.png": "/static/media/AA_TAA_02.cf133717c8914e0f1055.png",
     "static/media/abstract-2D.mp4": "/static/media/abstract-2D.bce353ec96dc31b91b6d.mp4",
@@ -43,7 +44,7 @@
     "static/media/ShellFur_01.jpeg": "/static/media/ShellFur_01.52e0c2a9ae21168ae7c9.jpeg",
     "static/media/Shadow_CSM_01.png": "/static/media/Shadow_CSM_01.a8f1355ec29220c35aee.png",
     "static/media/Challenges.png": "/static/media/Challenges.8a23a4c97435fbd9548c.png",
-    "static/media/Outcomes.png": "/static/media/Outcomes.8e9542da3e9a626fd6f6.png",
+    "static/media/Outcomes_01.png": "/static/media/Outcomes_01.9ce69bb329bf11dd4ae8.png",
     "static/media/SSAO_02.png": "/static/media/SSAO_02.9bf46d5a2adc881a047e.png",
     "static/media/Effects_SSFS_03.png": "/static/media/Effects_SSFS_03.cb60705b3f06634a24c7.png",
     "static/media/PPLL_01.jpeg": "/static/media/PPLL_01.90f7880db5dc54ff6f81.jpeg",
@@ -57,6 +58,7 @@
     "static/media/GI_NLG_03.png": "/static/media/GI_NLG_03.d3dccf249ba4109fa245.png",
     "static/media/Effects_Bloom_01.png": "/static/media/Effects_Bloom_01.e17652f7a48672104944.png",
     "static/media/Physics.png": "/static/media/Physics.7e01d5448035d6f317ec.png",
+    "static/media/Outcomes.png": "/static/media/Outcomes.8e9542da3e9a626fd6f6.png",
     "static/media/Static_Batching_01.png": "/static/media/Static_Batching_01.0455bec61c19b98049fb.png",
     "static/media/AA_TAA_01.png": "/static/media/AA_TAA_01.50969a68321ffb7009c7.png",
     "static/media/project-page-darkmode-background.png": "/static/media/project-page-darkmode-background.5184e6aeac493113bcea.png",
@@ -65,11 +67,11 @@
     "static/media/SSAO_03.png": "/static/media/SSAO_03.5ce2a4abfdff68fdf429.png",
     "index.html": "/index.html",
     "main.fd4de4aa.css.map": "/static/css/main.fd4de4aa.css.map",
-    "main.7daa8134.js.map": "/static/js/main.7daa8134.js.map",
+    "main.561bac31.js.map": "/static/js/main.561bac31.js.map",
     "453.eeebb05b.chunk.js.map": "/static/js/453.eeebb05b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd4de4aa.css",
-    "static/js/main.7daa8134.js"
+    "static/js/main.561bac31.js"
   ]
 }
