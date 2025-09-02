@@ -11,6 +11,7 @@ import PageTurningButton from '../components/PageTurningButton';
 
 import Challenges_01 from '../assets/images/project-mapplink/Challenges_01.png';
 import Outcomes_01 from '../assets/images/project-mapplink/Outcomes_01.mp4';
+import Outcomes_02 from '../assets/images/project-mapplink/Outcomes_02.png';
 
 interface PageProps {
   mode: 'light' | 'dark';
@@ -118,13 +119,25 @@ const MAppLinkPage: React.FC<PageProps> = ({ mode }) => {
             <section id="Outcomes">
               <h2>{t('MAppLinkPage.Outcomes.title')}</h2>
               <p>
-                {t('MAppLinkPage.Outcomes.content', { returnObjects: true }).map((_, index, array) => (
+                {t('MAppLinkPage.Outcomes.content1', { returnObjects: true }).map((_, index, array) => (
                   <TransText
-                    key={index}
-                    i18nKey={"MAppLinkPage.Outcomes.content" as any}
-                    index={index}
-                    isLast={index === array.length - 1}
-                    breakCount={2}
+                  key={index}
+                  i18nKey={"MAppLinkPage.Outcomes.content1" as any}
+                  index={index}
+                  isLast={index === array.length - 1}
+                  breakCount={2}
+                  />
+                ))}
+              </p>
+              <img src={Outcomes_02} alt="Unable to display" />
+              <p>
+                {t('MAppLinkPage.Outcomes.content2', { returnObjects: true }).map((_, index, array) => (
+                  <TransText
+                  key={index}
+                  i18nKey={"MAppLinkPage.Outcomes.content2" as any}
+                  index={index}
+                  isLast={index === array.length - 1}
+                  breakCount={2}
                   />
                 ))}
               </p>

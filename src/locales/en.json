@@ -653,7 +653,10 @@
         },
         "Outcomes": {
             "title": "Outcomes",
-            "content": [
+            "content1": [
+                "The figure below shows part of the painted texture effect: the left is the painting in <1>Photoshop</1>, and the right is the resulting material mapping on the model."
+            ],
+            "content2": [
                 "MAppLink has been officially released for internal use by the company’s art team. Here is a demonstration video:"
             ]
         }
