@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faUserGraduate, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, faUserGraduate, faLaptopCode, faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
@@ -15,6 +15,20 @@ function Timeline() {
       <div className="items-container">
         <h1>{t('HomePage.History.Title')}</h1>
         <VerticalTimeline>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="2026.3 - •"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faGamepad} />}
+          >
+            <h3 className="vertical-timeline-element-title">{t('HomePage.History.Time4.title')}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{t('HomePage.History.Time4.subtitle')}</h4>
+            <p>
+              {t('HomePage.History.Time4.content')}
+            </p>
+          </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
